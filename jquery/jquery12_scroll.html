@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray12 scroll</title>
+    <style>
+        body {height: 10000px; width: 10000px;}
+        div {width: 150px; height: 150px; color: #c7254e; background-color: #f9f2f4; 
+        border-radius: 50%; border: 1px dashed #a51a3d; text-align: center; line-height: 150px;}
+
+        .scrollTop {position: fixed; left: 30px; top: 30px;} 
+        .scrollTop::before {content: "scrollTop ";}
+        .scrollLeft {position: fixed; left: 200px; top: 30px;}
+        .scrollLeft::before {content: "scrollLeft ";}
+    </style>
+</head>
+<body>
+
+    <div class="scrollTop">0</div>
+    <div class="scrollLeft">0</div>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+       $(window).scroll(function(){
+           const scrollTop = $(window).scrollTop();
+           const scrollLeft = $(window).scrollLeft();
+           $(".scrollTop").text(parseInt(scrollTop));
+           $(".scrollLeft").text(parseInt(scrollLeft));
+       });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect07 - jquery</title>
+    <style>
+        @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *,*::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+
+        body {
+            background: url(img/images08@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #959595;
+            background-blend-mode: multiply;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: '62570체';
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(18,9,20,0.7);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #fff;
+            color: #222;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        .contents {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: orange;
+            border-bottom: 2px dashed orange;
+            font-style: normal;
+        }
+        .cursor {
+            position: absolute;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            user-select: none;
+            pointer-events: none;
+            border: 5px solid #fff;
+            background-image: url(img/images08@2.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+    <h1>mouseEffect07 - jquery</h1>
+    <p>마우스이펙트 - 마우스 움직임에 따른 돋보기 효과</p>
+    </div>
+    <div class="info right">
+    <ul>
+        <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+        <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+        <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+        <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
+        <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+        <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+        <li><a href="mouseEffect07-jquery.html" class="active">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+        <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
+        <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
+    </ul>
+    </div>
+
+    <main>
+        <div class="cursor"></div>
+        <div class="contents">
+            <p>I dream my painting and I pain my dream.</p>
+            <p>나는 나의 그림을 <em>꿈</em>꾸고, 내 <em>꿈</em>을 그린다.</p>
+        </div>
+       
+    </main>
+
+    <!--  script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const cursorWidth = $(".cursor").outerWidth()/2;
+        const cursorHeight = $(".cursor").outerHeight()/2;
+
+        $(window).mousemove(function(e){
+            gsap.to(".cursor", { duration:0.5, left: e.pageX - cursorWidth, top: e.pageY - cursorHeight });
+        
+        });
+    </script>
+</body>
+</html>

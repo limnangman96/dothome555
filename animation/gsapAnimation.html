@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>Jiwon | GSAP Animation</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Jiwon" />
+    <meta property="og:url" content="https://dnjsdl678.dothome.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="지원" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Jx5MnvLWGS7iNV5" />
+    <meta name="twitter:title" content="Jiwon" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">jiwon's &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://coding555.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/limnangman96/">Coding</a></li>
+                    <li><a href="https://github.com/limnangman96/dothome1/">github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>GSAP Animation Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://dnjsdl678.dothome.co.kr" target="_blank">dnjsdl678.dothome.co.kr</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <!-- 배너광고 1140 -->
+                <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                    <script>
+                        new PartnersCoupang.G({ id:348400 });
+                    </script>
+                </div>
+                <!-- //배너광고 1140 -->
+                <!-- Intro0 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">GSAP Animation</h2>
+                    <p class="bs-callout bs-callout-info">
+                        GSAP는 웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립트 라이브러리입니다. 기존 CSS Animation이나 jQuery Animation보다 탁월한 퍼포먼스를 발휘할 수 있도록 최적화된 애니메이션 전용 라이브러리입니다.
+                    </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>유형</th>
+                                        <th>메서드</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ce va" rowspan="3">Methods</td>
+                                        <td>gsap.to()</td>
+                                        <td>일반적인 유형의 애니메이션을 정의합니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gsap.from()</td>
+                                        <td>일반적인 유형의 애니메이션의 방향을 반대로 정의합니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gsap.fromTo()</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>gsap.set()</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>gsap.timeline()</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                <!-- //Intro0 -->
+                <style>
+                    .timing {height: 360px; overflow: hidden;}
+                    .timing > div {
+                        width: 80px; height: 80px;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 80px;
+                        margin: 20px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+                    .timing.bg1 > div {background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);}
+                    .timing.bg2 > div {background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);}
+                    .timing.bg3 > div {background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);}
+                    .timing.bg4 > div {background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);}
+                </style>
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">
+                        Animation01 - 이동하기 : gsap.to()
+                        <button type="button" class="btn btn btn-danger btn1-0">reset</button>
+                        <button type="button" class="btn btn btn-default btn1-1">Start1</button>
+                        <button type="button" class="btn btn btn-default btn1-2">Start2</button>
+                        <button type="button" class="btn btn btn-default btn1-3">Start3</button>
+                        <button type="button" class="btn btn btn-default btn1-4">Start4</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg1">
+                            <div class="animation01"><span>01</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn1-0").click(function(){
+    gsap.to(".animation01", {x: 0, borderRadius: 50, rotation: 0, scale: 1});
+});
+$(".btn1-1").click(function(){
+    gsap.to(".animation01", {x: leftWidth, duration: 2});
+});
+$(".btn1-2").click(function(){
+    gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2});
+});
+$(".btn1-3").click(function(){
+    gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2, scale: 2});
+});
+$(".btn1-4").click(function(){
+    var tl = gsap.timeline();
+    tl.to(".animation01", {x: leftWidth, duration: 1})
+      .to(".animation01", {y: leftHeight, duration: 1})
+      .to(".animation01", {x: 0, duration: 1})
+      .to(".animation01", {y: 0, duration: 1})
+});
+</code></pre>
+                </div>
+                <!-- //Intro1 -->
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">
+                        Animation02 - 이동하기 : gsap.from()
+                        <button type="button" class="btn btn btn-default btn2-1">start</button>
+                        <button type="button" class="btn btn btn-default btn2-2">start</button>
+                        <button type="button" class="btn btn btn-default btn2-3">start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg2">
+                            <div class="animation02"><span>02</span></div>
+                            <div class="animation02"><span>02</span></div>
+                            <div class="animation02"><span>02</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn2-1").click(function(){
+    gsap.from(".animation02",{duration: 1, x: leftWidth})
+});
+$(".btn2-2").click(function(){
+    gsap.from(".animation02",{duration: 1, y: 100, opacity: 0})
+});
+$(".btn2-3").click(function(){
+    gsap.from(".animation02",{duration: 1, x: 500, opacity: 0})
+});
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">
+                        Animation03 - 이동하기 : gsap.fromTo()
+                        <button type="button" class="btn btn btn-default btn3-1">start1</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg3">
+                            <div class="animation03"><span>03</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn3-1").click(function(){
+    gsap.fromTo(".animation03", {opacity: 0, x: 0, y: 0, borderRadius: 0}, {opacity: 1, x: 500, y: 100, borderRadius: 50, duration: 1})
+});
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">
+                        Animation04 - 이동하기 : gsap.To()
+                        <button type="button" class="btn btn btn-default btn4-1">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg4" style="height: 730px;">
+                            <div class="animation04-1"><span>04</span></div>
+                            <div class="animation04-2"><span>04</span></div>
+                            <div class="animation04-3"><span>04</span></div>
+                            <div class="animation04-4"><span>04</span></div>
+                            <div class="animation04-5"><span>04</span></div>
+                            <div class="animation04-6"><span>04</span></div>
+                            <div class="animation04-7"><span>04</span></div>
+
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn4-1").click(function(){
+    gsap.to(".animation04-1", {duration: 2, left: leftWidth, rotationY: 360, ease: "steps(12)"})
+    gsap.to(".animation04-2", {duration: 2, left: leftWidth, rotationY: 360, ease: "power2.out"})
+    gsap.to(".animation04-3", {duration: 2, left: leftWidth, rotationY: 360, ease: "power3.out"})
+    gsap.to(".animation04-4", {duration: 2, left: leftWidth, rotationY: 360, ease: "back.out(1.7)"})
+    gsap.to(".animation04-5", {duration: 2, left: leftWidth, rotationY: 360, ease: "elastic.out(1, 0.3)"})
+    gsap.to(".animation04-6", {duration: 2, left: leftWidth, rotationY: 360, ease: "rough({ template: none.out, strength:  1, points: 20, taper: 'none', randomize: true, clamp: false})"})
+    gsap.to(".animation04-7", {duration: 2, left: leftWidth, rotationY: 360, ease: "slow(0.7, 0.7, false)"})
+});
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">
+                        Animation05 - GSAP 애니메이션
+                    </h2>
+                    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="limnangman96" data-slug-hash="WNxBvMX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP Animation Sample01">
+                        <span>See the Pen <a href="https://codepen.io/limnangman96/pen/WNxBvMX">
+                        GSAP Animation Sample01</a> by LIMJIWON (<a href="https://codepen.io/limnangman96">@limnangman96</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro5 -->
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">
+                        Animation06 - GSAP 애니메이션
+                    </h2>
+                    <p class="codepen" data-height="1050" data-theme-id="light" data-default-tab="result" data-user="limnangman96" data-slug-hash="xxONZLp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP Animation Sample02">
+                        <span>See the Pen <a href="https://codepen.io/limnangman96/pen/xxONZLp">
+                        GSAP Animation Sample02</a> by LIMJIWON (<a href="https://codepen.io/limnangman96">@limnangman96</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro6 -->
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">
+                        Animation07 - GSAP 애니메이션
+                    </h2>
+                    <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="limnangman96" data-slug-hash="vYXEMeL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Roket Animation">
+                        <span>See the Pen <a href="https://codepen.io/limnangman96/pen/vYXEMeL">
+                        Roket Animation</a> by LIMJIWON (<a href="https://codepen.io/limnangman96">@limnangman96</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //Intro7 -->
+            </div>
+            <!-- //col-md-12 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const leftWidth = $(".sample").width() - 120;  
+        const leftHeight = $(".sample").height() - 150; 
+
+        $(".btn1-0").click(function(){
+            gsap.to(".animation01", {x: 0, borderRadius: 50, rotation: 0, scale: 1});
+        });
+        $(".btn1-1").click(function(){
+            gsap.to(".animation01", {x: leftWidth, duration: 2});
+        });
+        $(".btn1-2").click(function(){
+            gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2});
+        });
+        $(".btn1-3").click(function(){
+            gsap.to(".animation01", {x: leftWidth, rotation: 360, borderRadius: 5, duration: 2, scale: 2});
+        });
+        $(".btn1-4").click(function(){
+            var tl = gsap.timeline();
+            tl.to(".animation01", {x: leftWidth, duration: 1})
+              .to(".animation01", {y: leftHeight, duration: 1})
+              .to(".animation01", {x: 0, duration: 1})
+              .to(".animation01", {y: 0, duration: 1})
+        });
+
+
+        $(".btn2-1").click(function(){
+            gsap.from(".animation02",{duration: 1, x: leftWidth})
+        });
+        $(".btn2-2").click(function(){
+            gsap.from(".animation02",{duration: 1, y: 100, opacity: 0})
+        });
+        $(".btn2-3").click(function(){
+            gsap.from(".animation02",{duration: 1, x: 500, opacity: 0})
+        });
+
+
+        $(".btn3-1").click(function(){
+            gsap.fromTo(".animation03", {opacity: 0, x: 0, y: 0, borderRadius: 0}, {opacity: 1, x: 500, y: 100, borderRadius: 50, duration: 1})
+        });
+
+
+        $(".btn4-1").click(function(){
+            gsap.to(".animation04-1", {duration: 2, left: leftWidth, rotationY: 360, ease: "steps(12)"})
+            gsap.to(".animation04-2", {duration: 2, left: leftWidth, rotationY: 360, ease: "power2.out"})
+            gsap.to(".animation04-3", {duration: 2, left: leftWidth, rotationY: 360, ease: "power3.out"})
+            gsap.to(".animation04-4", {duration: 2, left: leftWidth, rotationY: 360, ease: "back.out(1.7)"})
+            gsap.to(".animation04-5", {duration: 2, left: leftWidth, rotationY: 360, ease: "elastic.out(1, 0.3)"})
+            gsap.to(".animation04-6", {duration: 2, left: leftWidth, rotationY: 360, ease: "rough({ template: none.out, strength:  1, points: 20, taper: 'none', randomize: true, clamp: false})"})
+            gsap.to(".animation04-7", {duration: 2, left: leftWidth, rotationY: 360, ease: "slow(0.7, 0.7, false)"})
+        });
+    </script>
+</body>
+    
+</html>

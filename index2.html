@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 0.894rem;
+            background: #f2f3f8;
+            color: #4e5155;
+        }
+
+        a {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+
+        #sidenav {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #2c2e3e;
+            width: 15.625rem;
+        }
+
+        .brand {
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            margin-bottom: 0.75rem
+        }
+
+        .brand h1 {
+            height: 63px;
+            line-height: 63px;
+            font-weight: normal;
+            font-size: 1rem;
+            padding-right: 1.45rem;
+            padding-left: 1.45rem;
+            color: #fff;
+        }
+
+        #contents {
+            padding-left: 15.625rem;
+            height: 100vh;
+            font-family: 'Malgun Gothic', '맑은고딕';
+        }
+
+        .navbar {
+            background-color: #fff;
+            color: #4E5155;
+            box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07);
+            padding: 1.5rem 2rem;
+        }
+
+        .sidenav-inner {}
+
+        .sidenav-inner li {
+            padding: 0.75rem 1.7rem;
+            color: #9B9CA5;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .container h2 {
+            font-size: 1.313rem;
+            padding-bottom: 0.75rem;
+            font-weight: normal;
+        }
+
+        .container h3 {
+            font-size: 1.113rem;
+            padding-bottom: 0.75rem;
+            padding-top: 2rem;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .container h4 {
+            padding-bottom: 0.75rem;
+        }
+
+        .container .card {
+            width: 100%;
+            height: 150px;
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+            background: #fff;
+            box-shadow: 0 10px 30px 0 rgba(24, 28, 33, 0.04);
+        }
+
+        .container .table {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 10px 30px 0 rgba(24, 28, 33, 0.04);
+            padding: 1.3rem 1.5rem;
+        }
+
+        .container .table table {
+            width: 100%;
+            border-top: 1px solid #f1f1f2;
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+        .container .table table a {
+            color: #4E5155;
+            text-decoration: underline;
+        }
+
+        .container .table table a:visited {
+            color: #4578bd;
+        }
+
+        .container .table table th {
+            border-bottom: 2px solid #f1f1f2;
+            padding: 0.625rem;
+            text-align: left
+        }
+
+        .container .table table td {
+            border-bottom: 1px solid #f1f1f2;
+            padding: 0.625rem;
+        }
+
+        .container .table table th:nth-child(1) {
+            text-align: center;
+        }
+
+        .container .table table td:nth-child(1) {
+            text-align: center;
+        }
+
+        .container .table table tr:hover {
+            background: #f1f1f1;
+        }
+
+        .container .table .ce {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="inner">
+            <div id="sidenav">
+                <div class="brand">
+                    <h1>웹디자인기능사</h1>
+                </div>
+                <ul class="sidenav-inner">
+                    <li><a href="#">포트폴리오 3기</a></li>
+                </ul>
+            </div>
+            <div id="contents">
+                <div class="navbar">웹표준기반 스마트UI/UX 디자인콘텐츠제작_B</div>
+                <div class="container">
+
+                    <h3>포트폴리오</h3>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:8%">
+                                <col style="width:8%">
+                                <col style="">
+                                <col style="">
+                                <col style="">
+                                <col style="">
+                                <col style="width:3%">
+                                <col style="width:3%">
+                                <col style="width:3%">
+                                <col style="width:3%">
+                                <col style="width:3%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="ce">번호</th>
+                                    <th class="ce">이름</th>
+                                    <th class="ce">완성</th>
+                                    <th class="ce">포트폴리오</th>
+                                    <th class="ce">깃헙</th>
+                                    <th class="ce">닷홈</th>
+                                    <th class="ce">티스토리</th>
+                                    <th class="ce">웹</th>
+                                    <th class="ce">제</th>
+                                    <th class="ce">자</th>
+                                    <th class="ce">H</th>
+                                    <th class="ce">C</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ce">1</td>
+                                    <td class="ce">강민정</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/Kangminjeong0228/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://min0228.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://min0228.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/3agU9FIXicIyDTnOFfNIWh/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=19%3A80" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/DnU373qHBTYbQrt5byQGTI/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/1UsM6RQLhx2zinWlWeyp4T/Javascript?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/seIlpp5K11gLscG3bIWD6p/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/VUlqfBT24oVSfAlZwGArYr/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">2</td>
+                                    <td class="ce">김소라</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/ssra91/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="https://ssra91.github.io/dothome1/index.html" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://sodya.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/8R6zHXG844TQIgmn6nCFrW/WEBSTANDARD?node-id=4%3A144" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/K68LgkQTihjEKOxYmYNKTI/jQuery?node-id=47%3A0" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/0gXfhkLzaIyUILiopg0PAG/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/IyYXNziIDsPEp97DvJctnd/HTML?node-id=85%3A0" target="_blank">h</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Xrfk336VEBziMAkGMv1UZy/css?node-id=144%3A0" target="_blank">c</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">3</td>
+                                    <td class="ce">김아영</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/ayou2017/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="ayou0911.dothome.co.kr" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://ahu-ahu.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/VPZ5WmOG8zKUarxSJZZPzl/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/l82VUcXJuJp3viWAnDRr7a/jQurey?node-id=5%3A0" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/W3l4sCmBtGhnkchuKTJneB/javascript?node-id=342%3A0" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/K0FK0Zr6qhe26jIwhLyh7b/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/K0FK0Zr6qhe26jIwhLyh7b/HTML?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">4</td>
+                                    <td class="ce">김정현</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/junghyunnn/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://wbslsj200.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://wbslsj200.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/4v2GMxZ3peVLTaW9mRCtCy/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/IYqyYQAsaoybOLAgdJ1BvX/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/tY53kg1Ib12tK6cNUlQrZy/jquery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Mqc4lBcDg81vUFgXW8shFg/html?node-id=0%3A1" target="_blank">h</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/YBerbujznJkhzTNPKbbqar/css?node-id=0%3A1" target="_blank">c</a></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="ce">5</td>
+                                    <td class="ce">김지원</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/jiwon506/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://kjw911108.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://smartwebuiux.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/hvv5sqe0rRwn0VFq2HOZox/%EC%9B%B9%ED%91%9C%EC%A4%80-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8-%EC%B5%9C%EC%A4%91%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0%3A1">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/jvgxlsQH2iI3SqRqldcevX/jQuery?node-id=0%3A1">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/LSfZURsOdTEblgoxBXpSLg/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Wk0VtIb8bKuw6EvFU3FAbK/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/AQi3wpkOR7Wz0T1wVXGA3S/css?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">6</td>
+                                    <td class="ce">김채영</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="#https://github.com/kim-chae-young/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="#http://cheyoung12.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="#https://chae04044.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/QAutnEVJhbRx8ZgBaMOA2Y/%EC%9B%B9%ED%91%9C%EC%A4%80-%EA%B0%80%EC%9D%B4%EB%93%9C?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/JrHRPiiiGqyllMv6yLv3WQ/jquery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/JzTHMxrI3jJLgB4YxmfXkU/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/y179sCul5B5fOLXo2KwNEk/HTML?node-id=0%3A1" target="_blank">h</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/vRK0YJwjdwrUjSFQPaE2lQ/%EC%88%98%EC%97%85css?node-id=0%3A1" target="_blank">c</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">7</td>
+                                    <td class="ce">노순미</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/nosoonmi7420/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://nomi742003.dothome.co.kr/ " target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://nomi742003.tistory.com/ " target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/2QygtiItSNRB2q4cu1hBUO/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-               %EB%9D%BC%EC%9D%B8?node-id=25%3A67 " target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/mjUgxObIFDnjB2R7DKJN96/jQuery?node-id=0%3A1  " target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/w1Y0Wmw6Uf5LxaTYgi0NUv/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/seQ1yaCWAmNk7W1NxfoiJS/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/4ZRcaofRXphwTrtpVpoU4X/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                <td class="ce">8</td>
+                                    <td class="ce">도하은</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/DOHAEUN/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://snan8800.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://ssaa0088.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/bwyhYUfGHWriuaNdd6crhI/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/dVWE8jcMCLC4v1E6o6Qx2S/jquery" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/RugKihPuDF2hKgj2h7IODb/Javascript" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/CQT2dTSuR4kZ6mnJi3iyNi/html-reference-book" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/iRmgWiPFgxyWvNziKvOuTo/css?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">9</td>
+                                    <td class="ce">박상현</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/park-sanghyun/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://pasahu13.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://pasahu13.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/ipWql5Uo1ldSOfOOp44AUJ/%EC%9B%B9-%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/qT1g6NTV0N5ZsuR5Ibif87/jquery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/lzT8YbGLsq63FfZgtFkAKG/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/KGR8oyZdBvmfwKA5cJrfEl/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/eK0eRbwikL4VHDlK24tm2v/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">10</td>
+                                    <td class="ce">서예인</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://seoyein0322.github.io/dothome1/" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://yein0322.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://yein-99.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Tv2kex96yTW8h4J6glvLxK/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/QFSo4Sw2T4MTKj3hnijNGo/jQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/WSL6nWIkvgxWnGoM9zUSgD/JAVASCRIPT?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/1hfUzLjjXzLCnl9y2W4RC5/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/r51RjcC0davKET2EJ9T1gC/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">11</td>
+                                    <td class="ce">신현서</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/hyunseo418/dothome" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://paneoy.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://paneoy.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/OtF1mhT2gOi7MSviAv9X7H/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Tan73UaM7iTe7dxFrREJun/%EC%88%98%EC%97%85-jQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/xnvvLsKxO4O9iltDFOoiKS/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/xurKeifMgUHxQL8RbmARnS/%EC%88%98%EC%97%85-HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/NBGqsvhKIcQmS4lqCZqpdH/%EC%88%98%EC%97%85-CSS?node-id=1%3A3" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">12</td>
+                                    <td class="ce">원용완</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/yongwan98/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://yongwan1998.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://wyw1998.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/MxGKoMWRu2BMLXpys4Evdg/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">W</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/NoJTsWMVG2DaG8DEilp0Hp/jQuery?node-id=0%3A1" target="_blank">J</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/SiBWKOw98OrW9E7GTvqrGD/Javascript?node-id=0%3A1" target="_blank">J</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/5pXup2tLkUIdFS5fOznRO2/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/eGhU3CKjUarYISLRbtCczj/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">13</td>
+                                    <td class="ce">윤소정</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/so-jeong-yun/dothome1" target="_blank">>깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://yuj0928.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://yunssoblog.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/pWnPDv5lPxh9jZxKrLH0Cv/%EC%9B%B9%ED%91%9C%EC%A4%80-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/KoIY5l5Z2Bto5bUoCmtNsA/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/YnIGQptgSWuCsJ2LokHwHa/javascript_1?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/nsQM5ioXB8kkGZCuqS9Tzy/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/t9T2zu8nvqGJ79uQQRuJLM/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">14</td>
+                                    <td class="ce">이희원</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/heemwon/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="heemwon.dothome.co.kr" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://heemwon.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/CsXXil2Ypd6gBOevFipXL7/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/gkPhxSAjAGd0cOYlnTz5B4/%EC%88%98%EC%97%85-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/wRxyza3YaQNiz8cUrLFMP3/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/WpV0FiGXXztZiNjvN1JzCc/%EC%88%98%EC%97%85-HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/g4rNhZkT8JgPYm9rTxFbQP/%EC%88%98%EC%97%85-CSS?node-id=115%3A7" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">2</td>
+                                    <td class="ce">임보람</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="#https://github.com/limboram/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="#http://qhfka8773.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="#https://qhfka8773.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/5yWjocFwOkUlsSSf5ndAyx/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/8T19pWnDS4Uw64jIp4dkqM/%EC%88%98%EC%97%85-%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/6wLZX1A7zT1fUK6a5oN7CN/JAVASCRIPT?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/5G91bHsynD5ayWm2nT5R8Y/%EC%88%98%EC%97%85-HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="#https://www.figma.com/file/Xts39bx3pTc25EqYfDRqxG/%EC%88%98%EC%97%85-CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">16</td>
+                                    <td class="ce">임지원</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/limnangman96/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://dnjsdl678.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://coding555.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/B7IFo7Lim03XANKM1ulaRZ/%EC%9B%B9-%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/2YP1vzn1V7OGNHL6Oxptq2/jQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/mEeVUZNwEWIH1c1U1UEZPo/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/hKTXCl10NfgKcatWVc3qeh/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/LH3i6dog1OPZLaHbJkd0la/CSS?node-id=97%3A64" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">17</td>
+                                    <td class="ce">장동욱</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/wkdddnr/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://wkdddnr.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://wkdddnr.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/a1RrywtKsjz2tJoSEhfQxN/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=55%3A2" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/ES0wMbXOLC9qduAdhuNkeD/jquery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/UWXHIduwcJ4wePZDFzT71L/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/y1PkIky7eZEjWAe7CNxquL/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/sx9cmIH9YLTB8swGFsoQGh/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">18</td>
+                                    <td class="ce">장쇠원</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/thldnjs/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://thldnjs.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://jscoding.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/LfJ4JKWnkqXSkAiEIKn6NU/%EC%9B%B9-%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/WpSce7xMWfwlLq06dMd0lN/jQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Wk8cuWaRh8h4xHKwRb8N6W/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/le4ScECukyY5n91dMo6hvc/HTML-Reference-book?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/D29RpWka9BOzZ9WNVXHocq/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">19</td>
+                                    <td class="ce">장아름</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/jangar6/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://jangar6621.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://jangar6621.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="http://jangar6621.dothome.co.kr/wabstandard/" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/PVRZlc2CVdZstrLmRfj5GK/JQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/v3LPO8EiGmmCP6bA6pC9ow/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/UBp3n3ma7QLuHKUIjgXjvp/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/7Cr8rdo3FWT7CFD270yFEG/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">20</td>
+                                    <td class="ce">전민주</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/minjooo97/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="https://minjooo97.github.io/dothome1/index.html" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://jmj9703.tistory.com/ " target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/NQPIYratApz6s6jSITkEdg/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/NLSWeteCsqwXuAT5VWGCMJ/jQuery?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/3oNgx45eMnLJMW24gyVPs0/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/YmqT1NTM7LP1yppx61tcV6/%EC%88%98%EC%97%85-HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/g7BcBelBvbBvJxq1yth7x7/%EC%88%98%EC%97%85-CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">21</td>
+                                    <td class="ce">조현정</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/chohyunjung0107/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://chohyun0107.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://study0107.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/dPMKnqiFJQ7gICH62gzqji/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/oDObel34x8ZmKUBQbUQQXF/jQ?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/7wzDGtZ1LDFN1ojvb4LFQy/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/ImBIH8aPBx3pxq3fr6h78X/HTML?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/3wIUfCrPMcqLwZwEX5Dnsi/css?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">22</td>
+                                    <td class="ce">최원락</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/zxcv1685/dothome1" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://zxcv1685.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://1rrock.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/WH4Iufcwj676vZRXbZIPo3/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/SlFv7aoMhwkhDRSxdvEIs7/jQuery-Reference-Book?node-id=0%3A1" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/Hel26uwTfTTVR4eXWmXzLf/javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/5qeyugzggnj7oQVUPgLsA2/HTML-Reference-book?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/ApChUuyemh0UvRdAbvwjwn/CSS-Reference-book?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="ce">23</td>
+                                    <td class="ce">홍기영</td>
+                                    <td class="ce">0%</td>
+                                    <td class="ce"><a href="#c" target="_blank">포폴 보기</a></td>
+                                    <td class="ce"><a href="https://github.com/giyoung1225/dothome" target="_blank">깃헙 보기</a></td>
+                                    <td class="ce"><a href="http://hgy5710.dothome.co.kr/" target="_blank">닷홈 보기</a></td>
+                                    <td class="ce"><a href="https://hgy4725.tistory.com/" target="_blank">티스토리 보기</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/7r1K8a4aZfv4t0P9xPjClh/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=0%3A1" target="_blank">웹</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/UeKcn2MptNjFNDyzOA20OP/jQuery?node-id=198%3A200" target="_blank">제</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/6aGWalrr0zt5gsDzSH5AQg/Javascript?node-id=0%3A1" target="_blank">자</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/79nte954t70948miBi54cO/HTML-reference-book?node-id=0%3A1" target="_blank">H</a></td>
+                                    <td class="ce"><a href="https://www.figma.com/file/OOCzK6izUG7Rdso0tBBiEz/CSS?node-id=0%3A1" target="_blank">C</a></td>
+                                </tr>
+                                
+                                
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

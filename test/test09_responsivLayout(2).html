@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09_responsivLayout(2)</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        body {background: #e3f2fd;}
+
+        /* layout */
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 100px; background: #bbdefb;}
+        nav {width: 100%; height: 300px; background: #90caf9;}
+        aside {width: 30%; height: 400px; float: left; background: #64b5f6;}
+        .section_top {width: 70%; height: 200px; float: left; background: #42a5f5;}
+        .section_top article {width: 44%; height: 150px; margin: 3%; background: #e3f2fd; float: left; border-radius: 15px;}
+        .section_bottom {width: 70%; height: 200px; background: #2196f3; float: left;}
+        .cont1 {width: 33.3333%; height: 300px; float: left; background: #448aff;}
+        .cont2 {width: 33.3333%; height: 300px; float: left; background: #2979ff;}
+        .cont3 {width: 33.3333%; height: 300px; float: left; background: #2962ff;}
+        .box_wrap {width: 90%; height: 200px; background: #1e88e5; overflow: hidden; padding: 5%;}
+        .box_wrap article {width: 21%; height: 160px; margin: 2%; background: #e3f2fd; float: left; border-radius: 20px;}
+        footer {width: 100%; height: 100px; background: #1976d2;}
+        
+        /* media */
+        @media (max-width: 1220px){
+            .container {width: 100%;}
+            .section_top article {width: 94%;}
+            .section_top article:nth-child(2n) {display: none;}
+            .cont1 {width: 50%;}
+            .cont2 {width: 50%;}
+            .cont3 {display: none;}
+            .box_wrap article {width: 29.333%;}
+            .box_wrap article:nth-child(4n) {display: none;}
+        }
+
+        @media (max-width: 900px){
+            .section_top article {display: none;}
+            .cont1 {width: 100%; height: 200px;}
+            .cont2 {width: 100%; height: 200px;}
+        }
+
+        @media (max-width: 480px){
+            aside {width: 100%; height: 150px;}
+            .section_top {width: 100%; height: 150px;}
+            .section_bottom {width: 100%; height: 150px;}
+            .box_wrap {height: 500px;}
+            .box_wrap article {width: 96%; height: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <!-- header -->
+            <nav></nav>
+            <!-- nav -->
+            <aside></aside>
+            <!-- aside -->
+            <section class="section_top">
+                <article></article>
+                <article></article>
+            </section>
+            <!-- section_top -->
+            <section class="section_bottom"></section>
+            <!-- section_bottom -->
+            <article class="cont1"></article>
+            <!-- cont1 -->
+            <article class="cont2"></article>
+            <!-- cont2 -->
+            <article class="cont3"></article>
+            <!-- cont3 -->
+            <section class="box_wrap">
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+            <!-- box_wrap -->
+            <footer></footer>
+        </div>
+        <!-- container -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>

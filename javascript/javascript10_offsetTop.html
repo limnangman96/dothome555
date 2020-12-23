@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetTop</title>
+    <style>
+        .box1 {
+            width: 250px;
+            height: 50px;
+            background-color: lightseagreen;
+            margin-top: 420px;
+            border-radius: 100px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .box2 {width: 250px;
+            height: 50px;
+            background-color: #ccc;
+            margin-top: 10px;
+            border-radius: 100px;
+            text-align: center;
+            line-height: 50px;}
+    </style>
+</head>
+<body>
+    <div class="box1">이 박스의 offsetTop 값은 ? </div>
+    <div class="box2"></div>
+
+    <script>
+        document.querySelector(".box2").innerText = document.querySelector(".box1").offsetTop;
+    </script>
+</body>
+</html>

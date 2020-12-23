@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray05 속성-addClass(1)</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {font-family: 'NEXON Lv2 Gothic';}
+        li.red {color:#c7254e; background: #f9f2f4; border: 1px dashed #a51a3d;}
+
+    </style>
+</head>
+<body>
+
+    <h1>탐색</h1>
+    <ul>
+        <li>addClass() 메서드는 선택한 요소에 클래스를 생성하고, removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.</li>
+        <li>toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있는 경우에는 삭제합니다.</li>
+        <li>hasClass() 메서드는 선택한 요소에 지정한 클래스가 있으면true를 반환하고, 없으면 false를 반환합니다.</li>
+    </ul>
+    <button class="btn1">addClass()</button>
+    <button class="btn2">removeClass()</button>
+    <button class="btn3">toggleClass()</button>
+    
+     <!-- script -->
+     <script src="jquery.min_1.1.24.js"></script>
+     
+    <script>
+        // $("li:odd").css({backgroundColor: "red", color: "#fff"});
+        // $("li:nth-child(2)").css({backgroundColor: "red", color: "#fff"});
+        // $("li:contains('toggle')").css({backgroundColor: "red", color: "#fff"});
+        // $("li:eq(1)").css({backgroundColor: "red", color: "#fff"});
+        // $("li:nth-of-type(2)").css({backgroundColor: "red", color: "#fff"});
+        // $("li:nth-child(even)").css({backgroundColor: "red", color: "#fff"});
+        // $("li:nth-child(2n)").css({backgroundColor: "red", color: "#fff"});
+
+        $(".btn1").click(function(){
+            // $("li:odd").css("backgroundColor", "red");
+            $("li:odd").addClass("red");
+        });
+
+        $(".btn2").click(function(){
+            $("li:odd").removeClass("red");
+        });
+
+        $(".btn3").click(function(){
+            $("li:odd").toggleClass("red");
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pageYOffset</title>
+    <style>
+        body {height: 10000px; width: 10000px;}
+        div {width: 150px; height: 150px; color: navy; background-color: #ADC0CB; 
+        border-radius: 50%; border: 1px dashed navy; text-align: center; line-height: 150px;}
+
+        .scrollTop {position: fixed; left: 30px; top: 30px;} 
+        .scrollTop::before {content: "scrollTop ";}
+        .scrollLeft {position: fixed; left: 200px; top: 30px;}
+        .scrollLeft::before {content: "scrollLeft ";}
+    </style>
+</head>
+<body>
+
+    <div class="scrollTop">0</div>
+    <div class="scrollLeft">0</div>
+
+    <script>
+
+        window.addEventListener("scroll", function(){
+            document.querySelector(".scrollTop").innerText = pageYOffset;
+            document.querySelector(".scrollLeft").innerText = pageXOffset;
+        });
+    </script>
+</body>
+</html>

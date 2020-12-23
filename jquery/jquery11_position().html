@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray11 position()/offset()</title>
+    <style>
+        div {line-height: 40px; text-align: center; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+        .circle1 {position: absolute; left: 100px; top: 400px; width: 40px; height: 40px; border-radius: 50%;}
+        .circle2 {position: absolute; right: 100px; bottom: 400px; width: 40px; height: 40px; border-radius: 50%;}
+    </style>
+</head>
+<body>
+
+    <div class="circle1">1</div>
+    <div class="circle2">2</div>
+
+    <button class="btn1">circle1</button>
+    <button class="btn2">circle2</button>
+    <button class="btn3">position1</button>
+    <button class="btn4">position2</button>
+    <ul>
+        <li><span>position().left : </span><span class="pl">0</span></li>
+        <li><span>position().top : </span><span class="pt">0</span></li>
+        <li><span>position().bottom : </span><span class="pb">0</span></li>
+        <li><span>position().right : </span><span class="pr">0</span></li>
+        <li><span>offset().left : </span><span class="ol">0</span></li>
+        <li><span>offset().top : </span><span class="ot">0</span></li>
+        <li><span>width() : </span><span class="wi">0</span></li>
+        <li><span>height() : </span><span class="he">0</span></li>
+    </ul>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+      $(".btn1").click(function(){
+        const pl = $(".circle1").position().left;
+        const pt = $(".circle1").position().top;
+        const pb = $(".circle1").position().bottom;
+        const pr = $(".circle1").position().right;
+        const ol = $(".circle1").offset().left;
+        const ot = $(".circle1").offset().top;
+        const wi = $(".circle1").width();
+        const he = $(".circle1").height();
+
+        $(".pl").text(parseInt(pl));
+        $(".pt").text(parseInt(pt));
+        $(".pb").text(parseInt(pb));
+        $(".pr").text(parseInt(pr));
+        $(".ol").text(parseInt(ol));
+        $(".ot").text(parseInt(ot));
+        $(".wi").text(parseInt(wi));
+        $(".he").text(parseInt(he));
+      });
+
+      $(".btn2").click(function(){
+        const pl = $(".circle2").position().left;
+        const pt = $(".circle2").position().top;
+        const pb = $(".circle2").position().bottom;
+        const pr = $(".circle2").position().right;
+        const ol = $(".circle2").offset().left;
+        const ot = $(".circle2").offset().top;
+        const wi = $(".circle2").width();
+        const he = $(".circle2").height();
+
+        $(".pl").text(parseInt(pl));
+        $(".pt").text(parseInt(pt));
+        $(".pb").text(parseInt(pb));
+        $(".pr").text(parseInt(pr));
+        $(".ol").text(parseInt(ol));
+        $(".ot").text(parseInt(ot));
+        $(".wi").text(parseInt(wi));
+        $(".he").text(parseInt(he));
+      });
+
+      $(".btn3").click(function(){
+          $(".circle1").offset({top:70, left:200});
+      });
+      $(".btn4").click(function(){
+          $(".circle2").offset({top:270, left:20});
+      });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect06 - javascript</title>
+    <style>
+        @font-face {
+            font-family: 'HangeulNuri-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *,*::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+
+        body {
+            background: url(img/images04@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #a18cd1;
+            background-blend-mode: multiply;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'HangeulNuri-Bold';
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(18,9,20,0.7);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #fff;
+            color: #222;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        .contents {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
+        }
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: orange;
+            border-bottom: 2px dashed orange;
+            font-style: normal;
+        }
+        .contents p .word {
+            color: orange;
+            font-size: 4vw;
+            /* text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4),
+                        -5px 10px 0px rgba(255, 35, 251, 0.4),
+                        10px -5px 0px rgba(255, 255, 73, 0.4),
+                        -10px 5px 0px rgba(102, 249, 255, 0.4); */
+        }
+        .cursor {
+            position: absolute;
+            width: 20px; height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+    <h1>mouseEffect06 - javascript</h1>
+    <p>미우스이펙트 - 마우스가 움직일 때 움직이는 text-shadow 효과 주기</p>
+    </div>
+    <div class="info right">
+    <ul>
+        <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+        <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+        <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+        <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
+        <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+        <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html" class="active">6</a></li>
+        <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+        <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
+        <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
+    </ul>
+    </div>
+
+    <!-- <div class="info bottom">
+    <ul>
+        <li>pageX : <span class="pageX">0</span> </li>
+        <li>pageY : <span class="pageY">0</span> </li>
+    </ul>
+    </div> -->
+    <!-- //info -->
+
+    <main>
+        <div class="contents">
+            <p>The way to get started is to quit talking and <em class="word">begin</em> doing.</p>
+            <p>무엇인가를 시작하려면 말을 멈추고 <em class="word">행동</em>해야 한다.</p>
+            <p>
+                <strong class="word">★</strong>
+                <strong class="word">★</strong>
+                <strong class="word">★</strong>
+                <strong class="word">★</strong>
+                <strong class="word">★</strong>
+            </p>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const word = document.querySelector(".word");
+
+        // 별이 하나일 때
+        // const shadow = e => {
+        //     const {x, y} = e;
+        //     const rect = word.getBoundingClientRect();
+        //     const mouseX = (x - rect.left - rect.width/2) / rect.width * 5;
+        //     const mouseY = (y - rect.top - rect.height/2) / rect.height * 5;
+        //     console.log(mouseX);
+
+        //     word.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
+        //                             ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
+        //                             ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
+        //                             ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`;
+        // }
+        // window.addEventListener("mousemove", shadow);
+
+        // 별이 두개일 때
+        window.addEventListener("mousemove", e => {
+            document.querySelectorAll(".word").forEach( elem => {
+                const {x, y} = e;
+                const rect = elem.getBoundingClientRect();
+                const mouseX = (x - rect.left - rect.width/2) / rect.width * 5;
+                const mouseY = (y - rect.top - rect.height/2) / rect.height * 5;
+                console.log(mouseX);
+
+                elem.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
+                                        ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
+                                        ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
+                                        ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1402 @@
+{
+    "status": "ok",
+    "status_message": "Query was successful",
+    "data": {
+      "refer": [
+        {
+          "type": "HTML",
+          "id": "A",
+          "title": "<a>",
+          "desc": "<a> 태그는 하이퍼 링크를 정의합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<address>",
+          "desc": "<address> 요소는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.",
+          "category": "-",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "B",
+          "title": "<button>",
+          "desc": "<button> 요소는 클릭 가능한 버튼을 나타냅니다. 버튼은 양식 내부는 물론 간단한 표준 버튼 기능이 필요한 곳이라면 문서 어디에나 배치할 수 있습니다.",
+          "category": "-",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "D",
+          "title": "<div>",
+          "desc": "<div> 태그는 문서의 영역을 나누거나 그룹화 할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<dl>",
+          "desc": "<dl>태그는 용어를 설명하는 목록을 만듭니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<dd>",
+          "desc": "<dd>는 용어의 제목을 넣을 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<dt>",
+          "desc": "<dt>는 용어의 제목을 넣을 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "E",
+          "title": "<em>",
+          "desc": "<em>태그는 강조 텍스트를 정의하는 데 사용됩니다. 내부 콘텐츠는 일반적으로 기울임 꼴로 표시됩니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "F",
+          "title": "<form>",
+          "desc": "사용자와 웹사이트 또는 어플리케이션이 서로 상호 작용하는 것 중 중요한 기술 중에 하나입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<fieldset>",
+          "desc": "<fieldset> 태그는 <form> 요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<figure>",
+          "desc": "<figure> 요소는 독립적인 콘텐츠를 표현합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<figcaption>",
+          "desc": "<figcaption> 요소를 사용해 설명을 붙일 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "H",
+          "title": "<h1>~<h6>",
+          "desc": "<h1>~<h6> 태그는 제목 영역을 나타낼 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "I",
+          "title": "<i>",
+          "desc": "<i>태그는 아이콘 요소에 의미를 추가합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<img>",
+          "desc": "<img> 요소는 문서에 이미지를 넣습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<input>",
+          "desc": "<input>태그는 사용자가 데이터를 입력 할 수있는 입력 필드를 지정한다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "L",
+          "title": "<li>",
+          "desc": "<li>태그는 list의 약자로, 목록을 만드는 태그입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<legend>",
+          "desc": "<legend> 태그는 <fieldset> 요소의 캡션(caption)을 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<label>",
+          "desc": "<label> 요소는 사용자 인터페이스 항목의 설명을 나타냅니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "M",
+          "title": "<meta>",
+          "desc": "<meta> 태그는 해당 문서에 대한 정보인 메타데이터(metadata)를 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "N",
+          "title": "<nav>",
+          "desc": "<nav> 요소는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "O",
+          "title": "<ol>",
+          "desc": "<ol> 순서(숫자)가 있는 목록을 만드는 태그입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "P",
+          "title": "<p>",
+          "desc": "<p> 태그는 paragraph, 즉 문단의 약자로, 하나의 문단을 만들 때 쓰입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<pre>",
+          "desc": "<pre> 태그는 미리 정의된 형식(preformatted)의 텍스트를 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<pre>",
+          "desc": "<pre> 태그는 미리 정의된 형식(preformatted)의 텍스트를 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<picture>",
+          "desc": "<picture> 태그는 <img> 요소의 다중 이미지 리소스(multiple image resources)를 위한 컨테이너를 정의 할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "S",
+          "title": "<span>",
+          "desc": "스타일을 적용하기 위해서, 또는 lang 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<section>",
+          "desc": "<section> 요소는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "<source>",
+          "desc": "<source> 태그는 <audio> 요소나 <video> 요소, <picture> 요소에서 사용할 수 있는 다중 미디어 자원(multiple media resources)을 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "T",
+          "title": "<table>",
+          "desc": "<table> 태그는 데이터를 포함하는 셀(cell)들의 행과 열로 구성된 2차원 테이블을 정의할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "U",
+          "title": "<ul>",
+          "desc": "순서가 없는 목록 요소를 만듭니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "ETC",
+          "title": "aria",
+          "desc": "장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션에 더 쉽게  접근할 수 있는 방법을 정의하는 여러 특성을 말합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "Semantic",
+          "desc": "시맨틱 (Semantic)은 의미가 부여된 뜻으로 div태그에서 파생된 태그입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "CSS",
+          "id": "B",
+          "title": "block",
+          "desc": "요소 안 내용 길이에 상관없이 요소 자체가 한 줄 전체를 차지하는 요소를 말합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "background",
+          "desc": "background 속성은 태그의 배경을 지정하는 속성으로, font 속성과 비슷하게 세부적인 속성들을 한번에 쓸 수 있는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "background image",
+          "desc": "background-image는 이미지를 배경으로 사용하게 하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "backface visibility",
+          "desc": "CSS backface-visibility 속성은 요소의 뒷면이 사용자를 향할 때 보여야 하는지 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "border",
+          "desc": "border는 테두리를 만드는 속성입니다. 위, 오른쪽, 아래, 왼쪽 선을 한 번에 정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "border-radius",
+          "desc": "요소 테두리 경계의 꼭짓점을 둥글게 만듭니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "box-shadow",
+          "desc": "box-shdow는 요소의 테두리를 감싼 그림자 효과를 추가합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "box-sizing",
+          "desc": "box-sizing은 박스의 크기를 화면에 표시하는 방식을 변경하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "C",
+          "title": "cursor",
+          "desc": "cursor 속성을 이용하면 해당 태그 위에 위치하는 마우스 커서의 모양을 바꿀 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "calc",
+          "desc": "calc()는 괄호 안의 식을 계산한 결과를 속성값으로 사용하게 해주는 함수입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "clear",
+          "desc": "float 속성을 통해 태그를 부유시킨 이후 문서의 흐름을 제거하기 위해 쓰입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "E",
+          "title": "em / rem",
+          "desc": "길이의 단위로 em과 rem은 상대적으로 크기를 정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "F",
+          "title": "font",
+          "desc": "font 속성은 글자의 폰트를 정의하는 속성인데, 여러 기능을 동시에 가지고 있는 속성이기도 합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "float",
+          "desc": "웹페이지에서 이미지를 어떻게 띄워서 텍스트와 함께 배치할 것인가에 대한 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "G",
+          "title": "grid system",
+          "desc": "그리드 시스템(Grid System)에서 ‘Grid’는 격자나 바둑판 모양의 눈금을 뜻하며 일반적으로는 수직과 수평으로 면이 분할된 것을 의미합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "I",
+          "title": "Inline",
+          "desc": "요소 안 내용 길이에 좌우, 해당 요소 안 내용 길이 만큼만 너비 차지하는 요소를 말합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "L",
+          "title": "line-height",
+          "desc": "line-height는 줄 높이를 정하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "letter spacing",
+          "desc": "글자 사이의 간격은 letter-spacing으로, 단어 사이의 간격은 word-spacing으로 정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "M",
+          "title": "Margin",
+          "desc": "Margin 속성은 요소의 바같쪽 여백을 설정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "O",
+          "title": "overflow",
+          "desc": "overflow는 내용이 요소의 크기를 벗어났을 때 어떻게 처리할지를 정하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "P",
+          "title": "perspective",
+          "desc": "perspective CSS 속성은 3D 위치 요소에 원근감을주기 위해 z = 0 평면과 사용자 사이의 거리를 결정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "pointer events",
+          "desc": "pointer-events은 그래픽 요소가 어떤 상황에서 포인터 이벤트의 대상이 될 수 있는지 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "position",
+          "desc": "position 속성은 HTML 요소가 위치를 결정하는 방식을 설정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "T",
+          "title": "text-shadow ",
+          "desc": "영역을 벗어나는 텍스트를 사용자에게 알리는 방법을 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "transform",
+          "desc": " 회전, 크기 조절, 기울이기, 이동 효과를 부여할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "text-overflow",
+          "desc": "박스 안에 내용이 넘칠 때 텍스트를 어떻게 처리할지 지정하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "text-indent",
+          "desc": "text-indent 속성은 들여쓰기 효과를 지정합니다. 문단의 첫번째 줄을 지정한 길이만큼 들여쓰기 합니다",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "text-align",
+          "desc": "text-align 속성은 텍스트의 정렬 방향을 의미합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "text-transfrom",
+          "desc": "text-transform은 대문자로 또는 소문자로 바꾸는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "U",
+          "title": "user-select",
+          "desc": "user-select 속성은 사용자가 텍스트를 선택할 수 있는지 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "W",
+          "title": "Width / Height",
+          "desc": "width와 height 속성은 각각 가로 길이, 세로 길이를 의미합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "white-space",
+          "desc": "white-space는 스페이스와 탭, 줄바꿈, 자동줄바꿈을 어떻게 처리할지 정하는 속성입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "word-break",
+          "desc": "word-break 속성은 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "Z",
+          "title": "z-index",
+          "desc": "position 속성을 이용하면 요소를 겹치게 놓을 수 있습니다. 이때 요소들의 수직 위치를 z-index 속성으로 정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "ETC",
+          "title": "CSS선택자",
+          "desc": "선택자(Selector)는 스타일을 적용하기 위한 대상을 뜻하며, HTML 요소를 사용할 수도 있고 ID나 Class 형태로 정의할 수도 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "CSS 선언 방법",
+          "desc": "nternal  Style / Inline Style / External Style 구분할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "색상표현 방법",
+          "desc": "16진수 표기법(헥사코드) / RGB & RGBA / HSL & HSLA / 색상 이름 표기 방법이 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "이미지 표현 방법",
+          "desc": "웹 문서에서 이미지를 표현하는 방법은 img 태그와 background로 설정할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "이미지 스프라이트",
+          "desc": "아이콘 또는 장식을 위한 이미지 요소들을 스프라이트 기법을 활용하여 파일의 사이즈를 최소화하고 효율성을 높일 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "IR 효과",
+          "desc": "IR 기법은 이미지 대체 텍스트를 제공하기 위한 CSS 기법으로 다양한 CSS 기법을 사용하여 이미지 대체 텍스트를 제공 할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "가상요소",
+          "desc": "가상클래스는 별도의 class를 지정하지 않아도 지정한 것처럼 요소를 선택할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "@media",
+          "desc": "미디어 쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "!important",
+          "desc": "같은 속성을 여러 번 정의했을 때, 나중에 설정한 값이 적용됩니다. 만약 나중에 설정한 값이 적용되지 않게 하려면 속성값 뒤에 !important를 붙입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "JAVASCRIPT",
+          "id": "변수",
+          "title": "변수",
+          "desc": "변수(Variables)는 변하는 데이터 (값)을 저장할 수 있는 메모리 공간입니다. 변수는 하나의 값만 넣을 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "문자형",
+          "desc": "문자형(String) 데이터는 문자나 숫자를 큰 따옴표 또는 작은 따옴표로 감싸고 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "숫자형",
+          "desc": "숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "typeof ",
+          "desc": "typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "연산자",
+          "title": "산술 연산자",
+          "desc": "산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "대입 연산자",
+          "desc": "대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "비교 연산자",
+          "desc": "두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자 입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "증감 연산자",
+          "desc": "증감 연산자에는 숫자형 데이터를 1씩 증가시키는 증가 연산자 (++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "논리 연산자",
+          "desc": "논리 연산자에는 ∥(or), &&(and), !(not)이 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "조건문",
+          "title": "if",
+          "desc": "if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "else",
+          "desc": "else 문은 조건식을 만족할(true) 경우와 만족하지 않을 (false) 경우에 따라 실행되는 코드가 달라집니다. 두 가지 결과가 나올 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "다중 if",
+          "desc": "다중 if 문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어져 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "switch",
+          "desc": "해당 조건에 맞는 case를 구분해서 수행하는 제어문입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "삼항연산자 ",
+          "desc": "조건부 연산자(=삼항연산자)는 조건을 처리하는 if문의 다른 형태 제어문입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "반복문",
+          "title": "while",
+          "desc": "while문은 조건식을 만족할 때 까지 코드를 여러 회 반복하여 실행할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "do while",
+          "desc": "do while문은 반드시 한 번은 코드를 실행하고 조건식을 검사합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)" 
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "for",
+          "desc": "for문은 조건식을 만족할 때 까지 특정 코드를 반복해서 실행합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "중첩 for",
+          "desc": "for문 안에 for문을 사용한 것을 중첩 for문이라고 합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "break",
+          "desc": "break문은 반복문을 강제로 종료할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "continue",
+          "desc": "for문이나 while문의 {}안에서 continue 문장을 만난 순간 continue문 아래에 있는 실행해야 하는 문장들을 건너 뛰고, 다음 반복을 시작합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "함수",
+          "title": "선언적 함수",
+          "desc": "가장 기본적으로 사용하는 함수의 형태입니다. 기본적으로 함수는 함수 이름을 설정하고 함수 이름을 호출해야 실행이 됩니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "익명 함수",
+          "desc": "익명 함수는 함수에 이름이 없기 때문에 변수에 넣어서 사용하는 함수입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "매개변수가 있는 함수",
+          "desc": "매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "Arguments 함수",
+          "desc": "함수 정의문에서 arguments를 사용하면 매개변수를 사용하는 것처럼 함수 호출문의 값을 받아올 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "리턴값이 있는 함수",
+          "desc": "return문은 함수에서 결괏값을 반환할 때 사용합니다.(return=결과)",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "재귀함수",
+          "desc": "재귀함수는 함수 정의문 내에 함수를 다시 호출하여 함수를 반복문처럼 사용할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "콜백 함수",
+          "desc": "함수를 변수에 저장하고 변수를 함수의 인자로 사용하여 매개변수에 전달하는 함수입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "내부 함수",
+          "desc": "내장 객체를 생성할 때는 이미 자바스크립트 엔진에 내장되어 있는 객체 생성자 함수를 사용하여 객체를 생성 합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "객체 생성자 함수",
+          "desc": "객체를 생성할 때 사용하는 함수 입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "프로토타입 함수",
+          "desc": "프로토타입(Prototype)의 사전적 의미는 '원형'입니다. 자바스크립트에서 '원형'은 객체 생성자 함수를 의미합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "화살표 함수",
+          "desc": "화살표 함수는 항상 익명입니다. 이  함수 표현은 메소드 함수가 아닌 곳에 가장 적합 합니다. 그래서 생성자로서 사용할 수 없습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "A",
+          "title": "addEventListener",
+          "desc": "addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "C",
+          "title": "classList",
+          "desc": "classList는 읽기 전용 프로퍼티로 공백으로 구분된 문자열인 element.className을 통해 엘리먼트의  클래스 목록에 접근하는 방식을 대체하는 간편한 방법입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)"
+        },
+        {
+          "type": "",
+          "id": "F",
+          "title": "forEach",
+          "desc": "forEach()는 주어진 callback을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "for in (for of) ",
+          "desc": "for - in문은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "G",
+          "title": "getElementById",
+          "desc": "getElementById() 메서드는 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "I",
+          "title": "innerText innerHTML",
+          "desc": "innerText는 문자열 그대로를 리턴하는 반면, innerHTML은 태그를 적용시켜, 즉 문자열을 html로 인식하여 리턴합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "M",
+          "title": "Math.round()",
+          "desc": "Math.round() 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "Math.random()",
+          "desc": "Math.random() 함수는 난수0이상 1이하의 랜덤 숫자를 만듭니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "O",
+          "title": "object",
+          "desc": "자바스크립트는 객체(object) 기반 언어입니다. 객체는 기능과 속성을 가지고 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "offsfetX / offsetY",
+          "desc": "이벤트 대상이 기준이 됩니다. 전체 문서를 기준으로 합니다.(스크롤 화면 포함)",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "offsetTop",
+          "desc": "window의 읽기 전용 속성으로, 상단과 현재 요소의 상대적 거리를 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "preventDefault()",
+          "desc": "a 태그나 submit 태그는 누르게 되면 href 를 통해 이동하거나 , 창이 새로고침하여 실행됩니다. preventDefault 를 통해 이러한 동작을 막아줄 수 있습니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "pageX,YOffset",
+          "desc": "위 메서드는 전체 문서를 기준으로 x,y 좌표를 반환 합니다. 스크롤 화면을 포함해서 측정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "parseInt",
+          "desc": "문자열을 정수로 바꾸는 함수입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "Q",
+          "title": "querySelector",
+          "desc": "리턴되는 값은 인자를 받아 일치하는 baseElement의 자손의 엘리먼트를 갖고 옵니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "R",
+          "title": "requestAnimationFrame",
+          "desc": "브라우저에게 수행하기를 원하는 애니메이션을 알리고 다음 리페인트가 진행되기 전에 해당 애니메이션을 업데이트하는 함수를 호출하게 합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "S",
+          "title": "setInterval",
+          "desc": "setInterval은 일정 시간 마다 함수를 실행하는 방법입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "setTimeout",
+          "desc": " setTimeout는 일정 시간이 지난 후에 함수를 실행하는 방법입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "setAttribute",
+          "desc": "setAttribute()는 선택한 요소(element)의 속성(attribute) 값을 정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "split",
+          "desc": "split는 파라미터로 구분자를 주면 해당 구분자를 기준으로 문자열을 잘라 리스트 형식으로 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "screenX/screenY",
+          "desc": "이 메서드는 모니터 화면을 기준으로 좌표를 제공합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "T",
+          "title": "toString",
+          "desc": "toString() 메서드는 특정한 Number 객체를 나타내는 문자열을 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "textContent",
+          "desc": "Node 인터페이스의 textContent 속성은 노드와 그 자손의 텍스트 콘텐츠를 표현합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "JQUERY",
+          "id": "A",
+          "title": "addClass()",
+          "desc": "addClass() 메서드는 선택한 요소에 클래스를 생성합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "attr()",
+          "desc": "attr() 메서드는 선택한 요소에 새 속성을 생성하거나 기존의 속성을 변경할 때 또는 요소의 속성값을 불러올 때 사용합니다. ",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "E",
+          "title": "each()",
+          "desc": "each () 메서드는 일치하는 각 요소에 대해 실행할 함수를 지정합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "F",
+          "title": "find()",
+          "desc": "find() 탐색 선택자는 선택한 하위 요소 중에서 find()로 필터링한 요소만 선택합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "filter()",
+          "desc": "filter() 탐색 선택자는 선택한 요소중에서 filter()로 필터링한 요소만 선택합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "fadeIn()",
+          "desc": "fadeIn() 메서드는 선택된 요소의 불투명도를 숨김에서 표시 (페이딩 효과)로 점차적으로 변경합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "fadeOut()",
+          "desc": "fadeOut() 메서드는 선택한 요소의 불투명도를 표시에서 숨김 (페이드 효과)으로 점차적으로 변경합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "H",
+          "title": "hasClass()",
+          "desc": "hasClass() 메서드는 선택한 요소에 지정한 클래스가 있으면 true를 반환하고, 없으면 false를 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "hide()",
+          "desc": "hide() 메서드는 숨겨진 요소는 CSS display 속성값이 none으로 설정하여, 요소를 숨긴다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "html()",
+          "desc": "html() 메서드는 선택한 요소의 하위 요소를 가져와 문자열로 반환하거나 하위 요소를 전부 제거하고 새 요소로 바꿀 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "I",
+          "title": "index()",
+          "desc": "index() 메서드는 일치하는 요소들중 선택한 요소가 몇 번째 순번을 가지고 있는지 알 수 있는 메서드입니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "N",
+          "title": "next()",
+          "desc": "next() 메서드는 선택한 요소의 다음 형제 요소를 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "nextAll()",
+          "desc": "nextAll() 메서드는 선택한 요소의 다음 형제 요소를 모두 반환합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "nextUntil()",
+          "desc": "nextUntil() 메서드는 선택한 요소의 다음 형제 요소 중 선택자부터 조건까지 실행합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "O",
+          "title": "offset()",
+          "desc": "offset() 메서드는 문서를 기준으로 선택한 요소의 가로/세로로 떨어진 위치의 좌푯값을 반환하거나 변경할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "P",
+          "title": "position()",
+          "desc": "position() 메서드는 포지션 기준이 되는 요소를 기준으로 선택한 요소에서 가로/세로로 떨어진 위치의 좌푯값을 변환하거나 변경할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "R",
+          "title": "removeClass()",
+          "desc": "removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "removeAttr()",
+          "desc": "removeAttr() 메서드는 선택한 요소에서 기존의 속성을 삭제할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "S",
+          "title": "show()",
+          "desc": "show() 메서드는 숨겨진 요소를 CSS display 속성값이 block으로 설정하여, 요소를 표시한다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "slideUp()",
+          "desc": "slideUp() 메서드는 선택한 요소를 슬라이드 업 (숨기기)합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "slideDown()",
+          "desc": "slideDown() 메서드는 선택한 요소를 아래로 슬라이드 (표시)합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "scrollTop()",
+          "desc": "scrollTop() 메서드는 브라우저의 스크롤바가 수직/수평으로 이동한 위칫값을 불러오거나 변경할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "scrollLeft()",
+          "desc": "scrollLeft() 메서드는 선택한 요소의 가로 스크롤 막대 위치를 설정하거나 반환할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "T",
+          "title": "text()",
+          "desc": "text() 메서드는 선택한 요소에 포함되어 있는 전체 텍스트를 가져오거나 선택한 하위 요소를 전부 제거하고 새 텍스트를 생성할 때 사용합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        },
+        {
+          "type": "",
+          "id": "",
+          "title": "toggleClass()",
+          "desc": "toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있을 경우에는 삭제합니다.",
+          "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+          "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+          "element": "인라인 구조(Inline Element)"
+        }
+      ]
+    }
+  }

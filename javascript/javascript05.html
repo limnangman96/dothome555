@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //"내 이름은 '웹쓰'이며, 직업은 '웹 퍼블리셔'입니다."
+        //"내 이름은 '웹스토리보이'이며, 직업은 '프론트앤드 개발자'입니다."
+
+        //매개변수 + 함수로 출력
+        function fun1 (name, job){
+            document.write("1. 내 이름은 " + name + "이며, 직업은 " + job + "입니다. <br/>");
+        }
+        fun1("웹쓰", "웹 퍼블리셔");
+        fun1("웹스토리보이", "프론트앤드 개발자");
+        document.write("<br/>");
+
+        //변수를 선언
+        function fun2 (name, job){
+            document.write("2. 내 이름은 " + name + "이며, 직업은 " + job + "입니다. <br/>");
+        }
+        const youName1 = "웹쓰";
+        const youJob1 = "웹 퍼블리셔";
+        const youName2 = "웹스토리보이";
+        const youJob2 = "프론트앤드 개발자";
+
+        fun2(youName1, youJob1);
+        fun2(youName2, youJob2);
+        document.write("<br/>");
+
+        //객체로 선언
+        function fun3 (name, job){
+            document.write("3. 내 이름은 " + name + "이며, 직업은 " + job + "입니다. <br/>");
+        }
+        const info = [
+            {
+                name:"웹쓰", 
+                job:"웹 퍼블리셔"
+            }, {
+                name:"웹스토리보이", 
+                job:"프론트앤드 개발자"
+            }
+        ];
+        
+        fun3(info[0].name, info[0].job);
+        fun3(info[1].name, info[1].job);
+        document.write("<br/>");
+        
+        //객체 + 메서드
+        let info2 = {
+            name1 : "웹쓰",
+            job1 : "웹 퍼블리셔",
+            name2 : "웹스토리보이",
+            job2 : "프론트앤드 개발자",
+            study1 : function(){
+                document.write("4. 내 이름은 " + this.name1 + "이며, 직업은 " + this.job1 + "입니다. <br/>");
+            },
+            study2 : function(){
+                document.write("4. 내 이름은 " + this.name2 + "이며, 직업은 " + this.job2 + "입니다. <br/>");
+            }
+        }   
+    info2.study1();
+    info2.study2();
+    document.write("<br/>");
+
+    //생성자 함수 + 인스턴스
+    function Info3(name, job){
+        this.name = name;
+        this.job = job;
+        this.study = function(){
+            document.write("5. 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다. <br/>");
+        }
+    }
+    const str1 = new Info3("웹쓰", "웹 퍼블리셔");
+    const str2 = new Info3("웹스토리보이", "프론트앤드 개발자");
+
+    str1.study();
+    str2.study();
+    document.write("<br/>");
+
+    //프로토타입 메서드
+    function Info4(name, job){
+        this.name = name;
+        this.job = job;
+    }
+    Info4.prototype.study = function(){
+        document.write("6. 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다. <br/>");
+    }
+    const str3 = new Info4("웹쓰", "웹 퍼블리셔");
+    const str4 = new Info4("웹스토리보이", "프론트앤드 개발자");
+
+    str3.study();
+    str4.study();
+    document.write("<br/>");
+
+    //객체 리터럴
+    function Info5(name, job){
+        this.name = name;
+        this.job = job;
+    }
+    Info5.prototype = {
+        study1 : function(){
+            document.write("7. 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다. <br/>");
+        },
+        study2 : function(){
+            document.write("7. 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다. <br/>");
+        },
+    }
+    const str5 = new Info5("웹쓰", "웹 퍼블리셔");
+    const str6 = new Info5("웹스토리보이", "프론트앤드 개발자");
+
+    str5.study1();
+    str6.study2();
+    document.write("<br/>");
+
+    //클래스(es6) : 함수의 집합체
+    class Info6 {
+        constructor(name, job){
+            this.name = name;
+            this.job = job;
+        }
+        study(){
+            document.write("8. 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다. <br/>"); 
+        }
+    }
+    // + 인스턴스 객체 생성
+    const str7 = new Info6("웹쓰", "웹 퍼블리셔")
+    const str8 = new Info6("웹스토리보이", "프론트앤드 개발자")
+
+    // + 메서드 실행
+    str7.study();
+    str8.study();
+
+    </script>
+</body>
+</html

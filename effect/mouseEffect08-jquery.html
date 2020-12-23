@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect08 - jquery</title>
+    <style>
+        @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *,*::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+
+        body {
+            background: url(img/images09@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #ccc;
+            background-blend-mode: multiply;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: '62570체';
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(18,9,20,0.7);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #fff;
+            color: #222;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        .text-wrap {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -20%);
+            font-size: 3vw;
+        }
+        .text-wrap .line {
+            width: 100%;
+            display: flex;
+        }
+        .text-wrap .line .left {
+            width: 50vw;
+            transform: skew(0deg, -15deg);
+            overflow: hidden;
+        }
+        .text-wrap .line .left .span-wrap {
+            width: 100vw;
+            text-align: center;
+        }
+        .text-wrap .line .left .span-wrap span {
+            color: gold;
+        }
+        .text-wrap .line .right {
+            width: 50vw;
+            transform: skew(0deg, 15deg);
+            overflow: hidden;
+        }
+        .text-wrap .line .right .span-wrap {
+            width: 100vw;
+            text-align: center;
+            transform: translate(-50vw);
+        }
+        .text-wrap span {
+            display: inline-block;
+        }
+        .img-wrap {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+    <h1>mouseEffect08 - jquery</h1>
+    <p>마우스이펙트 - 마우스 움직임에 따른 돋보기 효과</p>
+    </div>
+    <div class="info right">
+    <ul>
+        <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+        <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+        <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+        <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
+        <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+        <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+        <li><a href="mouseEffect07-jquery.html" class="active">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+        <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
+        <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
+    </ul>
+    </div>
+
+    <main>
+       <div class="contents">
+           <div class="move-image">
+                <div class="text-wrap">
+                    <div class="line">
+                        <div class="left">
+                            <div class="span-wrap">
+                                <span class="span-slow">Pain past</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="span-wrap">
+                                <span class="span-slow">Pain past</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="span-wrap">
+                                <span class="span-fast">is pleasuer.</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="span-wrap">
+                                <span class="span-fast">is pleasuer.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="span-wrap">
+                                <span class="span-slow">지나간 고통은</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="span-wrap">
+                                <span class="span-slow">지나간 고통은</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="span-wrap">
+                                <span class="span-fast">쾌락이다.</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="span-wrap">
+                                <span class="span-fast">쾌락이다.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-wrap">
+                    <img src="img/images15@2.jpg" alt="이미지">
+                </div>
+           </div>
+       </div>
+    </main>
+
+    <!--  script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        $(window).on("mousemove", mouseMove);
+
+        function mouseMove(e){
+            let positionSlow = (e.pageX - ($(window).width()/2)) * 0.1;
+            let positionFast = (e.pageX - ($(window).width()/2)) * 0.2;
+
+            gsap.to(".span-slow", {
+                duration: .4,
+                x: positionSlow
+            });
+            gsap.to(".span-fast", {
+                duration: .4,
+                x: -positionFast
+            });
+        }
+    </script>
+</body>
+</html>

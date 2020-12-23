@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구현 test03</title>
+    <style>
+        /* reset */
+        @font-face { 
+            font-family: 'S-CoreDream-8Heavy'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        body {
+            background-color: #e3f2fd;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            width: 1200px;
+            height: 1600px;
+            margin: 0 auto;
+            font-size: 72px;
+            font-family: 'S-CoreDream-8Heavy';
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #side {
+            width: 400px; 
+            height: 1600px; 
+            background-color: #90caf9; 
+            float: left;
+            line-height: 1600px;
+        }
+        #header {
+            width: 800px; 
+            height: 400px; 
+            background-color: #64b5f6; 
+            float: left;
+            line-height: 400px;
+        }
+        #contents {
+            width: 800px; 
+            height: 700px; 
+            background-color: #42a5f5; 
+            float: left;
+            line-height: 700px;
+        }
+        #footer {
+            width: 800px; 
+            height: 500px; 
+            background-color: #1e88e5; 
+            float: left;
+            line-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="side">side</div>
+        <div id="header">header</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>

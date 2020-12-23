@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect06 - jquery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+       @font-face {
+            font-family: 'BinggraeMelona-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }   
+        /* 리셋 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+
+        img {
+            width: 100%; 
+            vertical-align: top;
+        }
+
+        ul { list-style: none;}
+        li {list-style: none;}
+
+        /* 인포 */
+        .info {position:fixed; z-index: 1000;}
+        .info.left {left: 20px; top: 20px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2em; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {color: #fff; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px; }
+        .info li a.active{background: #fff; color: #000;}
+
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+        
+        /* 메인 */
+        body {--color-h1 : #dc6e25; 
+        --color-title : #fff; 
+        --color-sub : #999; 
+        --color-link : #000; 
+        --color-bg : #111; 
+        --font-family : 'BinggraeMelona-Bold';
+
+        --font-cafe: 'BinggraeMelona-Bold';
+        --font-lato: 'Lato', sans-serif;
+
+        background-color: var(--color-bg); 
+        color: var(--color-title);
+        font-family: var(--font-family);
+        font-style: 16px;
+        background: url(img/images05@2.jpg) no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        }
+        body:before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+         /* slider */
+         .slider-wrap {
+            width: 1200px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        .slider-img {
+            overflow: hidden;
+            position: relative;
+            width: 5000px;
+        }
+        .slider-img .slider {
+            float: left;
+            width: 400px;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute;
+            left: 15px; top: 15px;
+        }
+        .slider-btn a {
+            position: absolute; 
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0,0,0,0.5);
+            text-transform: capitalize;
+            font-family: var(--font-cafe);
+            color: var(--color-title);
+        }
+        .slider-btn a.prev {
+            left: 0;
+        }
+        .slider-btn a.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info left">
+        <h1>SliderEffect06 - jQuery</h1>
+        <p>이미지 슬라이드 - 3단 슬라이드 만들기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html">1</a></li>
+            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html">2</a></li>
+            <li><a href="sliderEffect03-jquery.html">3</a><a href="sliderEffect03-javascript.html">3</a></li>
+            <li><a href="sliderEffect04-jquery.html">4</a><a href="sliderEffect04-javascript.html">4</a></li>
+            <li><a href="sliderEffect05-jquery.html">5</a><a href="sliderEffect05-javascript.html">5</a></li>
+            <li><a href="sliderEffect06-jquery.html" class="active">6</a><a href="sliderEffect06-javascript.html">6</a></li>
+            <li><a href="sliderEffect07-jquery.html">7</a><a href="sliderEffect07-javascript.html">7</a></li>
+            <li><a href="sliderEffect08-jquery.html">8</a><a href="sliderEffect08-javascript.html">8</a></li>
+            <li><a href="sliderEffect09-jquery.html">9</a><a href="sliderEffect09-javascript.html">9</a></li>
+        </ul>
+    </div>
+    
+    <!-- info -->
+
+    <!-- main -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider s1"><img src="img/images05.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider s2"><img src="img/images04.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider s3"><img src="img/images03.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider s4"><img src="img/images02.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider s5"><img src="img/images01.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+        </div>
+        <div class="slider-btn">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <!-- script -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderShowNumber = 3;
+        let currentIndex = 0;
+
+        let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone();
+        sliderImg.append(sliderCopy);
+
+        function moveLeft(){
+            if(currentIndex == 0){ //처음 이미지
+                currentIndex = sliderCount;
+                sliderImg.css("margin-left", sliderWidth * -currentIndex);
+            }
+            currentIndex--;
+            sliderImg.animate({ "margin-left": -sliderWidth * currentIndex }, 400);
+        }
+
+        function moveRight(){
+            if (currentIndex == sliderCount){ //마지막 이미지
+                currentIndex = 0;
+                sliderImg.stop().css("margin-left", currentIndex);
+            }
+            currentIndex++;
+            sliderImg.animate({ "margin-left": -sliderWidth * currentIndex }, 400);
+        }
+
+        //버튼을 클릭하기 
+        sliderBtn.on("click","a",function(){
+            if( $(this).hasClass("prev") ){
+                moveLeft();
+            }else {
+                moveRight();
+            }
+        });       
+        
+        
+    </script>
+</body>
+</html>

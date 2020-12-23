@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout7</title>
+    <style>
+        /* reset */
+        @font-face { 
+            font-family: 'S-CoreDream-8Heavy'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout */
+        #wrap {
+            font-size: 72px;
+            font-family: 'S-CoreDream-8Heavy'; 
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        #header_top {height: 70px; background-color: #fff3f5; line-height: 70px;}
+        #header_bom {height: 70px; background-color: #fdeff4; line-height: 70px;}
+        #banner {height: 400px; background-color: #fcdee1; line-height: 400px;}
+        #content1 {height: 300px; background-color: #f5c2c2; line-height: 300px;}
+        #content2 {height: 900px; background-color: #eaa6a6; line-height: 900px;}
+        #content3 {height: 1600px; background-color: #f59896; line-height: 1600px;}
+        #content4 {height: 400px; background-color: #f88e86; line-height: 400px;}
+        #footer_top {height: 100px; background-color: #a44f6c; line-height: 100px;}
+        #footer_bom {height: 100px; background-color: #9a3330; line-height: 100px;}
+
+        /* container */
+        .container {
+            margin: 0 auto;
+            width: 1280px;
+            height: inherit;
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header_top">
+                <div class="container">header_top</div>
+            </div>
+            <div id="header_bom">
+                <div class="container">header_bom</div>
+            </div>
+        </div>
+        <!-- //header -->
+
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <!-- //banner -->
+
+        <div id="contents">
+            <div id="content1">
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <div id="footer">
+            <div id="footer_top">
+                <div class="container">footer_top</div>
+            </div>
+            <div id="footer_bom">
+                <div class="container">footer_bom</div>
+            </div>
+        </div>
+        <!-- //footer -->
+        
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

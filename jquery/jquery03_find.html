@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray03 탐색</title>
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+        $(function(){
+            // 선택자로 내용1을 선택해서 백그라운드를 빨간색으로 변경
+            // $(".txt1").css("backgroundColor", "red");
+            // $("p:contains('내용1')").css("backgroundColor", "red");
+            // $("#inner_1 p:first").css("backgroundColor", "red");
+            // $("#inner_1 p:eq(0)").css("backgroundColor", "red");
+            // $("p[class='txt1']").css("backgroundColor", "red");
+            // $("p[class^='txt1']").css("backgroundColor", "red");
+            // $("p[class*='txt1']").css("backgroundColor", "red");
+            // $("p[class$='txt1']").css("backgroundColor", "red");
+            // $("#inner_1 p:lt(1)").css("backgroundColor", "red");
+            // $("#inner_1 :nth-child(2)").css("backgroundColor", "red");
+            // $("#inner_1 p:nth-of-type(1)").css("backgroundColor", "red");
+            // $("#inner_1 p:nth-of-type(odd)").css("backgroundColor", "red");
+            // $("#inner_1 p:first-of-type").css("backgroundColor", "red");
+            // $("#inner_1 > .txt1").css("backgroundColor", "red");
+
+            // find로 내용1을 선택해서 백그라운드를 빨간색으로 변경
+            $("#inner_1").find(".txt1").css("backgroundColor", "red");
+
+            // filter로 내용2를 선택해서 백그라운드를 빨간색으로 변경
+            $("#inner_1 p").filter(".txt2").css("backgroundColor", "red");
+        });
+    </script>
+</head>
+<body>
+
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>find(), filter()</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index0</p>
+            <p>index1</p>
+            <p>index2</p>
+            <p>index4</p>
+        </section>
+    </div>
+     
+    <script>
+     
+    </script>
+</body>
+</html>

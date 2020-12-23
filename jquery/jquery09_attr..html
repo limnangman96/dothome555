@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray09 attr</title>
+</head>
+<body>
+    <div class="img">
+        <img src="img/img01.jpg" alt="이미지1" width="300">
+        <p class="desc">아아아</p>
+        <button class="btn1">200</button>
+        <button class="btn2">400</button>
+        <button class="btn3">600</button>
+    </div>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+       //이미지를 클릭하면 이미지를 사라지게
+        $("img").click(function(){
+            // $(this).css("display", "none");
+            let txt = $(this).attr("src");
+
+            $(".desc").text(txt);
+        });
+
+        $(".desc").css({"backgroundColor":"red", "color":"white"});
+        
+        // desc를 선택해서 패딩을 20px;
+        // $("img > p").css({"backgroundColor":"red", "color":"white"});
+        // $("p:lt(1)").css({"backgroundColor":"red", "color":"white"});
+        // $("p:eq(0)").css({"backgroundColor":"red", "color":"white"});
+        // $("p:lt(1)").css({"backgroundColor":"red", "color":"white"});
+        // $("p:first").css({"backgroundColor":"red", "color":"white"});
+        // $("p:even").css({"backgroundColor":"red", "color":"white"});
+        // $("p:last").css({"backgroundColor":"red", "color":"white"});
+        // $("p:contains(아)").css({"backgroundColor":"red", "color":"white"});
+        // $("p:parent").css({"backgroundColor":"red", "color":"white"});
+
+        //첫번째 버튼을 클릭하면 이미지 크기를 200으로
+        $(".btn1").click(function(){
+            $("img").attr("width", "200");
+        });
+        $(".btn2").click(function(){
+            $("img").attr("width", "400");
+        });
+        $(".btn3").click(function(){
+            $("img").attr("width", "600");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구현 test02</title>
+    <style>
+        /* reset */
+        @font-face { 
+            font-family: 'S-CoreDream-8Heavy'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            height: 1600px; 
+            font-size: 72px;
+            font-family: 'S-CoreDream-8Heavy';
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #header_wrap {
+            height: 150px; 
+            background-color: #d1c4e9;
+        }
+        #banner_wrap {
+            height: 450px; 
+            background-color: #b39ddb;
+        }
+        #contents_wrap {
+            height: 850px; 
+            background-color: #9575cd;
+        }
+        #footer_wrap {
+            height: 150px; 
+            background-color: #7e57c2;
+        }
+        .header {
+            width: 1200px; 
+            height: 150px; 
+            background-color: #e8eaf6; 
+            margin: 0 auto;
+            line-height: 150px;
+        }
+        .banner {
+            width: 1200px; 
+            height: 450px; 
+            background-color: #c5cae9; 
+            margin: 0 auto;
+            line-height: 450px;
+        } 
+        .contents {
+            width: 1200px; 
+            height: 850px; 
+            background-color: #9fa8da; 
+            margin: 0 auto;
+            line-height: 850px;
+        }
+        .footer {
+            width: 1200px; 
+            height: 150px; 
+            background-color: #7986cb; 
+            margin: 0 auto;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <div id="contents_wrap">
+            <div class="contents">contents</div>
+        </div>
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정리</title>
+    <script>
+        //선언적 함수
+        function func1(){
+            document.write("function1이 실행되었습니다. <br/>");
+        }
+        func1();
+
+        //익명 함수
+        const func2 = function(){
+            document.write("function2이 실행되었습니다. <br/>");
+        }
+        func2();
+
+        //매개변수가 있는 함수
+        const func3 = function(name){
+            document.write(name + "이 실행되었습니다. <br/>");
+        }
+        func3("function3");
+
+        //리턴값(종료)이 있는 함수
+        function func4(){
+            const str = "function4가 실행되었습니다. <br/>"
+            return str;
+        }
+        document.write(func4());
+
+        //즉시 실행 함수
+        (function(){
+            document.write("function5가 실행되었습니다. <br/>");
+        }());
+
+        //화살표 함수(선언적 함수)
+        func6 = () => {
+            document.write("function6이 실행되었습니다. <br/>");
+        }
+        func6();
+
+        //화살표 함수(익명함수)
+        const func7 = () => {
+            document.write("function7이 실행되었습니다. <br/>");
+        }
+        func7();
+
+        //화살표 함수(매개변수가 있는 함수)
+        const func8 = (str) => {
+            document.write(str + "이 실행되었습니다. <br/>");
+        }
+        func8("function8");
+
+        //화살표 함수(리턴값이 있는 함수)
+        const func9 = () => {
+            const str = "function9이 실행되었습니다. <br/>";
+            return str;
+        }
+        document.write(func9());
+
+        //객체 생성자 함수
+        function Func10(name, action){
+            this.name = name;
+            this.action = action;
+            this.study = function(){
+                document.write(this.name + "이 " + this.action + "되었습니다. <br/>")
+            }
+        }
+        const obj1 = new Func10("function10", "실행");
+        obj1.study();
+
+        //포로토타입 메서드
+        function Func11(name, action){
+            this.name = name;
+            this.action = action;
+        }
+        Func11.prototype.study = function(){
+            document.write(this.name + "이 " + this.action + "되었습니다. <br/>")
+        }
+        const obj2 = new Func11("function11", "실행");
+        obj2.study();
+
+        //클래스(se6)
+        class Func12 {
+            constructor(name, action){
+                this.name = name;
+                this.action = action;
+            }
+            study(){
+                document.write(this.name + "이 " + this.action + "되었습니다. <br/>");
+            }
+        }
+        const obj3 = new Func12("function12", "실행");
+        obj3.study();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

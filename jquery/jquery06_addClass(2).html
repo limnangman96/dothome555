@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray06 속성-addClass(2)</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none; color: #fff;}
+        #tab-menu {width: 500px; margin: 50px auto; background: #ccc;}
+        #tab-btn {}
+        #tab-btn ul {overflow: hidden;}
+        #tab-btn li {float: left; width: 20%; text-align: center;}
+        #tab-btn li a {display: block; padding: 20px; background: #1e88e5;}
+        #tab-cont {width: 500px; height: 334px;}
+        #tab-cont.img1 {background: url(img/img01.jpg) no-repeat; background-size: contain;}
+        #tab-cont.img2 {background: url(img/img02.jpg) no-repeat; background-size: contain;}
+        #tab-cont.img3 {background: url(img/img03.jpg) no-repeat; background-size: contain;}
+        #tab-cont.img4 {background: url(img/img04.jpg) no-repeat; background-size: contain;}
+        #tab-cont.img5 {background: url(img/img05.jpg) no-repeat; background-size: contain;}
+
+    </style>
+</head>
+<body>
+
+    <div id="tab-menu">
+        <div id="tab-btn">
+            <ul>
+                <li><a href="#">Tab1</a></li>
+                <li><a href="#">Tab2</a></li>
+                <li><a href="#">Tab3</a></li>
+                <li><a href="#">Tab4</a></li>
+                <li><a href="#">Tab5</a></li>
+            </ul>
+        </div>
+        <div id="tab-cont" class="img1"></div>
+    </div>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script> 
+       //글씨를 클릭하면 경고창
+       $("#tab-btn li:eq(0) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img1");
+       }); 
+       $("#tab-btn li:eq(1) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img2");
+       }); 
+       $("#tab-btn li:eq(2) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img3");
+       }); 
+       $("#tab-btn li:eq(3) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img4");
+       }); 
+       $("#tab-btn li:eq(4) a").click(function(){
+           $("#tab-cont").removeClass().addClass("img5");
+       }); 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃</title>
+    <style>
+        /* reset */
+        body {background-color: #ede7f6;}
+        * {margin: 0; padding: 0;}
+
+        /* layout */
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 200px; background: #967acd;}
+        aside {width: 30%; height: 700px; background: #7f5ec2; float: left;}
+        section {width: 70%; height: 700px; background: #6844b7; float: left;}
+        footer {width: 100%; height: 200px; background: #5f3fb1; clear: both;}
+
+        /* media */
+        /* 화면 너비가 0 ~ 1280px */
+        @media (max-width: 1290px){
+            .container {width: 90%;}
+        }
+
+        /* 화면 너비가 0 ~ 900px */
+        @media (max-width: 900px){
+            .container {width: 100%;}
+        }
+
+        /* 화면 너비가 0 ~ 480px */
+         @media (max-width: 480px){
+            aside {float: none; width: 100%; height: 400px;}
+            section {float: none; width: 100%; height: 400px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <header></header>
+            <!-- header -->
+            <aside></aside>
+            <!-- aside -->
+            <section></section>
+            <!-- section -->
+            <footer></footer>
+            <!-- footer -->
+        </main>
+        <!-- container -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>

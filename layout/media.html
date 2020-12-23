@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        @font-face {
+            font-family: 'ImcreSoojin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        h1 {font-size: 50px; font-family: 'ImcreSoojin';}
+        p {font-size:  30px; font-family: 'ImcreSoojin';}
+       
+        /* 화면 너비 전체 */
+        body {background-color: lightseagreen;}
+
+        /* 화면 너비가 0 ~ 1920px ('@media' 사용할 때 세미콜론은 찍지 않는다.) */
+        @media (max-width: 1920px) {
+            body {background-color: lightskyblue;}
+            h1::before {content: "1. "}
+            h1::after {content: " 화면 너비가 0 ~ 1920px"}
+        }
+
+        /* 화면 너비가 0 ~ 1280px */
+        @media (max-width: 1280px) {
+            body {background-color: lightcoral;}
+            h1::before {content: "2. "}
+            h1::after {content: " 화면 너비가 0 ~ 1280px"}
+        }
+
+        /* 화면 너비가 0 ~ 1024px */
+        @media (max-width: 1024px) {
+            body {background-color: lightsalmon;}
+            h1::before {content: "3. "}
+            h1::after {content: " 화면 너비가 0 ~ 1024px"}
+        }
+
+        /* 화면 너비가 0 ~ 960px */
+        @media (max-width: 960px) {
+            body {background-color: lightpink;}
+            h1::before {content: "4. "}
+            h1::after {content: " 화면 너비가 0 ~ 960px"}
+        }
+
+        /* 화면 너비가 0 ~ 768px */
+        @media (max-width: 768px) {
+            body {background-color: lemonchiffon;}
+            h1::before {content: "5. "}
+            h1::after {content: " 화면 너비가 0 ~ 768px"}
+        }
+
+        /* 화면 너비가 0 ~ 460px */
+        @media (max-width: 460px) {
+            body {background-color: lightgrey;}
+            h1::before {content: "6. "}
+            h1::after {content: " 화면 너비가 0 ~ 460px"}
+        }
+    </style>
+</head>
+<body>
+    <h1>미디어쿼리</h1>
+    <p>미디어쿼리는 화면 크기에 따른 각각의 속성 값을 지정하여, 여러가지 화면을 구성하는 기술입니다.</p>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Carousel</title>
+    <style>
+        body, html, #container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+        div {
+            position: absolute;
+            user-select: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const n = 12;
+        gsap.timeline()
+            .set("#container", {perspective: 800})
+        
+        for(let i=0; i<n; i++){
+            let b = document.createElement('div');
+            b.classList.add("box");
+            document.getElementById("container").appendChild(b);
+
+            gsap.set(b, {
+                left: '50%',
+                top: '50%',
+                x: '-50%',
+                y: '-50%',
+                z: 600,
+                width: 300,
+                height: 600,
+                borderRadius: 20,
+                background: () => 'hsl('+ (i/n*360) +', 100%, 50%)'
+            });
+
+            gsap.fromTo(b, {
+                scaleY: 0,
+                zIndex: ()=>(i<n/2)?-i:i,
+                rotationY: 90+i/n*206.5,
+                transformOrigin:String("50% 50% -1060%")
+            }, {
+                scaleY: 1,
+                duration: 1,
+                delay: 1,
+                ease: 'elastic'
+            });
+
+            b.onmouseenter = (e) => {
+                gsap.to(b, {duration: 0.3, rotationX: -14, y: '-130%', ease:'back.out(6)'})}
+            b.onmouseleave = (e) => {
+                gsap.to(b, {duration: 0.4, rotationX: 0, y: '-50%'})
+            }
+        }
+
+        window.onmousemove = (e) => {
+            gsap.to('.box', {duration: 0.6, rotationY: (i)=>45+i/n*206.5+90*(e.clientX/window.innerWidth)})
+        }
+    </script>
+</body>
+</html>

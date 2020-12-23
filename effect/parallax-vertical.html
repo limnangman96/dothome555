@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; font-family: 'Poppins', sans-serif;}
+        #section1 {height: 100vh; background: #111;}
+        #section2 {height: 100vh; background: #222;}
+        #section3 {height: 100vh; background: #111;}
+        #section4 {height: 100vh; background: #222;}
+        #section5 {height: 100vh; background: #111;}
+        #section6 {height: 100vh; background: #222;}
+
+        #section1 .imgWrap .img {background: url(img/images12@2.jpg); background-size: cover;}
+        #section2 .imgWrap .img {background: url(img/images13@2.jpg); background-size: cover;}
+        #section3 .imgWrap .img {background: url(img/images14@2.jpg); background-size: cover;}
+        #section4 .imgWrap .img {background: url(img/images15@2.jpg); background-size: cover;}
+        #section5 .imgWrap .img {background: url(img/images16@2.jpg); background-size: cover;}
+        #section6 .imgWrap .img {background: url(img/images11@2.jpg); background-size: cover;}
+
+        .content-item {
+            position: relative;
+        }
+        .content-item .num {
+            position: absolute; left: 80%; top: 0%;
+            z-index: 90;
+            font-size: 20vw;
+            font-weight: 100;
+            opacity: 0.099;
+            color: #fff;
+            letter-spacing: -1vw;
+        }
+        .content-item .imgWrap {
+            position: absolute; left: 50%; top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            width: 50vw; height: 50vh;
+        }
+        .content-item .imgWrap .img {
+            width: 100%; height: 100%;
+        }
+        .content-item .title {
+            position: absolute; left: 20%; top: 70%;
+            width: 50vw;
+            z-index: 110;
+            color: #fff;
+            font-size: 4vw;
+            line-height: 1.4;
+            word-break: keep-all;
+            font-family: 'GmarketSansMedium';
+        }
+
+        /* basic */
+        body {
+            height: 10000px;
+        }
+        #contents {
+            width: 600vw;
+            overflow: hidden;
+            position: fixed;
+            left: 0; top: 0;
+        }
+        #contents > section {
+            float: left;
+            width: 100vw;
+        }
+
+        .character {
+            width: 200px; height: 200px;
+            position: fixed;
+            left: 50%; bottom: 0%;
+            margin-left: -90px;
+            z-index: 200;
+            background-image: url(img/robby-slides.png);
+            background-size: 1800px;
+        }
+        .character.left {
+            background-position: 0 -200px;
+        }
+        .character.walking {
+            animation: walk 0.8s steps(9, start) infinite;
+        }
+        .character.left.walking {
+            animation: walk_reverse 0.8s steps(9, start) infinite;
+        }
+        @keyframes walk {
+            0% {background-position: 0px 0px;}
+            100% {background-position: -1800px 0px;}
+        }
+        @keyframes walk_reverse {
+            0% {background-position: 0px -200px;}
+            100% {background-position: -1800px -200px;}
+        }
+
+        .content-item .imgWrap {
+            opacity: 0;
+        }
+        .content-item .title {
+            opacity: 0;
+        }
+        .content-item .num {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="character"></div>
+
+    <section id="contents">
+        <section id="section1" class="content-item">
+            <span class="num">01</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">노력을 이기는 재능은 없고 노력을 외면하는 결과도 없다.</div>
+        </section>
+        <!-- //section1 --> 
+        <section id="section2" class="content-item">
+            <span class="num">02</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">지금 이 인생을 다시 한번 완전히 똑같이 살아도 좋다는 마음으로 살라.</div>
+        </section>
+        <!-- //section2 -->
+        <section id="section3" class="content-item">
+            <span class="num">03</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">어떤 가치있는 행동을 하지 아니한 날, 그 날은 잃은 날이다.</div>
+        </section>
+        <!-- //section3 -->
+        <section id="section4" class="content-item">
+            <span class="num">04</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">아무것도 버릴 수 없는 자는 아무 것도 느낄 수 없다.</div>
+        </section>
+        <!-- //section4 -->
+        <section id="section5" class="content-item">
+            <span class="num">05</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>
+        </section>
+        <!-- //section5 -->
+        <section id="section6" class="content-item">
+            <span class="num">06</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>
+        </section>
+        <!-- //section6 -->
+    </section>
+    <!-- //contents -->
+
+     <!-- script -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+     <script>
+        //  const totalWidth = $("#contents").width();
+        //  alert(totalWidth);  1903
+
+        let lastScrollTop = 0;
+        const totalWidth = $("#contents").width();
+        $("body").css("height", totalWidth);
+
+        // 스크롤이 됐을 때 얼만큼 앞으로 나갈지를 설정
+        $(window).scroll(function(){
+            let wScroll = $(window).scrollTop();
+            let wWidth = $(window).width();
+            let wHeight = $(window).height();
+            let dHeight = $("body").height() - wHeight;  //전체 세로 값 - 현재 화면 세로 값
+            let dWidth = totalWidth - wWidth;  //전체 가로 값 - 현재 화면의 가로 값
+            let step = dWidth/dHeight;
+            let goLeft = wScroll * step;
+            // console.log(goLeft);
+            $("#contents").css("left", -goLeft);
+
+            clearTimeout($.data(this, "scrollCheck"));  //움직이지 않을 때는 감지하지 말아라
+
+            $.data(this, "scrollCheck", setTimeout(function(){  //현재 데이터를 감지하는 방법 $.data
+                $(".character").removeClass("walking");
+            },100))
+
+            if(wScroll > lastScrollTop){
+                $(".character").removeClass("left");
+                $(".character").addClass("walking");
+            } else {
+                $(".character").addClass("left");
+                $(".character").addClass("walking");
+            }
+            lastScrollTop = wScroll;  //lastScrollTop이 계속 0에 머무르는 것을 방지! lastScrollTop 값 최신화!
+
+            if(wScroll > $("#section1").offset().left + $(window).width()*0.1){
+                // $("#section3").css("background", "#fff");
+                gsap.to("#section1 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section1 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section1 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+            if(wScroll > $("#section2").offset().left + $(window).width()*1){
+                gsap.to("#section2 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section2 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section2 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+            if(wScroll > $("#section3").offset().left + $(window).width()*2){
+                gsap.to("#section3 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section3 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section3 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+            if(wScroll > $("#section4").offset().left + $(window).width()*3){
+                gsap.to("#section4 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section4 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section4 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+            if(wScroll > $("#section5").offset().left + $(window).width()*4){
+                gsap.to("#section5 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section5 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section5 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+            if(wScroll > $("#section6").offset().left + $(window).width()*5){
+                gsap.to("#section6 .imgWrap", {duration: 0.4, opacity: 1, top: "50%"});
+                gsap.to("#section6 .title", {duration: 0.4, opacity: 1, delay: 0.4, top: "60%"});
+                gsap.to("#section6 .num", {duration: 0.4, opacity: 1, delay: 0.8, left: "70%"});
+            }
+        });
+
+
+        $(document).keydown(function(e){  //문서를 기준으로 하는 scrollTop값
+            if(e.which == 39){
+                let scrollTop = $(document).scrollTop();
+                $(window).scrollTop(scrollTop + 50);
+            }
+            if(e.which == 37){
+                let scrollTop = $(document).scrollTop();
+                $(window).scrollTop(scrollTop - 50);
+            }
+            console.log(event.keyCode);  //키보드의 키 값을 알아낼 수 있다.
+        });
+     </script>
+</body>
+</html>

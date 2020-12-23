@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+         function func1(){
+             let result, a = 100, b = 200, c = 300;
+             result = a < b ? b++ : --c;
+             document.write(result, "<br />"); //200
+             document.write(b);  //201
+         }
+         func1();
+         document.write("<br />");
+
+         function func2(){
+             let result, a = 100, b = 200, c = 300;
+             result = a < b ? ++b : --c;
+             document.write(result, "<br />"); //201
+             document.write(b);  //201
+         }
+         func2();
+         document.write("<br />");
+
+         function func3(){
+             let hap, j, k, l;
+             j = k = l = 0;
+             hap = ++j + k++ + ++l;
+             document.write(hap, "<br />"); //2
+             document.write(j); //1
+             document.write(k); //1
+             document.write(l); //1
+         }
+        func3();
+        document.write("<br />");
+
+        function func4(){
+            let i=10, j=10, k=30;
+            i /= j; // i=i/j   
+            j -= i; // j=j-i   
+            k %= j; // k=k%j   
+        document.write(i); //1
+        document.write(j); //9
+        document.write(k); //3
+        }
+        func4();
+        document.write("<br />");
+
+        function func5(){
+            for(i=1; i<=7; i++){
+                for(j=1; j<=i; j++){
+                    document.write(j);
+                } 
+                document.write("<br />");
+            }
+        }
+        func5();
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        // 123456
+        // 1234567
+     </script>
+
+</body>
+</html>

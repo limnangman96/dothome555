@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr1 = [100,200,300,400,500,600,700];
+        //for문 이용 출력
+        for(let i=0; i<arr1.length; i++){
+            document.write(arr1[i], "<br>");
+        }
+        document.write("<br><br>");
+
+        //forEach
+        arr1.forEach(element => {
+            document.write(element, "<br>");
+        });
+        document.write("<br><br>");
+
+        //for in문
+        for(let i in arr1){
+            document.write(arr1[i], "<br>");
+        }
+        document.write("<br><br>");
+
+        //for of문
+        for(let i of arr1){
+            document.write(i, "<br>");
+        }
+        document.write("<br><br>");
+
+        let a = []; //배열 선언
+        for ( let i=1; i<=5; i++){
+            a += [i] 
+            //a = a + [1]  a = a[1]
+            //a = a + [2]  a = a[2]
+            //a = a + [3]  a = a[3]
+            //a = a + [4]  a = a[4]
+            //a = a + [5]  a = a[5]
+        }
+        console.log(a);
+        document.write(a[0]);  //1
+        document.write(a[1]);  //2
+        document.write(a[2]);  //3
+        document.write(a[3]);  //4
+        document.write(a[4]);  //5
+        document.write(a[5]);  //undefined
+        document.write("<br><br>");
+
+        //배열 비구조화 할당: 순서 바꾸기 가능
+        // let x = [100]
+        let [x, y] = [100, 200];
+        document.write(x);  //100
+        document.write(y);  //200
+        document.write("<br>");
+
+        [x, y] = [y, x];
+        document.write(x);  //200
+        document.write(y);  //100
+        document.write("<br><br>");
+
+        //Array 객체
+        const arr10 = [100, 200, 300, 400, 500];
+        const arr20 = [600, 700, 800, 900, 1000];
+       
+        document.write(arr10, "<br>");  //100,200,300,400,500
+        document.write(arr10.join('*'), "<br>");  //추가하기 100*200*300*400*500
+        document.write(arr10.reverse(), "<br>");  //역순 정렬 500,400,300,200,100
+        document.write(arr10.sort(), "<br>");  //정렬 100,200,300,400,500
+        document.write(arr10.sort(function(a, b){return b - a;}), "<br>");  //두 개의 변수가 있으면 순서를 비교하여 높은 순서부터 정렬 500,400,300,200,100
+        document.write(arr10.sort(function(a, b){return a - b;}), "<br>");  //두 개의 변수가 있으면 순서를 비교하여 낮은 순서부터 정렬 100,200,300,400,500
+        document.write(arr10.slice(1,3), "<br>");  //200, 300
+        document.write(arr10.slice(2,3), "<br>");  //300
+        document.write(arr10.concat(arr20), "<br>");  //배열 합치기 100,200,300,400,500,600,700,800,900,1000
+        document.write(arr10.shift(), "<br>");  //맨 앞에 있는 값만 빼줌 100
+        document.write(arr10, "<br>");  //shift로 인해 배열의 첫 번째 값이 제거됨 200,300,400,500
+        document.write(arr10.unshift(100), "<br>");  //배열의 값이 다섯개 있음 5
+        document.write(arr10, "<br>");  //100,200,300,400,500
+        document.write(arr10.pop(), "<br>");  //배열의 마지막 값만 뺴줌 500
+        document.write(arr10, "<br>");  //pop으로 인해 배열의 마지막 값이 제거됨 100,200,300,400
+
+        //p.102 예제
+        let arr_1 = ["사당", "교대", "방배", "강남"];
+        let arr_2 = ["신사", "압구정", "옥수"];
+        
+        let result = arr_1.join("-");
+        console.log(result);  //사당-교대-방배-강남
+
+        result = arr_1.concat(arr_2);
+        console.log(result);  //"사당", "교대", "방배", "강남", "신사", "압구정", "옥수"
+
+        result = arr_1.slice(1, 3);
+        console.log(result);  //"교대", "방배"
+
+        arr_1.sort;
+        console.log(arr_1);  //"사당", "교대", "방배", "강남"
+
+        arr_2.reverse();
+        console.log(arr_2);  //"옥수", "압구정", "신사"
+
+        //p.103 예제
+        let greenArr = ["교대", "방배", "강남"];
+        let yellowArr = ["미금", "정자", "수서"];
+        
+        greenArr.splice(2, 1, "서초", "역삼");  //2번 인덱스부터 1개의 데이터를 삭제 후, "서초", "역삼" 삽입 
+        console.log(greenArr);  //"교대", "방배", "서초", "역삼"
+
+        let data1 = yellowArr.pop();  //yellowArr 배열 마지막 인덱스의 데이터를 data1에 저장 ("수서")
+        let data2 = yellowArr.shift();  //yellowArr 배열 가장 앞쪽 인덱스의 데이터를 data2에 저장 ("미금")
+
+        yellowArr.push(data2);  //data2에 저장된 데이터를 yellowArr 배열의 마지막 인덱스에 밀어 넣음
+        console.log(yellowArr);  //"정자", "미금"
+
+        yellowArr.unshift(data1);  //data1에 저장된 데이터를 yellowArr 배열의 가장 앞쪽 인덱스에 밀어 넣음
+        console.log(yellowArr);  //"수서", "정자", "미금"
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+       /* reset */
+       *{margin: 0; padding: 0;}
+       a {text-decoration: none; color: #333;}
+       ul {list-style: none;}
+
+       #wrap {}
+       #header {height: 100px; background: #fff;}
+       #nav {height: 200px; background: #e0dbd8}
+       #cont1 {height: 200px; background: #edf1f4;}
+       #cont2 {height: 200px; background: #ffffff;}
+       #cont3 {height: 200px; background: #f8ead4;}
+       #cont4 {height: 200px; background: #f5f7f9;}
+       #cont5 {background: #fff;}
+       #foot1 {height: 50px; background: #edeff4;}
+       #foot2 {height: 100px; background: #edeff4;}
+       #foot3 {height: 50px; background: #f58220;}
+
+       .container {margin: 0 auto; width: 1200px; height: inherit; background: rgba(255,255,255,0.3);}
+       
+       .cont5 {overflow: hidden;}
+       .cont5 .left {width: 585px; height: 320px; float: left; margin-right: 30px; position: relative;}
+       .cont5 .right {width: 585px; height: 320px; float: left; position: relative;}
+       .cont5 h2 {margin-top: 30px; margin-bottom: 15px;}
+       .cont5 ul {border: 1px solid #777;}
+       .cont5 li {border-bottom: 1px solid #777; overflow: hidden; padding: 20px;}
+       .cont5 li.last {border: none;} 
+       .cont5 li a {float: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 430px;}
+       .cont5 li span {float: right;}
+       .cont5 a.more {position: absolute; right: 5px; top: 35px;}
+
+   </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div id="cont1">
+                <div class="container"></div>
+            </div>
+            <div id="cont2">
+                <div class="container"></div>
+            </div>
+            <div id="cont3">
+                <div class="container"></div>
+            </div>
+            <div id="cont4">
+                <div class="container"></div>
+            </div>
+            <div id="cont5">
+                <div class="container">
+                    <div class="cont5">
+                        <div class="left">
+                            <h2>펀드공시</h2>
+                            <ul>
+                                <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형) 유형변경 안내</a><span>2020.10.12</span></li>
+                                <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.05</span></li>
+                                <li class="last"><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.05</span></li>
+                            </ul>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                        <div class="right">
+                            <h2>펀드뉴스</h2>
+                            <ul>
+                                <li><a href="#">펀드 기준가격 컷오프제도 시행 안내</a><span>2020.09.28</span></li>
+                                <li><a href="#">주문관리시스템 재구축 프로젝트 입찰 공고</a><span>2020.09.23</span></li>
+                                <li class="last"><a href="#">미래에셋 전략배분 TDF는 특별합니다.</a><span>2020.09.02</span></li>
+                            </ul>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="foot1">
+                <div class="container"></div>
+            </div>
+            <div id="foot2">
+                <div class="container"></div>
+            </div>
+            <div id="foot3">
+                <div class="container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

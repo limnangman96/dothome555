@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 클래스, 클래스(상속)</title>
+    <script>
+        //함수1이 실행되었습니다. (선언적 함수)
+        function func1(){
+            document.write("함수1이 실행되었습니다. <br/>");
+        }
+        func1();
+
+        //함수2가 실행되었습니다. (익명함수)
+        let func2 = function(){
+            document.write("함수2가 실행되었습니다. <br/>");
+        }
+        func2();
+
+        //함수3이 실행되었습니다. (매개변수 함수)
+        function func3(name){
+            document.write(name+"이 실행되었습니다. <br/>");
+        }
+        func3("함수3");
+
+        //함수4가 실행되었습니다. (리턴값 함수)
+        function func4(){
+            let str = "함수4가 실행되었습니다. <br/>";
+            return str;
+        }
+        document.write(func4());
+
+        //함수5가 실행되었습니다. (객체+메서드)
+        const info = {
+            name : "함수5",
+            active : "실행",
+            study : function(){
+                document.write(this.name + "가 " + this.active + "되었습니다. <br/>");
+            }
+        }
+        info.study();
+
+        //함수6이 실행되었습니다. (객체 생성자)
+        function Info1(name, active){
+            this.name = name;
+            this.active = active;
+            this.study = function(){
+                document.write(this.name + "이 " + this.active + "되었습니다. <br/>");
+            }
+        }
+        const result = new Info1("함수6", "실행");
+        result.study();
+
+        //프로토타입 메서드
+        function Info2(name, active){
+            this.name = name;
+            this.active = active;
+        }
+        Info2.prototype.study=function(){
+            document.write(this.name + "이 " + this.active + "되었습니다. <br/>");
+        }
+        const result2 = new Info2("함수7", "실행");
+        result2.study();
+
+        //클래스
+        class Info3 {
+            constructor(name, active){
+                this.name = name;
+                this.active = active;
+            }
+            study(){
+                document.write(this.name + "이 " + this.active + "되었습니다. <br/>");
+            }
+        }
+        const result3 = new Info3("함수8", "실행");
+        result3.study();
+
+        //클래스 상속
+        class Box1 {
+            constructor(name, active){
+                this.name = name;
+                this.active = active;
+            }
+            study(){
+                document.write(this.name + "가 " + this.active + "되었습니다. <br/>");
+            }
+        }
+        class Box2 extends Box1 {
+            constructor(name, active, today){
+                super(name, active);
+                this.today = today;
+            }
+            study2(){
+                document.write(this.today + this.name + "이 " + this.active + "되었습니다. <br/>");
+            }
+        }
+        const result4 = new Box1("함수9", "실행");
+        const result5 = new Box2("함수10", "실행", "오늘도 ");
+
+        result4.study();
+        result5.study();
+        result5.study2();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray02 선택자</title>
+    <style>
+        li {margin: 2px;}
+        a {padding: 0 10px;}
+    </style>
+</head>
+<body>
+
+    <h1>기본 선택자</h1>
+    <div id="sample">
+        <ul id="list1" class="list">
+            <li class="list1"><a href="https://www.daum.net">list1</a></li>
+            <li class="list2"><a href="https://www.naver.com">list2</a></li>
+            <li class="list3"><a href="#list2">list3</a></li>
+            <li class="list4"><a href="#">list4</a></li>
+            <li class="list5"><a href="#" class="link">list5</a></li>
+            <li class="list6"><a href="#" class="link">list6</a></li>
+            <li class="list7"><a href="https://www.gitbook.com">list7</a></li>
+            <li class="list8"><a href="#">list8</a></li>
+            <li class="list9"><a href="#">list9</a></li>
+            <li class="list10"><a href="#">list10</a>
+                <ul>
+                    <li>list10-1</li>
+                    <li>list10-2</li>
+                    <li>list10-3</li>
+                    <li>list10-4</li>
+                    <li>list10-5
+                        <ul>
+                            <li>list10-5-1</li>
+                            <li>list10-5-2</li>
+                            <li>list10-5-3</li>
+                            <li>list10-5-4</li>
+                            <li>list10-5-5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="list2" class="list">
+            <li class="list1"><a href="#">list1</a></li>
+            <li class="list2"><a href="#">list2</a></li>
+            <li class="list3"><a href="#">list3</a></li>
+            <li class="list4"><a href="#">list4</a></li>
+            <li class="list5"><a href="#">list5</a></li>
+            <li class="list6"><a href="#">list6</a></li>
+            <li class="list7"><a href="#">list7</a></li>
+            <li class="list8"><a href="#">list8</a></li>
+            <li class="list9"><a href="#">list9</a></li>
+            <li class="list10"><a href="#">list10</a>
+                <ul>
+                    <li>list10-1</li>
+                    <li>list10-2</li>
+                    <li>list10-3</li>
+                    <li>list10-4</li>
+                    <li>list10-5
+                        <ul>
+                            <li>list10-5-1</li>
+                            <li>list10-5-2</li>
+                            <li>list10-5-3</li>
+                            <li>list10-5-4</li>
+                            <li>list10-5-5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="list3" class="list">
+            <li class="list1"><a href="#"></a></li>
+            <li class="list2"><a href="#">list2</a></li>
+            <li class="list3"><a href="#">list3</a></li>
+            <li class="list4"><a href="#">list4</a></li>
+            <li class="list5"><a href="#">list5</a></li>
+            <li class="list6"><a href="#">list6</a></li>
+            <li class="list7"><a href="#">list7</a></li>
+            <li class="list8"><a href="#">list8</a></li>
+            <li class="list9"><a href="#">list9</a></li>
+            <li class="list10"><a href="#">list10</a>
+                <ul>
+                    <li>list10-1</li>
+                    <li>list10-2</li>
+                    <li>list10-3</li>
+                    <li>list10-4</li>
+                    <li>list10-5
+                        <ul>
+                            <li>list10-5-1</li>
+                            <li>list10-5-2</li>
+                            <li>list10-5-3</li>
+                            <li>list10-5-4</li>
+                            <li>list10-5-5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li>태그 선택자</li>
+            <li>클래스 선택자</li>
+            <li>그룹 선택자</li>
+            <li>전체 선택자</li>
+        </ul>
+    </div>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+        // 선택자 쓰는 법
+        // $("li").css("background-color","#bbdefb"); //태그 선택자
+        // $(".list").css("backgroundColor","#bbdefb"); //클래스 선택자
+        // $(".list").css({"backgroundColor":"#bbdefb", "border":"1px dashed #303f9f"}); //클래스 선택자
+        // $(".list").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //클래스 선택자
+
+        // 기본선택자
+        // $("li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //태그 선택자
+        // $(".list4").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //클래스 선택자
+        // $("#list1").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //아이디 선택자
+        // $("*").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //전체 선택자
+        // $(".list1, .list8, .list9").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //그룹 선택자
+
+        // 계층 선택자
+        // $(".list li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //하위 선택자
+        // $(".list > li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //자식 선택자
+        // $(".list5 + li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제 선택자
+        // $(".list5 ~ li").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //형제들 선택자
+
+        // 속성선택자
+        // $("li a[href='https://www.naver.com/']").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"});
+        // $("li a[href^='https']").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f"}); //^:시작하는거
+        // $("li a[href$='net']").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //$:끝나는거
+        // $("li a[href*='naver']").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //*:포함된거
+        // $("li a[href][class]").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"});
+
+        // 기본 필터 선택자 (한번 더 선택하는 것)
+        // $("li:eq(4)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //순서(0부터 시작하여 0-1-2-3-4-⑤)
+        // $("li:gt(4)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //선택된 것 이하 (자식 모두 해당)
+        // $("li:lt(4)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //선택된 것 이상
+        // $(":header").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //제목
+        // $("li:first").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //첫번째
+        // $("li:last").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //마지막
+        // $("li:odd").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //짝수
+        // $("li:even").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //홀수
+
+        // 내용필터 선택자
+        // $("li:contains(list4)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //해당내용 찾기
+        // $("li a:empty").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //비어있는 내용 찾기
+        // $("li:parent").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //내용물 존재하는것 모두 찾기
+        // $("li:has(li)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //내용물 안의 내용물 찾기
+
+        // 보임필터 선택자
+        // $("li:hidden").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //숨기는거
+        // $("li:visivle").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //보여지게 하는거
+
+        // 자식요소 필터 선택자
+        // $("li:first").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //첫번째
+        // $("li:first-child").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //첫째의 첫 자식과 첫 손주
+        // $("li:last").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //마지막
+        // $("li:last-child").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //막내의 막내 자식과 막내 손주
+        // $("li:nth-child(4)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //넷째의 넷째 자식과 넷째 손주
+        // $("li:nth-child(4n)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //4의 곱의 자식과 손주
+        // $("li:nth-child(2n+1)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //모든 홀수의 자식과 손주
+        // $("li:nth-child(odd)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //모든 홀수 자식과 손주
+        // $("li:nth-child(even)").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"}); //모든 짝수 자식과 손주
+        // $("li:only-child").css({backgroundColor:"#bbdefb", border:"1px dashed #303f9f", color: "#fff"});
+    
+    </script>
+
+</body>
+</html>

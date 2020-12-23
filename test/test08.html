@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주말 숙제</title>
+    <style>
+        @font-face {
+        font-family: 'HangultuelGothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.10/HangultuelGothic.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        /* reset */
+        ul {list-style: none;}
+        a {text-decoration: none; color: #333;}
+        .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
+        h1, h2, h3, p {font-family: 'HangultuelGothic';}
+        * {margin: 0; padding: 0;}
+
+        /* 레이아웃 */
+        #wrap {}
+        #header {height: 72px;}
+        #banner {width: 100%; height: 403px; background: url(img/top-visual-retailfinance.jpg);}
+        #footer {height: 311px; background: #444;}
+        #cont1 {height: 371px;}
+        #cont2 {height: 395px; background: url(img/pic-retailfinance1.jpg) no-repeat;}
+        #cont3 {height: 537px;}
+        .container {width: 1140px; height: inherit; margin: 0 auto;}
+
+        /* style */
+        .header img {margin-top: 25px;}
+        .header ul {float: right; margin-top: 20px; font-weight: bold;}
+        .header li {float: left; margin: 0 17px; font-size: 17px;}
+
+        .banner {position: relative;}
+        .banner h2 {position: absolute; left: 0; top: 320px; color: #fff; font-size: 35px;}
+
+        .cont1 {position: relative;}
+        .cont1 h3 {padding: 60px 0; font-size: 40px;}
+        .cont1 p {width: 600px; font-size: 18px; line-height: 28px;} 
+        .cont1 img {position: absolute; right: 0; bottom:0;}
+
+        .cont2 {position: relative;}
+        .cont2 .text {position: absolute; top: 100px; right: 0;}
+        .cont2 .text h3 {font-size: 30px; margin-bottom: 20px;}
+        .cont2 .text p {line-height: 27px;}
+
+        .cont3 {position: relative;}
+        .cont3 img {float: right; position: absolute; right:0; top: 59px;}
+        .cont3 .text {float: left; margin-top: 180px;}
+        .cont3 .text h3 {font-size: 30px; margin-bottom: 20px;}
+        .cont3 .text p {line-height: 27px;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="ir_so">로고</h1>
+                    <img src="img/bi.png" alt="로고 이미지">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">비즈니스</a></li>
+                        <li><a href="#">경영정보</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>개인금융 서비스</h2>
+                </div>
+            </div>
+        </div>
+        <!-- banner -->
+        <div id="contents">
+            <div id="cont1">
+                <div class="container">
+                    <div class="cont1">
+                        <h3>카카오 플랫폼을 활용한 생활금융 투자 서비스</h3>
+                        <p>오직 카카오 플랫폼을 통해서만 투자서비스를 제공합니다.<br/> 
+                            사용자의 생활에 필요한 모든 금융 영역을 하나로 연결하고 라이프스타일 특성을 반영해 가장 적합한 맞춤형 종합자산관리를 추구합니다.</p>
+                        <img src="img/kakao-bi-black.png" alt="카카오 페이 로고 이미지">
+                    </div> 
+                </div>
+            </div>
+            <!-- cont1 -->
+            <div id="cont2">
+                <div class="container">
+                    <div class="cont2">
+                        <div class="text">
+                            <h3>쉽고 재미있는 투자</h3>
+                            <p>소비 생활속에서도 다양한 투자 기회를 발굴합니다.<br/>
+                            복잡한 가입과정이나 큰돈 없이도 투자할 수 있습니다.<br/>
+                            상품선택의 수고로움을 덜기 위해 소수의 좋은 상품만을 제안합니다.<br/>
+                            카카오톡만 있다면 투자실행부터 투자상품 관리까지 한번에 해결됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- cont2 -->
+            <div id="cont3">
+                <div class="container">
+                    <div class="cont3">
+                        <img src="img/pic-retailfinance2.png" alt="카카오펀드 이미지">
+                        <div class="text">
+                            <h3>믿을 수 있는 상품</h3>
+                            <p>어떤 시장 환경에서도, 언제든지, 얼마의 금액을 투자하더라도<br/>
+                            많은 곳에 나눠져 안정적이고 전문가에 의해 운용되어 오랫동안<br/>
+                            믿고 맡길 수 있는 상품만을 엄선해 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- cont3 -->
+        </div>
+        <!-- contents -->
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+        <!-- footr -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>

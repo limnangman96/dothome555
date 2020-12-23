@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect05 - jQuery</title>
+    <style>
+         @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *,*::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+
+        body {
+            background: url(img/images04@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #a18cd1;
+            background-blend-mode: multiply;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: '62570체';
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8,31,36,0.7);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #fff;
+            color: #222;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        .contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%; height: 100vh;
+            overflow: hidden;
+        }
+        .move-image {
+            position: relative;
+            cursor: none;
+        }
+        .move-image .mimg {
+            width: 50vw;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            transition: transform 500ms ease-in-out;
+        }
+        .move-image:hover .mimg{
+            transform: scale(1.025);
+
+        }
+        .move-image .mimg .img {
+            position: absolute; left: -5%; top:-5%;
+            width: 110%; height: 110%;
+            object-fit: cover;  
+            /* background size 와 같은 기능 이미지 태그를 써도 사이즈 조절 가능 width값을 110%줬더니 이미지 왜곡이 생겨서 사용 */
+            transition: transform 500ms ease-in-out;
+        }
+
+        .move-image .mtxt {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+        .cursor {
+            position: absolute;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+    <h1>mouseEffect05 - jquery</h1>
+    <p>미우스이펙트 - 마우스를 따라 이미지 움직이기</p>
+    </div>
+    <div class="info right">
+    <ul>
+        <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+        <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+        <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+        <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
+        <li><a href="mouseEffect05-jquery.html" class="active">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+        <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+        <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+        <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
+        <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
+    </ul>
+    </div>
+
+    <div class="info bottom">
+    <ul>
+        <li>pageX : <span class="pageX">0</span> </li>
+        <li>pageY : <span class="pageY">0</span> </li>
+    </ul>
+    </div>
+    <!-- //info -->
+
+    <main>
+        <div class="contents">
+            <div class="cursor"></div>
+            <div class="move-image">
+                <div class="mimg"><img class="img" src="img/images04.jpg" alt="이미지"></div>
+                <div class="mtxt">
+                    <p>No winter lasts forever, no spring skips its turn.</p>
+                    <p>영원히 지속되는 겨울은 없다. 순서를 건너뛰는 봄도 없다.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+
+        $(".move-image").mousemove(function(e){
+            gsap.to(".cursor", {duration: 0.2, left: e.pageX - 10, top: e.pageY - 10});
+            // console.log(e)
+
+            // 마우스 커서가 이미지의 가운데에 위치했을 때 이미지의 위치도 정 가운데에 위치하도록
+            let x = e.pageX - ($(".move-image").width()/2 + $(".move-image").position().left);
+            let y = e.pageY - ($(".move-image").height()/2 + $(".move-image").position().top);
+
+            $(".img").attr({"style": "transform: translate("+x/20+"px, "+y/20+"px)"});
+            // 이미지가 조금 천천히 움직이도록 x와 y의 값을 20으로 나누어줬음
+        });
+
+        // 출력용
+        $(".move-image").mousemove(function(e){
+            $(".pageX").text(e.pageX);
+            $(".pageY").text(e.pageY);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃4</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        body {background: #fff8e1;}
+
+        /* layout */
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 100px; background: #ffde81;}
+        aside {width: 100%; height: 300px; background: #ffd34e;}
+        section {width: 90%; padding: 5%; background: #ffc825; overflow: hidden;}
+        section > article {
+            width: 18%; margin: 1%; height: 200px; background: #ff9900; float: left; border-radius: 10px;
+        }
+        footer {width: 100%; height: 100px; background: #ffb200;}
+
+        /* media */
+        @media (max-width: 1210px){
+            .container {width: 100%;}
+            section > article {width: 23%;}
+            section > article:nth-child(5n) {display: none;}
+        }
+
+        @media (max-width: 900px){
+            section > article {width: 31.3333%;}
+            section > article:nth-child(5) {display: block;}
+        }
+
+        @media (max-width: 600px){
+            section > article {width: 48%;}
+            section > article:nth-child(5n) {display: block;}
+        }
+
+        @media (max-width: 480px){
+            section > article {width: 98%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <header></header>
+            <!-- header -->
+            <aside></aside>
+            <!-- aside -->
+            <section>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+            <!-- section -->
+            <footer></footer>
+            <!-- footer -->
+        </main>
+        <!-- container -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>

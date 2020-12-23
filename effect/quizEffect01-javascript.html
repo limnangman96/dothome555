@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 18px;
+            background: #9FDDD8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        @font-face {
+            font-family: 'BMEULJIRO';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-size: 18px;
+            background: #9FDDD8;
+            font-family: 'BMEULJIRO';
+            line-height: 1.4;
+        }
+        .quiz-wrap {
+            max-width: 500px;
+            background: #E3E3E3;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .quiz-wrap .info {
+            background: #fff;
+            margin-bottom: 30px;
+        }
+        .quiz-wrap .info ul {
+            border: 3px solid #000;
+        }
+        .quiz-wrap .info li {
+            border-bottom: 3px solid #000;
+            padding: 8px;
+        }
+        .quiz-wrap .info li:last-child {
+            border-bottom: 0;
+        }
+        .quiz-wrap .quiz {
+            border: 3px solid #000;
+            padding: 20px;
+        }
+        .quiz-wrap .quiz h2 {
+            font-size: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .quiz-wrap .quiz .question {
+            font-size: 22px;
+            padding-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .quiz-wrap .quiz .question::before {
+            content: '';
+            width: 10px; height: 10px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute; left: 0; top: 9px;
+        }
+        .quiz-wrap .quiz .confirm-btn {
+            background: #00005C;
+            color: #fff;
+            text-align: center;
+            padding: 13px 10px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .quiz-wrap .quiz .confirm-answer {
+            border: 3px solid #000;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .quiz-wrap .quiz .confirm-answer::before {
+            content:"정답은 : "
+        }
+        .quiz-wrap .quiz .confirm-answer::after {
+            content:" 입니다."
+        }
+        .quiz-wrap .quiz .confirm-ex {
+            color: red;
+            position: relative;
+            padding-left: 17px;
+        }
+        .quiz-wrap .quiz .confirm-ex::before {
+            content: '';
+            width: 10px; height: 10px;
+            background: red;
+            border-radius: 50%;
+            position: absolute; left: 0; top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-wrap">
+        <div class="info">
+            <ul>
+                <li>시험 유형 : <span>주관식 퀴즈(한문제)</span></li>
+                <li>시험 과목 : <span>자바스크립트</span></li>
+                <li>시험 과목 : <span>HTML</span></li>
+            </ul>
+        </div>
+        <div class="quiz">
+            <h2>&lt; 문제<span class="num">0</span> &gt;</h2>
+            <p class="question"></p>
+            <div class="confirm">
+                <p class="confirm-btn">정답 확인하기</p>
+                <p class="confirm-answer"></p>
+                <p class="confirm-ex"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 선택자
+        const questionAsk = document.querySelector(".question");
+        const questionNum = document.querySelector(".num");
+        const questionBtn = document.querySelector(".confirm-btn");
+        const questionAnswer = document.querySelector(".confirm-answer");
+        const questionEx = document.querySelector(".confirm-ex");
+
+        // 문제 정보
+        const quizNum = 1;
+        const QuizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?";
+        const quizAnswer = "&lt;a&gt;";
+        const quizEx = "&lt;a&gt;태그는 유일하게 블록 구조를 감쌀 수 있는 태그입니다.";
+
+        // 문제 출력
+        questionNum.innerHTML=quizNum;
+        questionAsk.innerHTML=QuizAsk;
+        questionAnswer.innerHTML=quizAnswer;
+        questionEx.innerHTML=quizEx;
+
+        // 정답 숨기기
+        questionAnswer.style.display="none";
+        questionEx.style.display="none";
+
+        // 정답 확인
+        questionBtn.addEventListener("click", function() {
+            questionAnswer.style.display="block";
+            questionEx.style.display="block";
+        })
+    </script>
+</body>
+</html>

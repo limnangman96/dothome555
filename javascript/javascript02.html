@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복습</title>
+    <script>
+        //배열 선언
+        const arr1 = new Array;
+        arr1[0] = 100;
+        arr1[1] = 200;
+        
+        document.write(arr1[0]);
+        document.write(arr1[1]);
+        document.write("<br/>");
+
+        const arr2 = [100, 200, 300, 400];
+        for(let i=0; i<arr2.length; i++){
+            document.write(arr2[i]);
+        }
+        document.write("<br/>");
+
+        const arr3 = [100,200,300,400,500,600,700,800,900];
+        for(let i=0; i<arr3.length; i++){
+            document.write(arr3[i], "<br/>");
+            document.write(i, "<br/>");
+        }
+
+        //for문 up grade
+        arr3.forEach((element, index, array) => {
+            document.write(element, "<br/>");
+            document.write(index, "<br/>");
+            document.write(array, "<br/>");
+        })
+
+        document.write("<br/><br/>")
+        //for in문
+        for(let i in arr3){
+            document.write(arr3[i]);
+        }
+
+        document.write("<br/><br/>")
+        //for of문
+        for(let i of arr3){
+            document.write(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

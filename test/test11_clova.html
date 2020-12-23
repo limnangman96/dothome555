@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <title>CLOVA 2차</title>
+    <style>
+         /* reset */
+         *, img {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        body {font-family: 'NanumSquare', sans-serif;}
+
+        /* layout */
+        #header {width: 100%; height: 86px; background: #fff; position: fixed; z-index: 100;}
+        #banner {height: 650px; width: 100%; background:url(img/bg_cst.png) no-repeat; background-size: cover;}
+        #cont1 {height: 1000px;}
+        #cont2 {height: 800px;}
+        #cont3 {height: 1000px;}
+        #footer {background: #191919;}
+
+        .container {margin: 0 auto; width: 1200px; height: inherit; background: rgba(255,255,255,0);}
+
+        .header {position: relative;}
+        .header .header_logo {float: left; width: 150px; height: 30px; background: url(img/clova.png)0 -60px; margin-top: 30px;}
+        .header .header_menu {float: left;}
+        .header .header_menu ul {position: absolute; left: 300px; top: 33px;}
+        .header .header_menu li {display: inline-block; margin: 0 35px;}
+        .header .header_menu li a {color: #555; font-weight: 800;}
+        .header .header_btn {float: left;}
+        .header .header_btn ul {position: absolute; right: 0px; top: 28px;}
+        .header .header_btn li {display: inline-block; border: 1px solid #555; border-radius: 3px; }
+        .header .header_btn li a {display: inline-block; color: #555; font-size: 12px; font-weight: 800; padding: 8px 11px;}
+        .header .header_btn li:last-child {margin-left: 10px;}
+
+        .banner {color: #fff; padding-left: 150px; padding-top: 230px;}
+        .banner h2 {font-size: 42px; font-weight: 800;}
+        .banner p {width: 51%; margin-top: 30px; font-size: 18px; font-weight: 300; line-height: 1.8;}
+        .banner ul {overflow: hidden; margin-top: 45px;}
+        .banner li {float: left; margin-right: 10px;}
+        .banner li a {display: inline-block; color: #fff; border: 0.5px solid #fff; font-size: 18px; text-align: center; padding: 20px 40px; border-radius: 5px;}
+    
+        .cont1 {padding-top: 100px; text-align: center; position: relative;}
+        .cont1 h2 {font-size: 40px;}
+        .cont1 h2 span {color: #05D585;}
+        .cont1 p {font-size: 20px;  margin-top: 25px; line-height: 1.8;}
+        .cont1 .cont1_img {
+            width: 100%; height: 600px; background-size: cover;
+            background: url(img/diagram_cek.png) no-repeat;
+            position: absolute; top: 320px; left: 130px;
+        }
+        .cont1 .cont1_more a {display: inline-block; background: #05D585; color: #fff; border-radius: 5px; padding: 15px 55px; font-size: 20px; margin-top: 680px;}
+    
+        .cont2 {padding-top: 100px; text-align: center; position: relative;}
+        .cont2 h2 {font-size: 40px;}
+        .cont2 h2 span {color: #05D585;}
+        .cont2 p {font-size: 20px;  margin-top: 25px; line-height: 1.8;}
+        .cont2 .cont2_wrap {overflow: hidden;}
+        .cont2 .cont2_wrap > div {
+            float: left; 
+            width: 33.333%;
+            height: 480px; 
+            box-sizing: border-box;
+            padding: 0 50px;
+            font-size: 18px;
+            color: #888;
+            position: relative;
+        }
+        .cont2 .cont2_wrap > div h3 {color: #111; margin-top: 270px; font-size: 26px;}
+        .cont2 .cont2_wrap > div > .img {width: 200px; height: 180px; position: absolute; left: 100px; top: 50px;}
+        .cont2 .cont2_wrap .box_left .img {background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_platform.png) -35px 0px no-repeat;}
+        .cont2 .cont2_wrap >  div:after {
+            content: '';
+            width: 20px; height: 40px;
+            position: absolute; left: 380px; top: 130px;
+            background:url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_platform.png) -985px -260px no-repeat;
+        }
+        .cont2 .cont2_wrap >  div:last-child:after {
+            content: '';
+            width: 0px; height: 0px;
+        }
+        .cont2 .cont2_wrap .box_center .img {background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_platform.png) -303px 0px no-repeat;}
+        .cont2 .cont2_wrap .box_right .img {width: 220px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_platform.png) -35px -180px no-repeat;}
+
+        .cont3 {text-align: center; padding-top: 80px; font-size: 20px; line-height: 1.8;}
+        .cont3 .cont3_wrap {overflow: hidden;}
+        .cont3 .cont3_wrap > div {float: left; width: 33.333%; height: 500px; padding: 250px 20px 0px; box-sizing: border-box; position: relative;}
+        .cont3 .cont3_wrap > div > div {width: 150px; height: 160px; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_platform.png); position: absolute; left: 120px; top: 70px;}
+        .cont3 .cont3_wrap > div > h2 {font-size: 26px;}
+        .cont3 .cont3_wrap > div > h5 {color: #888; font-size: 20px;}
+        .cont3 .cont3_wrap > div > p {color: #888; line-height: 1.5; margin-top: 20px;}
+        .cont3 .cont3_wrap > div .left_icon {background-position: 5px -420px;}
+        .cont3 .cont3_wrap > div .center_icon {background-position: -145px -420px;}
+        .cont3 .cont3_wrap > div .right_icon {background-position: -268px -170px;}
+        .cont3 h3 {margin-top: 50px; font-size: 20px;}
+        .cont3 a {display: inline-block; margin-top: 30px; padding: 13px 40px; background: #05D585; color: #fff; border-radius: 5px;}
+
+        .footer {color: #565656; font-weight: 600; position: relative; overflow: hidden;}
+        .footer .logo_left {float: left; width: 150px; height: 30px; background: url(img/clova.png) 0 -30px; position: absolute; top: 30px; left: 0;} 
+        .footer .logo_right {float: right; position: absolute; right: 0; top: 30px; }
+        .footer .logo_right > div {width: 30px; height: 30px; background: url(img/clova.png) no-repeat; float: left; margin-left: 10px;}
+        .footer .logo_right > .logo_right_1 {background-position: -120px -85px;}
+        .footer .logo_right > .logo_right_2 {background-position: -158px -212px;}
+        .footer .logo_right > .logo_right_3 {background-position: -132px -212px;}
+        .footer .logo_right > .logo_right_4 {background-position: -195px -140px;;}
+        .footer ul {display: inline-block; margin-top: 80px; margin-bottom: 40px; width: 33%; font-size: 13px; box-sizing: border-box;}
+        .footer .ul1 {text-align: left;}
+        .footer .ul1 li:after {
+            content: '';
+            width: 1px; height: 10px;
+            background: #565656;
+            position: absolute; left: 128px; top: 2px;
+        }
+        .footer .ul1 li:last-child:after {
+            content: '';
+            width: 0px; height: 0px;
+        }
+        .footer .ul2 {text-align: center;}
+        .footer .ul3 {text-align: right;}
+        .footer .ul3 li:last-child {padding-right: 0;}
+        .footer .ul3 li:after {
+            content: '';
+            width: 1px; height: 10px;
+            background: #565656;
+            position: absolute; left: -9px; top: 2px;
+        }
+        .footer .ul3 li:first-child:after {
+            content: '';
+            width: 0px; height: 0px;
+            background: #565656;
+            position: absolute; left: 128px; top: 2px;
+        }
+        .footer ul li {display: inline-block; padding-right: 15px; position: relative;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <div class="header_logo"></div>
+                    <div class="header_menu">
+                        <ul>
+                            <li><a href="#">기술 · 솔루션</a></li>
+                            <li><a href="#">제품</a></li>
+                            <li><a href="#">플랫폼</a></li>
+                            <li><a href="#">파트너</a></li>
+                            <li><a href="#">리서치</a></li>
+                        </ul>
+                    </div>
+                    <div class="header_btn">
+                        <ul>
+                            <li><a href="#">Biz Start</a></li>
+                            <li><a href="#">비즈니스 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>CLOVA Skill Tools</h2>
+                    <p>클로바는 CLOVA Extensions Kit와 Chatbot Builder를 제공하여<br>
+                        새로운 Skill을 쉽고 빠르게 클로바에 추가할 수 있도록 도와드립니다.<br>
+                        클로바에서 제공하는 개발자 도구들을 통해 새로운 음성 기술을 개발하고
+                        특별한 서비스로 더 많은 고객을 만나세요.
+                    </p>
+                    <ul>
+                        <li><a href="#">콘솔 바로가기</a></li>
+                        <li><a href="#">챗봇 빌더 바로가기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="cont1">
+                <div class="container">
+                    <div class="cont1">
+                        <h2><span>CLOVA</span> Extensions Kit</h2>
+                        <p>CLOVA Extensions Kit는 외부 서비스나 IoT 기기를 제어할 수 있는<br>
+                            ‘CLOVA Skill’을 서비스할 수 있도록 필요한 도구와 인터페이스를 제공합니다.
+                        </p>
+                        <div class="cont1_img"></div>
+                        <div class="cont1_more">
+                            <a href="#">콘솔 바로가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cont2">
+                <div class="container">
+                    <div class="cont2">
+                        <h2><span>CLOVA</span> Chatbot Builder</h2>
+                        <p>Chatbot Builder를 통해 개발자가 아닌 일반 사용자도<br>
+                            쉽고 빠르게 챗봇을 만들고 서비스 할 수 있습니다.
+                        </p>
+                        <div class="cont2_wrap">
+                            <div class="box_left">
+                                <div class="img"></div>
+                                <h3>대화 등록</h3>
+                                <p>10개~15개의 대화 등록<br>
+                                    적은 데이터로도 챗봇 생성 가능
+                                </p>
+                            </div>
+                            <div class="box_center">
+                                <div class="img"></div>
+                                <h3>학습</h3>
+                                <p>방대한 네이버 DB와 함께<br>
+                                    빠르게 학습하고 바로 확인 가능
+                                </p>
+                            </div>
+                            <div class="box_right">
+                                <div class="img"></div>
+                                <h3>서비스 연결</h3>
+                                <p>스마트 스피커, LINE, 네이버 톡톡에서
+                                    음성과 텍스트 모두 즉시 연동
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cont3">
+                <div class="container">
+                    <div class="cont3">
+                        <p>CLOVA Chatbot은 기업의 상담 콜센터를 대체하고,<br>
+                            사용자의 흥미를 자극하는 재미있는 콘텐츠로 만들어지고 있습니다.
+                        </p>
+                        <div class="cont3_wrap">
+                            <div class="cont3_left">
+                                <div class=left_icon></div>
+                                <h2>마케팅 챗봇</h2>
+                                <h5>U+ 우리집AI β</h5>
+                                <p>유플러스 스피커 사용 고객에게<br>
+                                    우리집AI 상품을 소개해주는 챗봇
+                                </p>
+                            </div>
+                            <div class="cont3_center">
+                                <div class=center_icon></div>
+                                <h2>정보성 챗봇</h2>
+                                <h5>네이버 고객센터 β</h5>
+                                <p>네이버 주요 서비스에 대해<br>
+                                    도움말을 알려주는 챗봇
+                                </p>
+                            </div>
+                            <div class="cont3_right">
+                                <div class=right_icon></div>
+                                <h2>FUN 챗봇</h2>
+                                <h5>동물소리 번역기</h5>
+                                <p>동물 소리 발화를 유도하는<br>
+                                    사용 재미를 주는 챗봇
+                                </p>
+                            </div>
+                        </div>
+                        <h3>클로바 챗봇 빌더에서 나만의 챗봇을 만들어 보세요.</h3>
+                        <a href="#">챗봇 빌더 바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class=logo_left></div>
+                    <div class=logo_right>
+                        <div class="logo_right_1"></div>
+                        <div class="logo_right_2"></div>
+                        <div class="logo_right_3"></div>
+                        <div class="logo_right_4"></div>
+                    </div>
+                    <ul class="ul1">
+                        <li>고객센터 1833-5387</li>
+                        <li>09:00 - 18:00 (주말, 공휴일 휴무)</li>
+                    </ul>
+                    <ul class="ul2">
+                        <li>Powered by NAVER · LINE</li>
+                    </ul>
+                    <ul class="ul3">
+                        <li>공지사항</li>
+                        <li>이용약관</li>
+                        <li>CLOVA 채용안내</li>
+                        <li>CLOVA JP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

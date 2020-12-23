@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect02-jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'netmarbleB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top; 
+            /* 여백초기화! 이미지는 inline 구조이기 때문에 살짝 여백이 생긴다. */
+        }
+        ul {list-style: none;}
+
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #fff; 
+            border-radius: 50%; color: #fff; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-title: #fff;
+            --color-sub: #999;
+            --color-link: #000;
+            --color-bg: #111;
+            --font-cafe: 'netmarbleB';
+            --font-lato: 'Lato', sans-serif;
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+            font-size: 16px;
+            background: url(img/images09@2.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        body::before {
+            content:'';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8,31,36,0.7);
+        }
+
+        /* slider */
+        .slider-wrap {
+            width: 800px; height: 480px; 
+            overflow: hidden;
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        .slider-img {
+            overflow: hidden;
+            width: 4000px; height: 480px;
+            position: relative;
+        }
+        .slider-img .slider {
+            width: 800px; height: 480px;
+            float: left;
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute; left: 5px; top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- info -->
+<div class="info left">
+    <h1>Slider Effect02 - jQuery</h1>
+    <p>이미지 슬라이드 - 가로로 이동하기</p>
+</div>
+<div class="info right">
+    <ul>
+        <li><a href="SliderEffect01-jquery.html">1</a><a href="SliderEffect01-javascript.html">1</a></li>
+        <li><a href="SliderEffect02-jquery.html" class="active">2</a><a href="SliderEffect02-javascript.html">2</a></li>
+        <li><a href="SliderEffect03-jquery.html">3</a><a href="SliderEffect03-javascript.html">3</a></li>
+        <li><a href="SliderEffect04-jquery.html">4</a><a href="SliderEffect04-javascript.html">4</a></li>
+        <li><a href="SliderEffect05-jquery.html">5</a><a href="SliderEffect05-javascript.html">5</a></li>
+        <li><a href="SliderEffect06-jquery.html">6</a><a href="SliderEffect06-javascript.html">6</a></li>
+        <li><a href="SliderEffect07-jquery.html">7</a><a href="SliderEffect07-javascript.html">7</a></li>
+        <li><a href="SliderEffect08-jquery.html">8</a><a href="SliderEffect08-javascript.html">8</a></li>
+        <li><a href="SliderEffect09-jquery.html">9</a><a href="SliderEffect09-javascript.html">9</a></li>
+    </ul>
+</div>
+<!-- //info -->
+<!-- main -->
+<main>
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slider"><img src="img/images11.jpg" alt="이미지1"><span>이미지1</span></div>
+            <div class="slider"><img src="img/images12.jpg" alt="이미지2"><span>이미지2</span></div>
+            <div class="slider"><img src="img/images13.jpg" alt="이미지3"><span>이미지3</span></div>
+            <div class="slider"><img src="img/images15.jpg" alt="이미지4"><span>이미지4</span></div>
+            <div class="slider"><img src="img/images18.jpg" alt="이미지5"><span>이미지5</span></div>
+        </div>
+    </div>
+</main>
+<!-- //main -->
+
+<!-- script -->
+<script src="../jquery/jquery.min_1.1.24.js"></script>
+<script>
+    const sliderWrap = $(".slider-wrap");
+    const sliderImg = $(".slider-img");
+    const slider = $(".slider");
+
+    let currentIndex = 0;
+    let sliderCount = slider.length;
+
+    setInterval(function(){
+        // if (currentIndex < sliderCount - 1){
+        //     currentIndex++;  //0 1 2 3 4 0
+        // } else {
+        //     currentIndex = 0;
+        // }
+        currentIndex < sliderCount - 1 ?  currentIndex++ : currentIndex = 0;
+        console.log("currentIndex :" + currentIndex);
+
+        let sliderPosition = currentIndex * (-800) + "px";
+        sliderImg.animate({left: sliderPosition}, 400);
+    },3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        body {
+            width: 100%; height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center;
+        }
+        svg {
+            width: 100%; height: 100%;
+            visibility: hidden;
+        }
+
+        #allBoxes rect:nth-child(1) {fill:#faa027;}
+        #allBoxes rect:nth-child(2) {fill:#f4cc2d;}
+        #allBoxes rect:nth-child(3) {fill:#f3f230;}
+        #allBoxes rect:nth-child(4) {fill:#c2f261;}
+        #allBoxes rect:nth-child(5) {fill:#91f291;}
+        #allBoxes rect:nth-child(6) {fill:#61f2c2;}
+        #allBoxes rect:nth-child(7) {fill:#30f2f2;}    
+    </style>
+</head>
+<body>
+    <svg id="mainSvg" viewBox="0 0 800 600">
+	<defs>
+		<g id="allBoxes">
+			<rect x="62.92" y="231.96" width="100" height="100"/>
+			<rect x="185.14" y="231.96" width="100" height="100" rx="50"/>
+			<rect x="305.14" y="231.96" width="100" height="100"/>
+			<rect x="425.14" y="231.96" width="100" height="100" rx="50"/>
+			<rect x="545.14" y="231.96" width="100" height="100"/>
+			<rect x="665.14" y="231.96" width="100" height="100" rx="50"/>
+			<rect x="785.14" y="231.96" width="100" height="100"/>
+		</g>
+	</defs>
+	
+	<use xlink:href = "#allBoxes" />
+	<use id="ref" xlink:href = "#allBoxes" x="-0" y="100" opacity="0.1" />
+</svg>
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script>
+    gsap.set("svg", {visibility: "visible"});
+
+let tl = gsap.timeline({repeat: -1});
+tl.to("#allBoxes rect", {
+	transformOrigin: "107% 50%",
+	rotation: gsap.utils.wrap([180, -180]),
+	stagger: {each: 0.14}
+})
+
+	// 타임라인을 걸면 이어달리기 처럼 위에꺼 끝나고 실행
+.to("#allBoxes", {
+	x: -112,
+	duration:tl.recent().duration(),
+	ease: "linear"
+}, 0)
+	
+gsap.set("#ref", {
+	scaleY: -1,
+	transformOrigin: "50% 50%"
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>Jiwon | Display: flex </title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Jiwon" />
+    <meta property="og:url" content="https://dnjsdl678.dothome.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="지원" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Jx5MnvLWGS7iNV5" />
+    <meta name="twitter:title" content="Jiwon" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .iframe {position: relative; width: 100%; padding-bottom: 56%;}
+        .iframe iframe {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    </style>
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">jiwon's &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://coding555.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/limnangman96/">Coding</a></li>
+                    <li><a href="https://github.com/limnangman96/dothome1/">github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Flex Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://dnjsdl678.dothome.co.kr" target="_blank">dnjsdl678.dothome.co.kr</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- 배너광고 1140 -->
+               <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                    <script>
+                        new PartnersCoupang.G({ id:348400 });
+                    </script>
+                </div>
+                <!-- //배너광고 1140 -->
+                <!-- Intro0 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro0" class="page-header">Display: flex</h2>
+                    <p class="bs-callout bs-callout-info">Flexbox는 모던 웹을 위하여 제안된 기존 레이아웃보다 더 세련된 방식의 니즈에 부합하기 위한 CSS3의 새로운 레이아웃 방식입니다.</p>
+                    <p>
+                        Flexbox에서 사용하는 속성은 부모요소와 자식요소로 나누어집니다. 전체적인 정렬이나 흐름에 관한 속성은 Flex container에서 정의하고 자식 요소의 크기나 순서와 관련된 속성은 Flex item에서 정의합니다. 이를 분리해서 적용하는 것이 Flex-box에서 가장 중요합니다. <br>
+                        - Flex container 속성 : flex-direction, flex-wrap, justify-content, align-items, align-content <br>
+                        - Flex item 속성 : flex, flex-grow, flex-shrink, flex-basis, orfer
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <colgroup>
+                                <col style="width: 30%">
+                                <col style="width: 70%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>속성</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>align-content</td>
+                                    <td>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-items</td>
+                                    <td>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-self</td>
+                                    <td>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex</td>
+                                    <td>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-basis</td>
+                                    <td>flex-basis 속성은 요소의 기본 단위를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-direction</td>
+                                    <td>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-flow</td>
+                                    <td>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-grow</td>
+                                    <td>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-shrink</td>
+                                    <td>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-wrap</td>
+                                    <td>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-content</td>
+                                    <td>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-items</a></td>
+                                    <td>justify-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-self</a></td>
+                                    <td>justify-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-content</td>
+                                    <td>place-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-items</a></td>
+                                    <td>place-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-self</a></td>
+                                    <td>place-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>order</a></td>
+                                    <td>order 속성은 flex 콘텐츠의 순서를 정의합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //Intro0 -->
+                <style>
+                    .sample .boxWrap > div {
+                        background: #e2f0ff;
+                        float: none; 
+                        width: 100%;
+                        height: auto;
+                        line-height: normal;
+                        text-align: left;
+                        padding: 10px;
+                        margin: 0;
+                    }
+                    .flexBox {
+                        counter-reset: items;
+                    }
+                    .itemBox {
+                        border-radius: 3px;
+                        background: #a2cbfa;
+                        box-sizing: border-box;
+                        border: 1px solid #4390e1;
+                        box-shadow: 0 2px 0 rgba(0,90,250,0.05);
+                        min-height: 100px;
+                        width: 50px;
+                        margin: 10px;
+                        padding: 10px;
+                    }
+                    .itemBox:before {
+                        counter-increment: items;
+                        content: counter(items);
+                    }
+                    .flexChoie {padding: 20px;}
+                    .flexChoie a {
+                        border: 1px solid #4390e1;
+                        display: inline-block;
+                        padding: 5px 20px;
+                        margin: 5px;
+                        border-radius: 30px;
+                    }
+
+                    .flex {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: normal;
+                        height: 300px !important;
+                    }
+                </style>
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">align-content</h2>
+                    <p class="bs-callout bs-callout-info">
+                        align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">align-content</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex">
+                                <div class="itemBox item"></div>
+                                <div class="itemBox item"></div>
+                                <div class="itemBox item"></div>
+                                <div class="itemBox item"></div>
+                                <div class="itemBox item"></div>
+                                <div class="itemBox item"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn1">
+                            <a href="#">align-content: normal</a>
+                            <a href="#">align-content: stretch</a>
+                            <a href="#">align-content: center</a>
+                            <a href="#">align-content: flex-start</a>
+                            <a href="#">align-content: flex-end</a>
+                            <a href="#">align-content: space-between</a>
+                            <a href="#">align-content: space-around</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro1 -->
+                <style>
+                    .flex2 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        height: 300px !important;
+                    }
+                </style>
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">justify-content</h2>
+                    <p class="bs-callout bs-callout-info">
+                        justify-content 속성은 콘텐츠의 좌우관계 정렬 상태를 정의합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">justify-content</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex2">
+                                <div class="itemBox item2"></div>
+                                <div class="itemBox item2"></div>
+                                <div class="itemBox item2"></div>
+                                <div class="itemBox item2"></div>
+                                <div class="itemBox item2"></div>
+                                <div class="itemBox item2"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn2">
+                            <a href="#">justify-content: normal</a>
+                            <a href="#">justify-content: flex-start</a>
+                            <a href="#">justify-content: flex-end</a>
+                            <a href="#">justify-content: space-between</a>
+                            <a href="#">justify-content: space-around</a>
+                            <a href="#">justify-content: space-evenly</a>
+                            
+
+                            <a href="#">justify-content: center</a>
+                            <a href="#">justify-content: start</a>
+                            <a href="#">justify-content: end</a>
+                            <a href="#">justify-content: left</a>
+                            <a href="#">justify-content: right</a>
+                            <a href="#">justify-content: stretch</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro2 -->
+                <style>
+                    .flex3 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        height: 300px !important;
+                    }
+                </style>
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">flex-direction</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex-direction 속성은 콘텐츠의 정렬 방향을 정의합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex-direction</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex3">
+                                <div class="itemBox item3"></div>
+                                <div class="itemBox item3"></div>
+                                <div class="itemBox item3"></div>
+                                <div class="itemBox item3"></div>
+                                <div class="itemBox item3"></div>
+                                <div class="itemBox item3"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn3">
+                            <a href="#">flex-direction: row</a>
+                            <a href="#">flex-direction: row-reverse</a>
+                            <a href="#">flex-direction: column</a>
+                            <a href="#">flex-direction: column-reverse</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro3 -->
+                <style>
+                    .flex4 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        min-height: 300px !important;
+                    }
+                </style>
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">flex-basis</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex-basic 속성은 요소의 기본 크기를 정의합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex-basis</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex4">
+                                <div class="itemBox item4"></div>
+                                <div class="itemBox item4"></div>
+                                <div class="itemBox item4"></div>
+                                <div class="itemBox item4"></div>
+                                <div class="itemBox item4"></div>
+                                <div class="itemBox item4"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn4">
+                            <a href="#">flex-basis: auto</a>
+                            <a href="#">flex-basis: 0</a>
+                            <a href="#">flex-basis: 100px</a>
+                            <a href="#">flex-basis: 200px</a>
+                            <a href="#">flex-basis: 300px</a>
+                            <a href="#">flex-basis: 10%</a>
+                            <a href="#">flex-basis: 20%</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro4 -->
+                <style>
+                    .flex5 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        min-height: 300px !important;
+                    }
+                    .item5 {
+                        flex: 1 1 0;
+                    }
+                </style>
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">flex-grow</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex-grow 속성은 요소의 크기를 숫자를 통해 확대합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex-grow</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex5">
+                                <div class="itemBox item5"></div>
+                                <div class="itemBox item5"></div>
+                                <div class="itemBox item5"></div>
+                                <div class="itemBox item5"></div>
+                                <div class="itemBox item5"></div>
+                                <div class="itemBox item5"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn5">
+                            <a href="#">flex-grow: 0</a>
+                            <a href="#">flex-grow: 1</a>
+                            <a href="#">flex-grow: 2</a>
+                            <a href="#">flex-grow: 3</a>
+                            <a href="#">flex-grow: 4</a>
+                            <a href="#">flex-grow: 5</a>
+                            <a href="#">flex-grow: 0.5</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro5 -->
+                <style>
+                    .flex6 {
+                        display: flex;
+                        min-height: 300px !important;
+                    }
+                    .item6 {
+                        flex: 1 1 300px;
+                    }
+                </style>
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">flex-shrink</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex-shrink</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex6">
+                                <div class="itemBox item6"></div>
+                                <div class="itemBox item6"></div>
+                                <div class="itemBox item6"></div>
+                                <div class="itemBox item6"></div>
+                                <div class="itemBox item6"></div>
+                                <div class="itemBox item6"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn6">
+                            <a href="#">flex-shrink: 0</a>
+                            <a href="#">flex-shrink: 1</a>
+                            <a href="#">flex-shrink: 2</a>
+                            <a href="#">flex-shrink: 3</a>
+                            <a href="#">flex-shrink: 4</a>
+                            <a href="#">flex-shrink: 5</a>
+                            <a href="#">flex-shrink: 0.5</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro6 -->
+                <style>
+                    .flex7 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        min-height: 300px !important;
+                    }
+                    .item7 {
+                        flex-wrap: noWrap;
+                    }
+                </style>
+                 <!-- Intro7 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">flex-wrap</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex-wrap 속성은 요소의 줄 속성을 정의합니다.
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex-wrap</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex7">
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                                <div class="itemBox item7"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn7">
+                            <a href="#">flex-wrap: noWrap</a>
+                            <a href="#">flex-wrap: wrap</a>
+                            <a href="#">flex-wrap: wrap-reverse</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro7 -->
+                <style>
+                     .flex8 {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        min-height: 300px !important;
+                    }
+                    .item8 {
+                        flex: 1 1 0;
+                    }
+                </style>
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">flex</h2>
+                    <p class="bs-callout bs-callout-info">
+                        flex 속성은 flex-grow와 flex-shrink, flex-basis 속성을 정의합니다.
+                    </p>
+                    <p class="bs-callout bs-callout-info">
+                        /* 단위가 없는 속성 한개만 사용한 경우 : flex-grow */ <br>
+                        flex: 2 <br><br>
+
+                        /* 단위가 있는 속성을 한개만 사용한 경우 : flex-basis */ <br>
+                        flex: 100px <br><br>
+
+                        /* 단위가 없는 속성 두개 사용한 경우 */ <br>
+                        flex: 2 2; <br><br>
+
+                        /* flex: grow | flex: basis */ <br>
+                        flex: 2 200px; <br><br>
+
+                        /* flex-grow | flex-shrink | flex-basis */ <br>
+                        flex: 2 2 100px <br><br>
+                    </p>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">flex</em></h3>
+                        <div class="boxWrap">
+                            <div class="flexBox flex8">
+                                <div class="itemBox item8"></div>
+                                <div class="itemBox item8"></div>
+                                <div class="itemBox item8"></div>
+                                <div class="itemBox item8"></div>
+                            </div>
+                        </div>
+                        <div class="flexChoie flexBtn8">
+                            <a href="#">flex: 2</a>
+                            <a href="#">flex: 200px</a>
+                            <a href="#">flex: 2 200px</a>
+                            <a href="#">flex: 1 1 150px</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- //Intro8 -->
+                <style>
+                    .flex9 {
+                       display: flex;
+                       flex-wrap: wrap;
+                       align-content: center;
+                    }
+                   .item9 {
+                       flex: 1 1 0;
+                       min-height: auto;
+                   }
+               </style>
+               <!-- Intro9 -->
+               <div class="bs-docs-section">
+                   <h2 id="intro9" class="page-header">align-items</h2>
+                   <p class="bs-callout bs-callout-info">
+                        align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.
+                   </p>
+                   <div class="sample">
+                       <h3><span></span><em class="sr-only">align-items</em></h3>
+                       <div class="boxWrap">
+                           <div class="flexBox flex9">
+                               <div class="itemBox item9"><br>1<br></div>
+                               <div class="itemBox item9"><br>2<br>2<br></div>
+                               <div class="itemBox item9"><br>3<br>3<br>3<br></div>
+                               <div class="itemBox item9"><br>4<br>4<br>4<br>4<br></div>
+                               <div class="itemBox item9"><br>5<br>5<br>5<br>5<br>5<br></div>
+                               <div class="itemBox item9"><br>6<br>6<br>6<br>6<br>6<br>6<br></div>
+                               <div class="itemBox item9"><br>7<br>7<br>7<br>7<br>7<br></div>
+                               <div class="itemBox item9"><br>8<br>8<br>8<br>8<br></div>
+                               <div class="itemBox item9"><br>9<br>9<br>9<br></div>
+                               <div class="itemBox item9"><br>10<br>10<br></div>
+                               <div class="itemBox item9"><br>11<br></div>
+                           </div>
+                       </div>
+                       <div class="flexChoie flexBtn9">
+                           <a href="#">align-items: stretch</a>
+                           <a href="#">align-items: center</a>
+                           <a href="#">align-items: flex-start</a>
+                           <a href="#">align-items: flex-end</a>
+                           <a href="#">align-items: baseline</a>
+                       </div>
+                   </div>
+               </div>    
+               <!-- //Intro10 -->
+               <style>
+                .flex10 {
+                   display: flex;
+                   flex-wrap: wrap;
+                   align-content: center;
+                }
+               .item10 {
+                   flex: 1 1 0;
+                   min-height: auto;
+               }
+           </style>
+           <!-- Intro10 -->
+           <div class="bs-docs-section">
+               <h2 id="intro10" class="page-header">justify-items</h2>
+               <p class="bs-callout bs-callout-info">
+                    justify-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.
+               </p>
+               <div class="sample">
+                   <h3><span></span><em class="sr-only">justify-items</em></h3>
+                   <div class="boxWrap">
+                       <div class="flexBox flex10">
+                           <div class="itemBox item10"> 1 </div>
+                           <div class="itemBox item10"> 2 2 </div>
+                           <div class="itemBox item10"> 3 3 3 </div>
+                           <div class="itemBox item10"> 4 4 4 4 </div>
+                           <div class="itemBox item10"> 5 5 5 5 5 </div>
+                           <div class="itemBox item10"> 6 6 6 6 6 6 </div>
+                           <div class="itemBox item10"> 7 7 7 7 7 </div>
+                           <div class="itemBox item10"> 8 8 8 8 </div>
+                           <div class="itemBox item10"> 9 9 9 </div>
+                           <div class="itemBox item10"> 10 10 </div>
+                           <div class="itemBox item10"> 11 </div>
+                       </div>
+                   </div>
+                   <div class="flexChoie flexBtn10">
+                       <a href="#">justify-items: stretch</a>
+                       <a href="#">justify-items: center</a>
+                       <a href="#">justify-items: flex-start</a>
+                       <a href="#">justify-items: flex-end</a>
+                       <a href="#">justify-items: baseline</a>
+                   </div>
+               </div>
+           </div>    
+           <!-- //Intro10 -->
+
+
+           <br><br><br>
+
+           <style>
+               .sFlex {
+                   padding: 20px;
+                   counter-reset: items;
+               }
+               .sItem {
+                   background: #a2cbfa;
+                   border: 1px solid #4390e1;
+                   box-sizing: border-box;
+                   box-shadow:
+                        0 2px 2px rgba(0,90,250,0.05),
+                        0 4px 4px rgba(0,90,250,0,0.05),
+                        0 8px 8px rgba(0,90,250,0,0.05),
+                        0 16px 16px rgba(0,90,250,0,0.05);
+                    padding: 10px;
+                    border-radius: 3px;
+                    min-height: 100px;
+                   }
+               .sItem::before {
+                   counter-increment: items;
+                   content: counter(items);
+               }
+               
+
+               /* flex */
+               /* .sFlex1 {display: flex;}
+               .sItem1 {flex: 1 1 0;}
+               .sItem1 + .sItem1 {margin-left: 2%;} */
+
+               .sFlex1 {display: flex; justify-content: space-between;}
+               .sItem1 {flex: 0 0 100px;}
+           </style>
+           <!-- sample01 -->
+           <div class="bs-docs-section">
+            <h2 id="sample01" class="page-header">sample01</h2>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">sample01</em></h3>
+                <div class="boxWrap">
+                    <div class="sFlex sFlex1">
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                        <div class="sItem sItem1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.sFlex1 {display: flex; justify-content: space-between;}
+.sItem1 {flex: 0 0 100px;}
+</code></pre>
+        </div>    
+        <!-- //sample01 -->
+        <style>
+               .sFlex2 {display: flex;}
+               .sItem2 {flex: 1 1 0}
+               .sItem2 + .sItem2 {margin-left: 2%;}
+        </style>
+        <!-- sample02 -->
+        <div class="bs-docs-section">
+            <h2 id="sample02" class="page-header">sample02</h2>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">sample02</em></h3>
+                <div class="boxWrap">
+                    <div class="sFlex sFlex2">
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                        <div class="sItem sItem2"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.sFlex2 {display: flex;}
+.sItem2 {flex: 1 1 0}
+.sItem2 + .sItem2 {margin-left: 2%;}
+</code></pre>
+        </div>    
+        <!-- //sample02 -->
+        <style>
+            .sFlex3 {display: flex;}
+            .sItem3 {flex-basis: 100px}
+            .sItem3 + .sItem3 {margin-left: 2%;}
+            .sItem3:last-child{margin-left: auto;}
+        </style>
+        <!-- sample03 -->
+        <div class="bs-docs-section">
+            <h2 id="sample03" class="page-header">sample03</h2>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">sample03</em></h3>
+                <div class="boxWrap">
+                    <div class="sFlex sFlex3">
+                        <div class="sItem sItem3"></div>
+                        <div class="sItem sItem3"></div>
+                        <div class="sItem sItem3"></div>
+                        <div class="sItem sItem3"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.sFlex3 {display: flex;}
+.sItem3 {flex-basis: 100px}
+.sItem3 + .sItem3 {margin-left: 2%;}
+.sItem3:last-child{margin-left: auto;}
+</code></pre>
+        </div>    
+        <!-- //sample03 -->
+        <style>
+            .sFlex4 {display: flex;}
+            .sItem4 {flex-basis: 100px}
+            .sItem4 + .sItem4 {margin-left: 2%;}
+            .sItem4:nth-child(2) {margin-left: auto; flex-basis: 300px;}
+            .sItem4:last-child{margin-left: auto;}
+        </style>
+        <!-- sample04 -->
+        <div class="bs-docs-section">
+            <h2 id="sample04" class="page-header">sample04</h2>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">sample04</em></h3>
+                <div class="boxWrap">
+                    <div class="sFlex sFlex4">
+                        <div class="sItem sItem4"></div>
+                        <div class="sItem sItem4"></div>
+                        <div class="sItem sItem4"></div>
+                        <div class="sItem sItem4"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.sFlex4 {display: flex;}
+.sItem4 {flex-basis: 100px}
+.sItem4 + .sItem4 {margin-left: 2%;}
+.sItem4:nth-child(2) {margin-left: auto; flex-basis: 300px;}
+.sItem4:last-child{margin-left: auto;}
+</code></pre>
+        </div>    
+        <!-- //sample04 -->
+        
+
+            </div>
+            <!-- //col-md-12 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <script>
+        $(".flexBtn1").on("click","a", function(e){
+            e.preventDefault();
+            // on 클래스 이벤트 함수는 find찾아서 작업할 것을(a 찾는거) click이벤트와 함께 쓸수 있다.
+            let attrText = $(this).text();
+
+            // 가져온 글씨값을 flex 속성으로 넣어주기
+            $(".flex").attr("style", attrText);
+        });
+
+        $(".flexBtn2").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".flex2").attr("style", attrText);
+        });
+
+        $(".flexBtn3").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".flex3").attr("style", attrText);
+        });
+
+        $(".flexBtn4").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".item4").attr("style", attrText);
+        });
+
+        $(".flexBtn5").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".item5").eq(3).attr("style", attrText);
+        });
+
+        $(".flexBtn6").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".item6").eq(3).attr("style", attrText);
+        });
+
+        $(".flexBtn7").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".flex7").attr("style", attrText);
+        });
+
+        $(".flexBtn8").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".item8").eq(2).attr("style", attrText);
+        });
+
+        $(".flexBtn9").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".flex9").attr("style", attrText);
+        });
+
+        $(".flexBtn10").on("click","a", function(e){
+            e.preventDefault();
+            let attrText = $(this).text();
+            $(".flex10").attr("style", attrText);
+        });
+    </script>
+</body>
+
+</html>

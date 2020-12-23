@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구현 test04</title>
+    <style>
+        /* reset */
+        @font-face { 
+            font-family: 'S-CoreDream-8Heavy'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* layout */
+        #wrap {
+            height: 1600px;
+            font-size: 72px;
+            margin: 0 auto;
+            font-family: 'S-CoreDream-8Heavy';
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #header_wrap { 
+            height: 150px; 
+            background-color: #e0f2f1 ;
+        }
+        #banner_wrap { 
+            height: 400px; 
+            background-color: #b2dfdb ;
+        }
+        #contents_wrap {
+            background-color: #80cbc4 ;
+        }
+        #content2 {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #footer_wrap {
+            height: 150px; 
+            background-color: #4db6ac ;
+        }
+        .header {
+            width: 1200px; 
+            height: 150px; 
+            background-color: #03a9f4 ; 
+            margin: 0 auto;
+            line-height: 150px;
+        }
+        .banner {
+            width: 1200px; 
+            height: 400px; 
+            background-color: #039be5; 
+            margin: 0 auto;
+            line-height: 400px;
+        }
+        .content1 {
+            width: 1200px; 
+            height: 300px; 
+            background-color: #0288d1; 
+            margin: 0 auto;
+            line-height: 300px;
+        }
+        .content2-1 {
+            width: 600px; 
+            height: 300px; 
+            background-color: #0277bd; 
+            margin: 0 auto; 
+            float: left;
+            line-height: 300px;
+        }
+        .content2-2 {
+            width: 600px; 
+            height: 300px; 
+            background-color: #01579b; 
+            margin: 0 auto; 
+            float: left;
+            line-height: 300px;
+        }
+        .content3 {
+            width: 1200px; 
+            height: 300px; 
+            background-color: #00b0ff; 
+            margin: 0 auto; 
+            clear: both;
+            line-height: 300px;
+        }
+        .footer {
+            width: 1200px; 
+            height: 150px; 
+            background-color: #0091ea; 
+            margin: 0 auto; 
+            clear: both;
+            line-height: 150px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <!-- //header_wrap -->
+
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <!-- //banner_wrap -->
+
+        <div id="contents_wrap">
+            <div class="content1">content1</div>
+            <div id="content2">
+                <div class="content2-1">content2-1</div>
+                <div class="content2-2">content2-2</div>
+            </div>
+            <div class="content3">content3</div>
+        </div>
+        <!-- //contents_wrap -->
+
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+        <!-- //footer_wrap -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

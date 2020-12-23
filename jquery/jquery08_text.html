@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQueray08 text</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {font-family: 'NEXON Lv2 Gothic';}
+        li.red {color:#c7254e; background: #f9f2f4; border: 1px dashed #a51a3d;}
+    </style>
+</head>
+<body>
+    <h1>탐색</h1>
+    <ul>
+        <li>addClass() 메서드는 선택한 요소에 클래스를 생성하고, removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.</li>
+        <li class="select">toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있는 경우에는 삭제합니다.</li>
+        <li>hasClass() 메서드는 선택한 요소에 지정한 클래스가 있으면true를 반환하고, 없으면 false를 반환합니다.</li>
+    </ul>
+
+    <button class="btn1">btn1</button>
+    <button class="btn2">btn2</button>
+    <button class="btn3">btn3</button>
+    <button class="btn4">btn4</button>
+
+    <!-- script -->
+    <script src="jquery.min_1.1.24.js"></script>
+    <script>
+        // 세번째 li를 선택해서 글씨 색을 빨간색으로 변경해보세요. (10가지)
+        // $("li:eq(2)").css("color","red");
+        // $("li:last").css("color","red");
+        // $("li:nth-child(3)").css("color","red");
+        // $("li:gt(1)").css("color","red");
+        // $("li:last-child").css("color","red");
+        // $("li:nth-child(3n)").css("color","red");
+        // $("li:contains('has')").css("color","red");
+        // $("li:nth-of-type(3)").css("color","red");
+        // $("li:last-of-type").css("color","red");
+        // $("li:nth-child(2)~li").css("color","red");
+
+        // 버튼을 클릭하면 첫번째 li의 글씨를 경고창으로 띄워주세요.
+        $(".btn1").click(function(){
+            let text = $("li:first").text();
+            alert(text);
+        });
+
+        // 버튼2를 클릭하면 마지막 li의 글씨를 변경해주세요.
+        // text() 메서드는 선택한 요소에 포함되어 있는 전체 텍스트를 가져오거나 선택한 하위 요소를 전부 제거하고 새 텍스트를 생성할 때 사용합니다.
+        $(".btn2").click(function(){
+            $("li:last").text("text() 메서드는 선택한 요소에 포함되어 있는 전체 텍스트를 가져오거나 선택한 하위 요소를 전부 제거하고 새 텍스트를 생성할 때 사용합니다.");
+        });
+    
+        $(".btn3").click(function(){
+            $("li:eq(1)").html("<strong>addClass()</strong>메서드는 선택한 요소에 클래스를 생성하고, removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.")
+        });
+
+        $(".btn4").click(function(){
+            $("li:eq(1)").text("<strong>addClass()</strong>메서드는 선택한 요소에 클래스를 생성하고, removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.")
+        });
+    </script>
+
+</body>
+</html>

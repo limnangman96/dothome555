@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax02-javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'GyeonggiTitleM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top; 
+            /* 여백초기화! 이미지는 inline 구조이기 때문에 살짝 여백이 생긴다. */
+        }
+        ul {list-style: none;}
+
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {
+            width: 25px; height: 25px; 
+            display: inline-block; 
+            border: 1px dashed #222; 
+            border-radius: 50%; color: #222; 
+            text-align: center; 
+            line-height: 25px; 
+            font-size: 0.8rem; 
+            margin: 5px;
+        } 
+        .info li a.active {
+            background: #222;
+            color: #fff;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        body {
+            --color-h1 : #647aff;
+            --color-title: #fff;
+            --color-sub: #999;
+            --color-link: #000;
+            --color-bg: #cecece;
+            --font-cafe: 'GyeonggiTitleM';
+            --font-lato: 'Lato', sans-serif;
+
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+            --aspect-ratio : 33/17;
+            
+        }
+        #parallax-wrap {
+            overflow: hidden;
+        }
+
+        #parallax-wrap h1 {
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10vw 8vw 0 8vw;
+        }
+
+        #parallax-wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+
+        .contents {
+            margin: 0 auto 35vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .content-item {
+            width: 1200px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+            position: relative;
+        }
+        .content-item:nth-child(even){
+            margin-left: auto;
+        }
+        .content-item-num {
+            font-size: 25vw;
+            font-weight: 100;
+            font-family: var(--font-lato);
+            position: absolute; right: -5vw; top: -20vw;
+            opacity: 0.3;
+        }
+        .content-item:nth-child(even)  .content-item-num {
+            right: auto;
+            left: -5vw;
+        }
+        .content-item .content-item-title {
+            padding: 1% 0;
+        }
+        .content-item:nth-child(odd) .content-item-title {
+            text-align: right;
+            padding: 1% 0;
+        }
+        .content-item-imgWrap {
+            /* padding-bottom: 50%; */
+            /* 패딩을 준 이유? position을 쓸건데 그걸 쓰면 영역이 사라지기 때문에 임의의 공간 만들었다. 반응형을 만들려면 pixel은 사용할 수 없다. */
+            padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
+            --width: 100%;
+            width: var(--width);
+            overflow: hidden;
+            position: relative;
+            background: red;
+            /* 임시로 지정한 배경색. 이미지 크기 수정이 잘 되었는지 확인용 */
+        }
+        .content-item-img {
+            width: var(--width);
+            --overflow: 60px;
+            position: absolute;
+            top: calc(-1 * var(--overflow));
+            /* 60px과 같은 값 */
+            background: url(img/images18.jpg);
+            /* background-size: contain; (width값 중심으로 맞추어 주는 것) */
+            background-size: cover;
+            height: calc(100% + (3 * var(--overflow)));
+            background-position: 50% 0;
+        }
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            padding-left: 8vw;
+            z-index: 100;
+            position: relative;
+
+            /* position: relative;
+                1. position: absolute 기준점 역할
+                2. position: absolute를 사용하지 않고 z-index를 사용할 경우
+                3. position: absolute를 사용하지 않고 left, top을 통해서 위치를 설정할 경우 
+            */
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+            margin-right: auto;
+            padding-left: 0;
+            /* padding은 auto가 없다. 기본값 0으로 작업 */
+            padding-right: 10vw;
+            margin-left: -4vw;
+        }
+
+        .content-item:nth-child(2) .content-item-img {
+            background: url(img/images10.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(3) .content-item-img {
+            background: url(img/images11.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(4) .content-item-img {
+            background: url(img/images12.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(5) .content-item-img {
+            background: url(img/images13.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(6) .content-item-img {
+            background: url(img/images14.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(7) .content-item-img {
+            background: url(img/images15.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(8) .content-item-img {
+            background: url(img/images16.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(9) .content-item-img {
+            background: url(img/images17.jpg);
+            background-size: cover;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+<!-- info -->
+<div class="info left">
+    <h1>Parallax Effect02 - javascript</h1>
+    <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
+</div>
+<div class="info right">
+    <ul>
+        <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
+        <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html" class="active">2</a></li>
+        <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
+        <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+        <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
+        <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
+        <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
+        <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
+        <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
+    </ul>
+</div>
+
+<div class="info bottom">
+    <ul>
+        <li>scrollTop() : <span class="scrollTop">0</span>px</li>
+    </ul>
+</div>
+<!-- //info -->
+    <main>
+        <section id="parallax-wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents">
+                <section id="section1" class="content-item">
+                    <span class="content-item-num">01</span>
+                    <h2 class="content-item-title">section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">나를 죽이지 않는 역경은 나를 키운다.</p>
+                </section>
+                <section id="section2" class="content-item">
+                    <span class="content-item-num">02</span>
+                    <h2 class="content-item-title">section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">실패란 넘어지는 것이 아니다. 넘어진 자리에 머무는 것이다.</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">긍정적인 태도는 그 어느것도 막을 수 없는 강력한 힘을 갖는다.</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">길을 아는 것과 그 길을 걷는 것은 분명히 다르다.</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">인생은 욕망이지, 의미가 아니다.</p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">폭풍이 두렵지 않다. 나의 배로 항해하는 법을 배우고 있으니까.</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">배움을 게을리 하는 사람은 과거를 상실하며 미래도 없다.</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">인생은 과감한 모험이던가 아니면 아무것도 아니다.</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신을 어떻게 생각하느냐가 자신의 운명을 결정짓는다.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- script -->
+    <script src="../jquery/jquery.min_1.1.24.js"></script>
+    <script>
+        window.addEventListener("scroll", () => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrillTop) // 옛날 버전(익스플로러) 지원, 호환성 준수
+
+            // 개별적으로
+            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;
+            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
+            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
+            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
+            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
+            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
+            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
+            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
+            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
+
+            // document.querySelector("#section1 .content-item-desc").style.transform = "translateY("+ -offset1 +"px)"
+            // document.querySelector("#section2 .content-item-desc").style.transform = "translateY("+ -offset2 +"px)"
+            // document.querySelector("#section3 .content-item-desc").style.transform = "translateY("+ -offset3 +"px)"
+            // document.querySelector("#section4 .content-item-desc").style.transform = "translateY("+ -offset4 +"px)"
+            // document.querySelector("#section5 .content-item-desc").style.transform = "translateY("+ -offset5 +"px)"
+            // document.querySelector("#section6 .content-item-desc").style.transform = "translateY("+ -offset6 +"px)"
+            // document.querySelector("#section7 .content-item-desc").style.transform = "translateY("+ -offset7 +"px)"
+            // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 +"px)"
+            // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)"
+
+            // 한번에(for문)
+            // for(let i=1; i<=9; i++){
+            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
+            //     document.querySelector("#section"+i+" .content-item-desc").style.transform = "translateY("+ -offset +"px)"
+            // }
+
+             // 한번에(for Each)
+            document.querySelectorAll(".content-item").forEach((elem) => {
+                // console.log(elem);
+                let target = elem.childNodes[7];  //parallax-wrap의 7번째 자식(content-item-desc)을 찾는 방법(자바스크립트에는 find()메서드가 존재하지 않음)
+                let offset = (pageYOffset - elem.offsetTop) * 0.2;
+                target.style.transform = "translateY("+ -offset +"px)";
+            });
+        });
+
+    </script>
+</body>
+</html>

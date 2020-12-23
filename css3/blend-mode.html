@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>Jiwon | Blend Mode </title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Jiwon" />
+    <meta property="og:url" content="https://dnjsdl678.dothome.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="지원" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Jx5MnvLWGS7iNV5" />
+    <meta name="twitter:title" content="Jiwon" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">jiwon's &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://coding555.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/limnangman96/">Coding</a></li>
+                    <li><a href="https://github.com/limnangman96/dothome1/">github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Blend-Mode Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://dnjsdl678.dothome.co.kr" target="_blank">dnjsdl678.dothome.co.kr</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- 배너광고 1140 -->
+                <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                    <script>
+                        new PartnersCoupang.G({ id:348400 });
+                    </script>
+                </div>
+                <!-- //배너광고 1140 -->
+                <!-- Intro0 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro0" class="page-header">background-blend-mode</h2>
+                    <p class="bs-callout bs-callout-info"> normal | multiply | screen | overlay | darken | lighten | color-dodge | color-burn | hard-light | soft-light | difference | exclusion | hue | saturation | color | luminosity </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>예시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>normal</td>
+                                    <td>배경색에 상관하지 않고 최상단 색을 사용합니다. 두 장의 불투명한 종이를 겹친 것과 같습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>multiply</td>
+                                    <td>최종 색은 전경과 배경색을 곱한 값입니다. 검은 레이어는 최종 레이어를 검은 색으로 만들고, 하얀 레이어는 아무런 변화도 주지 않습니다. 투명한 필름에 프린트한 이미지를 서로 겹친 것과 같습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>screen</td>
+                                    <td>최종 색은 전경과 배경색을 각각 반전한 후 서로 곱해 나온 값을 다시 반전한 값입니다. 검은 레이어는 아무런 변화도 주지 않고, 하얀 레이어는 최종 레이어를 하얗게 만듭니다. 프로젝터 두 대로 이미지를 겹친 것과 같습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>overlay</td>
+                                    <td>배경색이 더 어두운 경우 multiply, 더 밝은 경우 screen을 적용합니다. hard-light와 같지만 배경과 전경을 뒤집은 것입니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>darken</td>
+                                    <td>최종 색은 각각의 색상 채널에 대해 제일 어두운 값을 취한 결과입니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>lighten</td>
+                                    <td>최종 색은 각각의 색상 채널에 대해 제일 밝은 값을 취한 결과입니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>color-dodge</td>
+                                    <td>최종 색은 배경색을 전경색의 역으로 나눈 결과입니다. 검은 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 제일 밝은 색이 됩니다. screen과 유사하지만, 전경색의 밝기가 배경색과 동일하기만 해도 최대의 밝기를 가진 색을 반환합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>color-burn</td>
+                                    <td>최종 색은 배경색을 반전한 후 전경색으로 나누고, 다시 반전한 결과입니다. 하얀 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 결과는 검은색입니다. multiply와 유사하지만, 전경색의 밝기가 배경색의 역과 동일하기만 해도 검은색을 반환합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>hard-light</td>
+                                    <td>전경색이 더 어두운 경우 multiply, 더 밝은 경우 screen을 적용합니다. overlay와 같지만 배경과 전경을 뒤집은 것입니다. 배경색에 스포트라이트를 "강렬하게" 비춘 효과와 유사합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>soft-light</td>
+                                    <td>hard-light와 유사하지만 더 부드럽습니다. hard-light와 비슷하게 동작합니다. 배경색에 스포트라이트를 산란시켜 비춘 효과와 유사합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>difference</td>
+                                    <td>최종 색은 두 색상 중 더 어두운 색을 밝은 색에서 뺀 결과입니다. 검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>exclusion</td>
+                                    <td>difference와 유사하지만 더 적은 대비를 가진 색을 반환합니다. difference와 마찬가지로 검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>hue</td>
+                                    <td>최종 색은 전경색의 색조를 가지며 배경색의 채도와 밝기를 가집니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>saturation</td>
+                                    <td>최종 색은 전경색의 채도를 가지며 배경색의 색조와 밝기를 가집니다. 색조 없는 순수한 회색 배경으로는 아무런 효과도 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>최종 색은 전경색의 색조와 채도를 가지며 배경색의 밝기를 가집니다. 회색조를 유지하므로 전경을 색칠할 때 사용할 수 있습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>luminosity</td>
+                                    <td>최종 색은 전경색의 밝기를 가지며 배경색의 색조와 채도를 가집니다. color와 동일하지만 배경과 전경을 뒤집은 것입니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Intro0 -->
+                <style>
+                    .blendBox {overflow: hidden;}
+                    .blendBox > div {
+                        float: left;
+                        width: 50%; height: 400px;
+                        background: url(img/img01.jpg) no-repeat center center;
+                        background-color: #a18cd1;
+                        background-size: cover;
+                    }
+                    .blendBox > div span {
+                        background: rgba(0,0,0,0.8);
+                        color: #fff;
+                        padding: 5px 10px; margin: 10px;
+                        border-radius: 5px;
+                        display: inline-block;
+                    }
+                    .original.normal {background-blend-mode: normal;}
+                    .original.multiply {background-blend-mode: multiply;}
+                    .original.screen {background-blend-mode: screen;}
+                    .original.overlay {background-blend-mode: overlay;}
+                    .original.darken {background-blend-mode: darken;}
+                    .original.lighten {background-blend-mode: lighten;}
+                    .original.color-dodge {background-blend-mode: color-dodge;}
+                    .original.color-burn {background-blend-mode: color-burn;}
+                    .original.hard-light {background-blend-mode: hard-light;}
+                    .original.soft-light {background-blend-mode: soft-light;}
+                    .original.difference {background-blend-mode: difference;}
+                    .original.exclusion {background-blend-mode: exclusion;}
+                    .original.hue {background-blend-mode: hue;}
+                    .original.saturation {background-blend-mode: saturation;}
+                    .original.color {background-blend-mode: color;}
+                    .original.luminosity {background-blend-mode: luminosity;}
+                </style>
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">background-blend-mode</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">background-blend-mode</em></h3>
+                       <div class="blendBox">
+                            <div class="original normal"><span>original</span></div>
+                            <div class="original multiply"><span>multiply</span></div>
+                            <div class="original screen"><span>screen</span></div>
+                            <div class="original overlay"><span>overlay</span></div>
+                            <div class="original darken"><span>darken</span></div>
+                            <div class="original lighten"><span>lighten</span></div>
+                            <div class="original color-dodge"><span>color-dodge</span></div>
+                            <div class="original color-burn"><span>color-burn</span></div>
+                            <div class="original hard-light"><span>hard-light</span></div>
+                            <div class="original soft-light"><span>soft-light</span></div>
+                            <div class="original difference"><span>difference</span></div>
+                            <div class="original exclusion"><span>exclusion</span></div>
+                            <div class="original hue"><span>hue</span></div>
+                            <div class="original saturation"><span>saturation</span></div>
+                            <div class="original color"><span>color</span></div>
+                            <div class="original luminosity"><span>luminosity</span></div>
+                       </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.original.normal {background-blend-mode: normal;}
+.original.multiply {background-blend-mode: multiply;}
+.original.screen {background-blend-mode: screen;}
+.original.overlay {background-blend-mode: overlay;}
+.original.darken {background-blend-mode: darken;}
+.original.lighten {background-blend-mode: lighten;}
+.original.color-dodge {background-blend-mode: color-dodge;}
+.original.color-burn {background-blend-mode: color-burn;}
+.original.hard-light {background-blend-mode: hard-light;}
+.original.soft-light {background-blend-mode: soft-light;}
+.original.difference {background-blend-mode: difference;}
+.original.exclusion {background-blend-mode: exclusion;}
+.original.hue {background-blend-mode: hue;}
+.original.saturation {background-blend-mode: saturation;}
+.original.color {background-blend-mode: color;}
+.original.luminosity {background-blend-mode: luminosity;}
+</code></pre>
+                </div>
+                <!-- //Intro1 -->
+                <style>
+                    .original2 {position: relative;}
+                    .original2 .red {
+                        position: absolute; left: 50%; top: 50%;
+                        transform: translate(-75%, -50%);
+                        width: 250px; height: 250px;
+                        border-radius: 50%;
+                        background: rgba(255,0,0,0.8);
+                    }
+                    .original2 .blue {
+                        position: absolute; left: 50%; top: 50%;
+                        transform: translate(-25%, -50%);
+                        width: 250px; height: 250px;
+                        border-radius: 50%;
+                        background: rgba(0,0,255,0.8);
+                    }
+                    .original2.normal > div {mix-blend-mode: normal;}
+                    .original2.multiply > div {mix-blend-mode: multiply;}
+                    .original2.screen > div {mix-blend-mode: screen;}
+                    .original2.overlay > div {mix-blend-mode: overlay;}
+                    .original2.darken > div {mix-blend-mode: darken;}
+                    .original2.lighten > div {mix-blend-mode: lighten;}
+                    .original2.color-dodge > div {mix-blend-mode: color-dodge;}
+                    .original2.color-burn > div {mix-blend-mode: color-burn;}
+                    .original2.hard-light > div {mix-blend-mode: hard-light;}
+                    .original2.soft-light > div {mix-blend-mode: soft-light;}
+                    .original2.difference > div {mix-blend-mode: difference;}
+                    .original2.exclusion > div {mix-blend-mode: exclusion;}
+                    .original2.hue > div {mix-blend-mode: hue;}
+                    .original2.saturation > div {mix-blend-mode: saturation;}
+                    .original2.color > div {mix-blend-mode: color;}
+                    .original2.luminosity > div {mix-blend-mode: luminosity;}
+                </style>  
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">mix-blend-mode</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">mix-blend-mode</em></h3>
+                        <div class="blendBox">
+                            <div class="original2 normal">
+                                <span>normal</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 multiply">
+                                <span>multiply</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 screen">
+                                <span>screen</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 overlay">
+                                <span>overlay</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 darken">
+                                <span>darken</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 lighten">
+                                <span>lighten</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 color-dodge">
+                                <span>color-dodge</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 color-burn">
+                                <span>color-burn</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 hard-light">
+                                <span>hard-light</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 soft-light">
+                                <span>soft-light</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 difference">
+                                <span>difference</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 exclusion">
+                                <span>exclusion</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 hue">
+                                <span>hue</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 saturation">
+                                <span>saturation</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 color">
+                                <span>color</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                            <div class="original2 luminosity">
+                                <span>luminosity</span>
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                            </div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.original2.normal > div {mix-blend-mode: normal;}
+.original2.multiply > div {mix-blend-mode: multiply;}
+.original2.screen > div {mix-blend-mode: screen;}
+.original2.overlay > div {mix-blend-mode: overlay;}
+.original2.darken > div {mix-blend-mode: darken;}
+.original2.lighten > div {mix-blend-mode: lighten;}
+.original2.color-dodge > div {mix-blend-mode: color-dodge;}
+.original2.color-burn > div {mix-blend-mode: color-burn;}
+.original2.hard-light > div {mix-blend-mode: hard-light;}
+.original2.soft-light > div {mix-blend-mode: soft-light;}
+.original2.difference > div {mix-blend-mode: difference;}
+.original2.exclusion > div {mix-blend-mode: exclusion;}
+.original2.hue > div {mix-blend-mode: hue;}
+.original2.saturation > div {mix-blend-mode: saturation;}
+.original2.color > div {mix-blend-mode: color;}
+.original2.luminosity > div {mix-blend-mode: luminosity;}
+</code></pre>
+                </div>
+                <!-- //Intro2 -->  
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">filter</h2>
+                    <p class="bs-callout bs-callout-info"> filter : none | blur() | brihgtness() | contrast | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url() </p>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Porperty</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>none</td>
+                                <td>이미지의 아무런 효과를 주지 않습니다.</td>
+                            </tr>
+                            <tr>
+                                <td>blur(px)</td>
+                                <td>이미지의 블러 효과를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>brihgtness(%)</td>
+                                <td>이미지의 밝고 어두움 정도를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>contrast(%)</td>
+                                <td>이미지의 대비를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>drop-shadow()</td>
+                                <td>이미지의 그림자를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>grayscale(%)</td>
+                                <td>이미지의 그레이스케일을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>hue-ratate(deg)</td>
+                                <td>이미지의 색조를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>invert(%)</td>
+                                <td>이미지의  반전색상을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>opacity(%)</td>
+                                <td>이미지의 투명도를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>saturate(%)</td>
+                                <td>이미지의 채도를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>sepia(%)</td>
+                                <td>이미지의 세피아 효과를 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>url()</td>
+                                <td>이미지의 경로를 설정합니다.</td>
+                            </tr>
+                    
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Intro3 -->
+                <style>
+                    .original3 {display: flex;}
+                    .original3 > div img {width: 100%;}
+                    .original3.blur > div:nth-child(1) {filter: blur(1px);}
+                    .original3.blur > div:nth-child(2) {filter: blur(3px);}
+                    .original3.blur > div:nth-child(3) {filter: blur(5px);}
+                    .original3.blur > div:nth-child(4) {filter: blur(10px);}
+                </style>
+                <!-- Intro4 -->
+                    <h3 class="mt60">filter : blur</h3>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">filter : blur</em></h3>
+                        <div class="blendBox2">
+                            <div class="original3 blur">
+                                <div><img src="img/img02.jpg" alt="이미지2"></div>
+                                <div><img src="img/img02.jpg" alt="이미지2"></div>
+                                <div><img src="img/img02.jpg" alt="이미지2"></div>
+                                <div><img src="img/img02.jpg" alt="이미지2"></div>
+                            </div>
+                        </div>
+<pre class="line-numbers language-css"><code>.original3.blur > div:nth-child(1) {filter: blur(1px);}
+.original3.blur > div:nth-child(2) {filter: blur(3px);}
+.original3.blur > div:nth-child(3) {filter: blur(5px);}
+.original3.blur > div:nth-child(4) {filter: blur(10px);}
+</code></pre>
+                    </div>
+                <!-- //Intro4 -->
+                <style>
+                    .original3 {display: flex;}
+                    .original3 > div img {width: 100%;}
+                    .original3.brightness > div:nth-child(1) {filter: brightness(10%);}
+                    .original3.brightness > div:nth-child(2) {filter: brightness(20%);}
+                    .original3.brightness > div:nth-child(3) {filter: brightness(30%);}
+                    .original3.brightness > div:nth-child(4) {filter: brightness(50%);}
+                </style>
+                <!-- Intro5 -->
+                <h3 class="mt60">filter : brightness</h3>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">filter : brightness</em></h3>
+                    <div class="blendBox2">
+                        <div class="original3 brightness">
+                            <div><img src="img/img02.jpg" alt="이미지2"></div>
+                            <div><img src="img/img02.jpg" alt="이미지2"></div>
+                            <div><img src="img/img02.jpg" alt="이미지2"></div>
+                            <div><img src="img/img02.jpg" alt="이미지2"></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>.original3.brightness > div:nth-child(1) {filter: brightness(10%);}
+.original3.brightness > div:nth-child(2) {filter: brightness(20%);}
+.original3.brightness > div:nth-child(3) {filter: brightness(30%);}
+.original3.brightness > div:nth-child(4) {filter: brightness(50%);}
+</code></pre>
+                </div>
+                <!-- //Intro5 -->
+                <!-- Intro6 -->
+                <style>
+                    .original3.grayscale > div:nth-child(1) {filter: grayscale(100%)}
+                    .original3.grayscale > div:nth-child(2) {filter: grayscale(80%)}
+                    .original3.grayscale > div:nth-child(3) {filter: grayscale(60%)}
+                    .original3.grayscale > div:nth-child(4) {filter: grayscale(20%)}
+                </style>
+                </style>
+                <h3 class="mt60">filter : grayscale</h3>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">filter : grayscale</em></h3>
+                    <div class="blendBox2">
+                        <div class="original3 grayscale">
+                            <div><img src="img/img02.jpg" alt="이미지1"></div>
+                            <div><img src="img/img02.jpg" alt="이미지1"></div>
+                            <div><img src="img/img02.jpg" alt="이미지1"></div>
+                            <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        </div>
+                    </div>
+                </div>
+<pre class="line-numbers language-css"><code>.original3.grayscale > div:nth-child(1) {filter: grayscale(100%)}
+.original3.grayscale > div:nth-child(2) {filter: grayscale(80%)}
+.original3.grayscale > div:nth-child(3) {filter: grayscale(60%)}
+.original3.grayscale > div:nth-child(4) {filter: grayscale(20%)}
+</code></pre>
+            <!-- //Intro6 -->
+            <!-- Intro7 -->
+            <style>
+                .original3.hue-rotate > div:nth-child(1) {filter: hue-rotate(10deg)}
+                .original3.hue-rotate > div:nth-child(2) {filter: hue-rotate(40deg)}
+                .original3.hue-rotate > div:nth-child(3) {filter: hue-rotate(80deg)}
+                .original3.hue-rotate > div:nth-child(4) {filter: hue-rotate(120deg)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : hue-rotate</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : hue-rotate</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 hue-rotate">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.hue-rotate > div:nth-child(1) {filter: hue-rotate(10deg)}
+.original3.hue-rotate > div:nth-child(2) {filter: hue-rotate(40deg)}
+.original3.hue-rotate > div:nth-child(3) {filter: hue-rotate(80deg)}
+.original3.hue-rotate > div:nth-child(4) {filter: hue-rotate(120deg)}
+</code></pre>
+            <!-- //Intro7 -->
+            <!-- Intro8 -->
+            <style>
+                .original3.invert > div:nth-child(1) {filter: invert(10%)}
+                .original3.invert > div:nth-child(2) {filter: invert(30%)}
+                .original3.invert > div:nth-child(3) {filter: invert(70%)}
+                .original3.invert > div:nth-child(4) {filter: invert(100%)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : invert</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : invert</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 invert">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.invert > div:nth-child(1) {filter: invert(10%)}
+.original3.invert > div:nth-child(2) {filter: invert(30%)}
+.original3.invert > div:nth-child(3) {filter: invert(70%)}
+.original3.invert > div:nth-child(4) {filter: invert(100%)}
+</code></pre>
+            <!-- //Intro8 -->
+            <!-- Intro9 -->
+            <style>
+                .original3.opacity > div:nth-child(1) {filter: opacity(10%)}
+                .original3.opacity > div:nth-child(2) {filter: opacity(30%)}
+                .original3.opacity > div:nth-child(3) {filter: opacity(70%)}
+                .original3.opacity > div:nth-child(4) {filter: opacity(100%)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : opacity</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : opacity</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 opacity">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.opacity > div:nth-child(1) {filter: opacity(10%)}
+.original3.opacity > div:nth-child(2) {filter: opacity(30%)}
+.original3.opacity > div:nth-child(3) {filter: opacity(70%)}
+.original3.opacity > div:nth-child(4) {filter: opacity(100%)}
+</code></pre>
+            <!-- //Intro9 -->
+            <!-- Intro10 -->
+            <style>
+                .original3.saturate > div:nth-child(1) {filter: saturate(10%)}
+                .original3.saturate > div:nth-child(2) {filter: saturate(50%)}
+                .original3.saturate > div:nth-child(3) {filter: saturate(100%)}
+                .original3.saturate > div:nth-child(4) {filter: saturate(200%)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : saturate</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : saturate</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 saturate">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.saturate > div:nth-child(1) {filter: saturate(10%)}
+.original3.saturate > div:nth-child(2) {filter: saturate(50%)}
+.original3.saturate > div:nth-child(3) {filter: saturate(100%)}
+.original3.saturate > div:nth-child(4) {filter: saturate(200%)}
+</code></pre>
+            <!-- //Intro10 -->
+            <!-- Intro11 -->
+            <style>
+                .original3.sepia > div:nth-child(1) {filter: sepia(10%)}
+                .original3.sepia > div:nth-child(2) {filter: sepia(30%)}
+                .original3.sepia > div:nth-child(3) {filter: sepia(70%)}
+                .original3.sepia > div:nth-child(4) {filter: sepia(120%)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : sepia</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : sepia</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 sepia">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.sepia > div:nth-child(1) {filter: sepia(10%)}
+.original3.sepia > div:nth-child(2) {filter: sepia(30%)}
+.original3.sepia > div:nth-child(3) {filter: sepia(70%)}
+.original3.sepia > div:nth-child(4) {filter: sepia(120%)}
+</code></pre>
+            <!-- //Intro11 -->
+            <!-- Intro12 -->
+            <style>
+                .original3.contrast > div:nth-child(1) {filter: contrast(10%)}
+                .original3.contrast > div:nth-child(2) {filter: contrast(20%)}
+                .original3.contrast > div:nth-child(3) {filter: contrast(30%)}
+                .original3.contrast > div:nth-child(4) {filter: contrast(50%)}
+            </style>
+            </style>
+            <h3 class="mt60">filter : contrast</h3>
+            <div class="sample">
+                <h3><span></span><em class="sr-only">filter : contrast</em></h3>
+                <div class="blendBox2">
+                    <div class="original3 contrast">
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                        <div><img src="img/img02.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.original3.contrast > div:nth-child(1) {filter: contrast(10%)}
+.original3.contrast > div:nth-child(2) {filter: contrast(20%)}
+.original3.contrast > div:nth-child(3) {filter: contrast(30%)}
+.original3.contrast > div:nth-child(4) {filter: contrast(50%)}
+</code></pre>
+            <!-- //Intro12 -->
+
+            <!-- sample01 -->
+            <div class="bs-docs-section">
+                <h2 class="mt60">Sample01</h2>
+                <div class="codepen">
+                    <p class="codepen" data-height="1000" data-theme-id="light" data-default-tab="result" data-user="vailjoy" data-slug-hash="OWVwvO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Spotify Colorizer Effects Using CSS Blend Modes">
+                        <span>See the Pen <a href="https://codepen.io/vailjoy/pen/OWVwvO">
+                        Spotify Colorizer Effects Using CSS Blend Modes</a> by Vail Joy (<a href="https://codepen.io/vailjoy">@vailjoy</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+                </div>
+            </div>
+            <!-- //sample01 -->
+            <!-- sample02 -->
+            <div class="bs-docs-section">
+                <h2 class="mt60">Sample02</h2>
+                <div class="codepen">
+                    <p class="codepen" data-height="760" data-theme-id="light" data-default-tab="result" data-user="rss" data-slug-hash="ftnDd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS(webkit) filters">
+                        <span>See the Pen <a href="https://codepen.io/rss/pen/ftnDd">
+                        CSS(webkit) filters</a> by Rıza Selçuk Saydam (<a href="https://codepen.io/rss">@rss</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
+                </div>
+            </div>
+            <!-- //sample02 -->
+            </div>
+            <!-- //col-md-12 -->
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <script>
+     
+    </script>
+</body>
+
+</html>

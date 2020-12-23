@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09_responsivLayout(1)</title>
+    <style>
+        /* reset */
+        * {margin: 0; padding: 0;}
+        body {background: #f1f8e9;}
+        
+        /* layout */
+        .container {width: 1200px; margin: 0 auto;}
+        header {height: 100px; background: #dcedc8;}
+        nav {height: 300px; background: #c5e1a5;}
+        section {width: 90%; height: 400px; background: #aed581; overflow: hidden; padding: 5%;}
+        section article {width: 16%; height: 38%; margin: 2%; float: left; background: #f1f8e9; border-radius: 20px;}
+        footer {height: 100px; background: #9ccc65;}
+
+        /* media */
+        @media (max-width: 1210px){
+            .container {width: 100%;}
+            section article {width: 21%;}
+            section .arti9 {display: none;}
+            section .arti10 {display: none;}
+        }
+
+        @media (max-width: 900px){
+            nav {height: 200px;}
+            section {height: 600px;}
+            section article {width: 29.333%; height: 29%;}
+            section .arti9 {display: block;}
+        }
+
+        @media (max-width: 480px){
+            section {height: 800px;}
+            section article {width: 46%; height: 18%;}
+            section .arti10 {display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <header></header>
+            <!-- header -->
+            <nav></nav>
+            <!-- nav -->
+            <section>
+                <article class="arti1"></article>
+                <article class="arti2"></article>
+                <article class="arti3"></article>
+                <article class="arti4"></article>
+                <article class="arti5"></article>
+                <article class="arti6"></article>
+                <article class="arti7"></article>
+                <article class="arti8"></article>
+                <article class="arti9"></article>
+                <article class="arti10"></article>
+            </section>
+            <!-- section -->
+            <footer></footer>
+            <!-- footer -->
+        </main>
+        <!-- container -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>
