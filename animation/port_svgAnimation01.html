@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my name</title>
+    <style>
+        @font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	background: #000;
+	font-size: 140px;
+	font-family: 'TmonMonsori';
+}
+svg {
+	position: absolute; top: 50%; left: 50%;
+	width: 100%; height: 100%;
+	transform: translate(-50%, -50%);
+}
+.text-copy {
+	fill: none;
+	stroke: white;
+	stroke-width: 3px;
+	stroke-dasharray: 7% 28%;
+	animation: stroke 9s infinite linear;
+}
+.text-copy:nth-child(1) {
+	stroke: #360745;
+	stroke-dasharray: 7%;
+}
+.text-copy:nth-child(2) {
+	stroke: #d61c59;
+	stroke-dasharray: 14%;
+}
+.text-copy:nth-child(3) {
+	stroke: #e7d84b;
+	stroke-dasharray: 21%;
+}
+.text-copy:nth-child(4) {
+	stroke: #efeac5;
+	stroke-dasharray: 28%;
+}
+.text-copy:nth-child(5) {
+	stroke: #1b8798;
+	stroke-dasharray: 35%;
+}
+@keyframes stroke {
+	50% {stroke-dashoffset: 35%; stroke-dasharray: 0 7.5%}
+}
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1320 300">
+        <symbol id="s-text">
+                <text x="50%" y="50%" dy="40px" text-anchor="middle">LIMJI</text>
+        </symbol>
+        
+        <g class="g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>
+</body>
+</html>

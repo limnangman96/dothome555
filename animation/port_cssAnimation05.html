@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave</title>
+    <style>
+        body {
+	height: 100vh;
+	background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+	display: flex; justify-content: center; align-items: center;
+}
+/* 컨텐츠 요소를 가운데로 오게 하는 방법 */
+/* 1. position: absolute; left: 50%; top: 50%;
+   transform: translate(-50%, -50%);
+2. position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin: 0 auto;
+3. display: flex; justify-content: center; align-items: center; */
+.circle {
+	width: 10px; height: 10px; 
+	background: #fff; 
+	border-radius: 50%; 
+	margin: 5px 10px;
+	transform-origin: top center;
+	animation: spin 1s linear infinite;
+}
+@keyframes spin {
+	0% {transform: scale(1.1) rotate(0);}
+	50% {transform: scale(0.2) rotate(180deg);}
+	100% {transform: scale(1.1) rotate(360deg);}
+}
+.row {
+	display: flex;
+}
+.row:nth-child(1) .circle {animation-delay: 100ms}
+.row:nth-child(2) .circle {animation-delay: 200ms}
+.row:nth-child(3) .circle {animation-delay: 300ms}
+.row:nth-child(4) .circle {animation-delay: 400ms}
+.row:nth-child(5) .circle {animation-delay: 500ms}
+.row:nth-child(6) .circle {animation-delay: 600ms}
+.row:nth-child(7) .circle {animation-delay: 700ms}
+.row:nth-child(8) .circle {animation-delay: 800ms}
+.row:nth-child(9) .circle {animation-delay: 900ms}
+    </style>
+</head>
+<body>
+    <div class="circle-wrap">
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+	<div class="row">
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+		<div class="circle"></div>
+	</div>
+</div>
+</body>
+</html>
