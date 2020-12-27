@@ -2,12 +2,7 @@
    Info Block
 ================================================== */
 
-@font-face {
-    font-family: 'Cafe24Syongsyong';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Syongsyong.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url( 'https://fonts.googleapis.com/css2? family = Gaegu & display = swap');
 
 .info-block {
     border-left: 4px solid #DE5E60;
@@ -228,7 +223,7 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family: 'Cafe24Syongsyong', cursive; font-size: 40px;
+	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
 	color:#45D4FB; 
