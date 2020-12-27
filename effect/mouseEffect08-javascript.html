@@ -224,11 +224,11 @@
                 window.addEventListener("mousemove", this.spanPosition);
             }
             spanPosition(e){
-                let positionS = e.clientX - (window.innerWidth()/2) * 0.1;
-                let positionF = e.clientX - (window.innerWidth()/2) * 0.2;
+                this.positionS = e.clientX - (window.innerWidth/2) * 0.1;
+                this.positionF = e.clientX - (window.innerWidth/2) * 0.2;
 
-                gsap.to(spanSlow, {duraion: .4, x: positionS});
-                gsap.to(spanFast, {duraion: .4, x: -positionF});
+                gsap.to(this.spanSlow, {duraion: .4, x: positionS});
+                gsap.to(this.spanFast, {duraion: .4, x: -positionF});
             }
         }
 
