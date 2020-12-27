@@ -144,29 +144,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script>
     const sliderWrap = document.querySelector(".slider-wrap");
-        const sliderImg = document.querySelector(".slider-img");
-        const slider = document.querySelectorAll(".slider");
-        let sliderCount = slider.length;
-        let sliderWidth = sliderImg.clientWidth / 6;
+    const sliderImg = document.querySelector(".slider-img");
+    const slider = document.querySelectorAll(".slider");
+    let sliderCount = slider.length;
+    let sliderWidth = sliderImg.clientWidth / 6;
 
-        let currentIndex = 0;
-        let clone = sliderImg.firstElementChild.cloneNode(true);
-        sliderImg.appendChild(clone);
+    let currentIndex = 0;
+    let clone = sliderImg.firstElementChild.cloneNode(true);
+    sliderImg.appendChild(clone);
 
-        function sliderEffect(){
-            currentIndex++;
-            sliderImg.style.transition = "0.3s";
-            sliderImg.style.transform = `translateX(${-sliderWidth*currentIndex}px)`
-            
-            if(currentIndex == 5){
-                setTimeout(()=>{
-                    sliderImg.style.transition = "0s";
-                    sliderImg.style.transform = "translate(0)"
-                },301);
-                currentIndex = 0;
-            }
+    function sliderEffect(){
+        currentIndex++;
+        sliderImg.style.transition = "0.3s";
+        sliderImg.style.transform = `translateX(${-sliderWidth*currentIndex}px)`
+        
+        if(currentIndex == 5){
+            setTimeout(()=>{
+                sliderImg.style.transition = "0s";
+                sliderImg.style.transform = "translate(0)"
+            },301);
+            currentIndex = 0;
         }
-        setInterval(sliderEffect, 2100);
+    }
+    setInterval(sliderEffect, 2100);
     
 </script>
 </body>

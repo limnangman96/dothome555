@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 로딩 텍스트 애니메이션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        user-select: none;
+        }
+        .menu {
+            overflow: hidden;
+        }
+        .menu-item {
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: nowrap;
+            cursor: pointer;
+            text-shadow: 5px 5px #fff, 5px 5px rgba(0,0,0,0.1), 10px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-item">
+            <div class="menu-word">Limji -&nbsp;</div>
+        </div>
+    </div>
+​
+    <!-- script -->
+    <script>
+        //변수 설정
+        let wordWidth = 0;
+        let width = 0;
+        let cloned = [];
+        let hover = false;
+        let speed = 0;
+        let acc = 0;
+
+        const item = document.querySelector(".menu-item");
+        const word = item.querySelector(".menu-word");
+
+        //계산하기
+        const calculate = () => {
+            cloned.forEach(i => {
+                i.parentNode.removeChild(i);
+            }); 
+            cloned = []
+            wordWidth = Math.ceil(word.clientWidth);
+            width = Math.ceil(window.innerWidth / wordWidth);
+            for (let i=0; i < width+1; i++){
+                const clone = word.cloneNode(true);
+                word.parentNode.appendChild(clone);
+                cloned.push(clone);
+            }
+        }
+
+        //이벤트 설정
+        const handleMouse = function(bool){
+            hover = bool;
+        }
+        
+        item.addEventListener("mouseenter", ()=>{handleMouse(true)});
+        item.addEventListener("mouseleave", ()=>{handleMouse(false)});
+        item.addEventListener("touchstart", ()=>{handleMouse(true)});
+        item.addEventListener("touchend", ()=>{handleMouse(false)});
+
+        window.addEventListener("resize", calculate);
+        window.addEventListener("load", calculate);
+
+        //움직임 애니메이션
+        const animate = () => {
+
+            //가속
+            acc += 0.1;
+            if(hover){
+                acc -= 0.35;
+            }
+            //최대값 제한
+            acc = Math.min(5, Math.max(0, acc));
+            //가속도 주기
+            speed += acc;
+            if(speed >= wordWidth){
+                speed = 0;
+            }
+            //텍스트 효과
+            item.style.transform = `translateX(${-speed}px) skewX(${-2 * acc}deg)`;
+            //raf
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>

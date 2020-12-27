@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect08 - jquery</title>
+    <title>Mouse Effect08 - javascript</title>
     <style>
         @font-face {
-            font-family: '62570체';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-family: 'BMEULJIRO';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -19,15 +19,15 @@
         li {list-style: none;}
 
         body {
-            background: url(img/images09@2.jpg) no-repeat center center;
+            background: url(img/images13@2.jpg) no-repeat center center;
             background-size: cover;
-            background-color: #ccc;
+            background-color: rgb(255, 211, 80, 0.4);
             background-blend-mode: multiply;
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
             line-height: 1.5;
-            font-family: '62570체';
+            font-family: 'BMEULJIRO';
             /* cursor: none; */
             position: relative;
         }
@@ -91,7 +91,7 @@
             text-align: center;
         }
         .text-wrap .line .left .span-wrap span {
-            color: gold;
+            color: lightsalmon;
         }
         .text-wrap .line .right {
             width: 50vw;
@@ -118,7 +118,7 @@
 <body>
     <!-- info -->
     <div class="info left">
-    <h1>mouseEffect08 - jquery</h1>
+    <h1>mouseEffect08 - javascript</h1>
     <p>마우스이펙트 - 마우스 움직임에 따라 텍스트가 서로 교차되며 움직이는 효과</p>
     </div>
     <div class="info right">
@@ -129,7 +129,7 @@
         <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
         <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
         <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
-        <li><a href="mouseEffect07-jquery.html" class="active">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+        <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html" class="active">7</a></li>
         <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
         <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
     </ul>
@@ -189,31 +189,52 @@
                     </div>
                 </div>
                 <div class="img-wrap">
-                    <img src="img/images15@2.jpg" alt="이미지">
+                    <img src="img/images11@2.jpg" alt="이미지">
                 </div>
            </div>
        </div>
     </main>
 
     <!--  script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        $(window).on("mousemove", mouseMove);
+        // $(window).on("mousemove", mouseMove);
 
-        function mouseMove(e){
-            let positionSlow = (e.pageX - ($(window).width()/2)) * 0.1;
-            let positionFast = (e.pageX - ($(window).width()/2)) * 0.2;
+        // function mouseMove(e){
+        //     let positionSlow = (e.pageX - ($(window).width()/2)) * 0.1;
+        //     let positionFast = (e.pageX - ($(window).width()/2)) * 0.2;
 
-            gsap.to(".span-slow", {
-                duration: .4,
-                x: positionSlow
-            });
-            gsap.to(".span-fast", {
-                duration: .4,
-                x: -positionFast
-            });
+        //     gsap.to(".span-slow", {
+        //         duration: .4,
+        //         x: positionSlow
+        //     });
+        //     gsap.to(".span-fast", {
+        //         duration: .4,
+        //         x: -positionFast
+        //     });
+        // }
+
+        class TextMove {
+            constructor(obj){
+                this.spanSlow = document.querySelectorAll(".span-slow");
+                this.spanFast = document.querySelectorAll(".span-fast");
+                this.events();
+            }
+            events(){
+                window.addEventListener("mousemove", this.spanPosition);
+            }
+            spanPosition(e){
+                let positionS = e.clientX - (window.innerWidth()/2) * 0.1;
+                let positionF = e.clientX - (window.innerWidth()/2) * 0.2;
+
+                gsap.to(spanSlow, {duraion: .4, x: positionS});
+                gsap.to(spanFast, {duraion: .4, x: -positionF});
+            }
         }
+
+        new TextMove();
+
+
     </script>
 </body>
 </html>

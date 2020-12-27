@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 </head>
 <style>
-    @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansLight';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
 
     * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {height: 20000px; font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';}
+    body {height: 20000px; font-family: 'GmarketSansMedium';}
     em {font-style: normal;}
         .scroll {
         position: fixed; right: 10px; top: 10px;
@@ -96,6 +106,7 @@
             top: 30%;
             font-size: 0.95vw;
             line-height: 1.5;
+            font-family: 'GmarketSansLight';
         }
 
         .s2Txt04 {
@@ -186,15 +197,86 @@
         .s3Txt02 .txtBox2 {left: 150%;}
         .s3Txt02 .txtBox3 {left: -150%;}
         .s3Txt02 .txtBox4 {top: 150%;}
-        /* .s3Txt02 .txtBox5 {left: -150%;}
-        .s3Txt02 .txtBox6 {left: -150%;} */
 
         .s3Txt03 .aniBox1 {top: -100%; left: 30%; z-index: 500;}
         .s3Txt03 .aniBox2 {top: 80%; left: 150%; z-index: 1500;}
         .s3Txt03 .aniBox3 {top: 30%; left: -150%; z-index: 1500;}
         .s3Txt03 .aniBox4 {top: 150%; left: 70%; z-index: 500;}
-        /* .s3Txt03 .aniBox5 {}
-        .s3Txt03 .aniBox6 {} */
+
+        /* section4 */
+        .s4Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        .s4Txt02 .border1 {
+            width: 120vw; height: 1vh;
+            background: #fff;
+            left: -10%;
+
+        }
+        .s4Txt02 .border1 .bor_circle {
+            width: 1.5vw; height: 1.5vw;
+            background: #fff;
+            border-radius: 50%;
+            left: 100%;
+        }
+        .s4Txt02 .text {
+            color: #fff;
+            font-size: 3vw;
+            top: 51.5%;
+            left: -10%;
+            white-space: nowrap;
+        }
+
+        .s4Txt03 .circleBox .circle1 {
+            width: 1.5vw; height: 1.5vw;
+            background: orange;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .s4Txt03 .circleBox .circle2 {
+            width: 1.5vw; height: 1.5vw;
+            border: 0.1vw dotted orange;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .s4Txt03 .circleBox .circle3 {
+            width: 1.5vw; height: 1.5vw;
+            border: 0.15vw solid orange;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .s4Txt03 .circleBox .circle4 {
+            width: 1.5vw; height: 1.5vw;
+            border: 0.1vw dashed orange;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        }
+        .s4Txt03 a .dothomeBox {
+            width: 23vw; height: 23vw;
+            border-radius: 50%;
+            line-height: 23vw;
+        }
+        .s4Txt03 a {
+            color: #fff;
+            font-size: 1.8vw;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        .s4Txt03 a:hover .dothomeBox {
+            border: 0.5vw solid #fff;
+            transform: translate(-50%, -50%) rotate(360deg);
+            transition: transform 0.8s;
+        }
+
+
 </style>
 <body>
     <div class="scroll">0</div>
@@ -340,14 +422,17 @@
         <section id="section3"
             data-24999="display:none"
             data-25000="display:block"
-            data-59999="display:block"
-            data-60000="display:none"
+            data-57000="display:block"
+            data-57001="display:none"
         >
             <div class="s3Txt01 fixed" data-title="검은색 배경"
                 data-21500="width:200vw; height:200vw"
                 data-28000="width:30vw; height:30vw"
                 data-31000="width:30vw; height:30vw"
                 data-33000="width:20vw; height:20vw"
+                data-50300="width:20vw; height:20vw"
+                data-55000="width:100vw; height:100vw"
+                data-56000="width:200vw; height:200vw"
             >
                 <div class="s3Txt02">
                     <h2 class="txtBox fixed"
@@ -357,7 +442,7 @@
                     <h2 class="txtBox fixed"
                         data-27999 = "display: none"
                         data-28000 = "display: block; left: 77%;"
-                        data-32000 = "left: -250%;"
+                        data-32000 = "left: -300%;"
                     ><span>I've been working on Animation</span></h2>
                     <h3 class="txtBox1 fixed"
                         data-30000 = "top: -100%"
@@ -412,12 +497,69 @@
             </div>
         </section>
         <!-- //section3 -->
-        <section id="section4"></section>
+        <section id="section4"
+            data-56999 = "display:none"
+            data-57000 = "display:block"
+            data-79999 = "display:block"
+            data-80000 = "display:none"
+        >
+            <div class="s4Txt01 fixed" data-title="검은색 배경"
+                data-56000="width:200vw; height:200vw"
+                data-80000="width:200vw; height:200vw"
+            >
+                <div class="s4Txt02">
+                    <div class="border1 fixed"
+                        data-56999="left:-10%"
+                        data-65000="left:20%"
+                    >
+                        <div class="bor_circle fixed"></div>
+                    </div>
+                    <div class="text fixed"
+                        data-57000="left: -10%"
+                        data-63000="left: 50%"
+                        data-63200="left: 50%"
+                        data-66000="left: -10%"
+                    >저의 작업물이 마음에 드셨다면,
+                    </div>   
+                </div>
+                <div class="s4Txt03 fixed">
+                    <div class="circleBox">
+                        <div class="circle1 fixed"
+                            data-65000="opacity: 0; transform: translate(-50%, -50%) scale(1);"
+                            data-65800="opacity: 1"
+                            data-69000="transform: translate(-50%, -50%) scale(3);"
+                            data-71000="transform: translate(-50%, -50%) scale(2.5);"
+                            data-74000="transform: translate(-50%, -50%) scale(2.5);"
+                            data-75500="transform: translate(-50%, -50%) scale(15);"
+                        ></div>
+                        <div class="circle2 fixed"
+                            data-68500="opacity: 0; transform: translate(-50%, -50%) scale(1);"
+                            data-68501="opacity: 1;"
+                            data-72000="opacity: 1; transform: translate(-50%, -50%) scale(11);"
+                            data-73000="opacity: 1; transform: translate(-50%, -50%) scale(5);"
+                        ></div>
+                        <div class="circle3 fixed"
+                            data-69000="opacity: 0; transform: translate(-50%, -50%) scale(1);"
+                            data-69001="opacity: 1;"
+                            data-71000="opacity: 1; transform: translate(-50%, -50%) scale(8);"
+                        ></div>
+                        <div class="circle4 fixed"
+                            data-71500="opacity: 0; transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                            data-71501="opacity: 1;"
+                            data-73000="opacity: 1; transform: translate(-50%, -50%) scale(15) rotate(180deg);"
+                            data-75000="opacity: 1; transform: translate(-50%, -50%) scale(10) rotate(360deg);"
+                        ></div>
+                    </div>
+                    <a class="fixed" href="http://dnjsdl678.dothome.co.kr/"
+                        data-73999="opacity: 0; transform: translate(-50%, -50%) scale(0);"
+                        data-74000="opacity: 1; transform: translate(-50%, -50%) scale(0);"
+                        data-76000="opacity: 1; transform: translate(-50%, -50%) scale(1);"
+                    ><div class="dothomeBox fixed">CONTACT ME</div></a>
+                </div>
+            </div>
+
+        </section>
         <!-- //section4 -->
-        <section id="section5"></section>
-        <!-- //section5 -->
-        <section id="section6"></section>
-        <!-- //section6 -->
     </div>
 
     <!-- script -->
