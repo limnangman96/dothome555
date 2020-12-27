@@ -72,52 +72,74 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>Slider Effect Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>Mouse Effect Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="http://dnjsdl678.dothome.co.kr" target="_blank">dnjsdl678.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
-                <!-- 배너광고 -->
-                <div class="ad">
+            <div class="col-md-12" role="main">
+               <!-- 배너광고 1140 -->
+               <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
                     <script>
-                        new PartnersCoupang.G({ id:347688 });
+                        new PartnersCoupang.G({ id:348400 });
                     </script>
                 </div>
-                <!-- //배너광고 -->
+                <!-- //배너광고 1140 -->
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸
-                        것처럼 나타내는 기능입니다.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample02.jpg">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <h2 id="intro1" class="page-header">Slider Effect01</h2>
+                    <p class="bs-callout bs-callout-info">3초에 한번씩 변경하기</p>
+                    <iframe width="100%" height="600px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0; //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length //이미지 갯수
+
+//3초에 한번씩 함수를 실행
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount;  //이미지 4에서 다시 0으로!
+    slider.eq(currentIndex).fadeOut();  //첫 번째 이미지를 사라지게 두 번째 이미지 보여지게
+    slider.eq(nextIndex).fadeIn();      //두 번째 이미지가 나타나게
+    console.log("currentIndex: " + currentIndex)
+    console.log("nextIndex: " + nextIndex)
+    //currentIndex++;
+    currentIndex = nextIndex;
+},3000);
+</code></pre>
+                    <iframe width="100%" height="600px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;  //현재 보이는 첫 번째 이미지
+let sliderCount = slider.length;   //이미지 갯수
+
+setInterval(() =&gt; {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+                    // ( 0 + 1 ) % 5 -&gt; 1
+                    // ( 1 + 1 ) % 5 -&gt; 2
+                    // ( 2 + 1 ) % 5 -&gt; 3
+                    // ( 3 + 1 ) % 5 -&gt; 4
+                    // ( 4 + 1 ) % 5 -&gt; 0
+                    // ( 5 + 1 ) % 5 -&gt; 1
+                    // ( 6 + 1 ) % 5 -&gt; 2
+    // slider[currentIndex].style.display = "none";
+    // slider[nextIndex].style.display = "block";
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1";   //.slider-img .slider에 transition
+
+    currentIndex = nextIndex++;
+    // currentIndex = nextIndex;
+},3000);
                 <!-- //Intro1 -->
             </div>
-            <!-- //col-md-9 -->
+            <!-- //col-md-12 -->
 
-            <!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">클리핑마스크</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--//col-md-3 -->
         </div>
         <!-- //row -->
     </div>
