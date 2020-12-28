@@ -20,43 +20,81 @@
 
 *, html, body {margin: 0; padding: 0; box-sizing: border-box; font-family: 'GmarketSansMedium';}
 
-#wrap {width: 100vw; height: 20000px;}
+#wrap {width: 100vw; height: 500000px;}
 
-#header {
-    position: fixed;
-    z-index: 100000;
-    width: 100vw; height: 7vh;
-    background: #000;
-}
-#section1 {width: 100vw; height: 20000px;}
-#into {
-    width: 100vw; height: 2000px;
-    position: relative;
-    background: #cccccc;
-}
-#about {}
+#section1 {width: 100vw; height: 8220px;}
+#into {width: 100vw; height: 1800px; position: relative;}
+#about {width: 100vw; height: 1950px; position: relative; background: #cccccc;}
 #text1 {}
 #text2 {}
 #follow {}
 
-/* header */
-.header {padding: 0 2vw;}
-.header ul {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.3vw;
-    line-height: 7vh;
-}
-.header ul li a {color: #fff;}
-
 /* section1 */
 .into {}
-.into .logo {
-    position: absolute; top: 8%; left: 5%; 
-    width: 70vw; height: 80vh;
+.into .logo span {
+    font-family: 'GmarketSansBold';
+    font-size: 11.2vw;
+    line-height: 0.8;
+    -webkit-text-stroke: 3px #000;
+    letter-spacing: -10px;
 }
-.into .logo svg {font-family: 'GmarketSansBold'; font-weight: bold;}
-.into .introduce {}
-.into .border-box .toRight {}
-.into .border-box .toBottom {}
+.into .logo .logo_top {color: #fff; position: absolute; top: 13%; left: 8%; z-index: 5;}
+.into .logo .logo_bottom {color: #000; position: absolute; top: 24.5%; left: 8%;}
+.into .introduce {
+    position: absolute; top: 38%; left: 8.5%;
+    font-size: 1.5vw;
+    line-height: 1.2;
+}
+.into .border-box {}
+.into .border-box .toRight {
+    position: absolute; top: 19.6%; left: 55%;
+    width: 35vw; height: 2px; 
+    background: #000; 
+}
+.into .border-box .toRight:before {
+    content: '2021';
+    width: 5vw; height: 5vh;
+    color: #FF0000;
+    font-size: 1vw;
+    position: absolute; top: -25px; left: 0;
+}
+.into .border-box .toBottom {
+    position: absolute; top: 19.6%; left: 90%;
+    width: 2px; height: 55vw; 
+    background: #000; 
+}
+.into .border-box .toBottom:before {
+    content: '';
+    position: absolute; top: 98%; left: -700%;
+    border-top: 15px solid transparent;
+    border-right: 30px solid black;
+    border-bottom: 15px solid transparent;
+    transform: rotate(270deg);
+}
+.into .mainImg {
+    position: absolute; top: 63%; left: 31%;
+    width: 37vw; height: 32vw;
+    background: lightgreen;
+    /* background: url(image/mainImg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover; */
+}
 
+.about {}
+.about > div:nth-child(1) {
+    margin-top: 10vw;
+    font-size: 7vw;
+    white-space: nowrap;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid;
+    -webkit-text-stroke: 3px #000;
+}
+.about .slideBox1 {
+    border-bottom: 2px solid #000;
+    padding: 1vw 0 0.5vw 0;
+}
+.about .slideBox2 {
+    margin-top: 8vw;
+    border-top: 2px solid #000;
+    padding: 1vw 0 0.5vw 0;
+}
