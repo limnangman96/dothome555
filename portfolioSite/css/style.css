@@ -18,16 +18,22 @@
     font-style: normal;
 }
 
-*, html, body {margin: 0; padding: 0; box-sizing: border-box; font-family: 'GmarketSansMedium'}
+*, html, body {margin: 0; padding: 0; box-sizing: border-box; font-family: 'GmarketSansMedium';}
 
-#wrap {width: 100vw; height: 100vh;}
+#wrap {width: 100vw; height: 20000px;}
 
 #header {
+    position: fixed;
+    z-index: 100000;
     width: 100vw; height: 7vh;
     background: #000;
 }
-#section1 {}
-#into {}
+#section1 {width: 100vw; height: 20000px;}
+#into {
+    width: 100vw; height: 2000px;
+    position: relative;
+    background: #cccccc;
+}
 #about {}
 #text1 {}
 #text2 {}
@@ -45,15 +51,11 @@
 
 /* section1 */
 .into {}
-.into .logo {}
-.into .logo span {
-    display: block;
-    font-size: 10vw; 
-    font-family: 'GmarketSansBold'; 
-    text-stroke: 1px solid red;
-    
-
+.into .logo {
+    position: absolute; top: 8%; left: 5%; 
+    width: 70vw; height: 80vh;
 }
+.into .logo svg {font-family: 'GmarketSansBold'; font-weight: bold;}
 .into .introduce {}
 .into .border-box .toRight {}
 .into .border-box .toBottom {}
