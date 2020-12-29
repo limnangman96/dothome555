@@ -28,7 +28,7 @@
 #about {width: 100vw; height: 1950px; position: relative; overflow: hidden;}
 #text-sec1 {width: 100vw; height: 1000px; position: relative;}
 #text-sec2 {width: 100vw; height: 2050px; position: relative;}
-#follow {width: 100vw; height: 940px; background: #ff0000;}
+#follow {width: 100vw; height: 960px; background: #ff0000; position: relative;}
 
 
 /* section1 */
@@ -43,30 +43,105 @@
     -webkit-text-stroke: 3px #000;
     letter-spacing: -10px;
 }
-.into .logo .logo_top {color: #fff; position: absolute; top: 13%; left: 8%; z-index: 5;}
-.into .logo .logo_bottom {color: #000; position: absolute; top: 24.5%; left: 8%;}
+.into .logo .logo_top {
+    position: absolute; top: 13%; left: 8%; 
+    z-index: 5; 
+    opacity: 0;
+    color: #fff;
+    animation: logoTop-show 1s 1 ease; animation-fill-mode: forwards; 
+}
+@keyframes logoTop-show {
+    0% {
+        opacity: 0;
+        top: 13%; left: 20%;
+    }
+    100% {
+        opacity: 1;
+        top: 13%; left: 8%;
+    }
+}
+.into .logo .logo_bottom {
+    position: absolute; top: 24.5%; left: 8%;
+    opacity: 0;
+    color: #000;
+    animation: logoBottom-show 1s 200ms 1 ease; animation-fill-mode: forwards;  
+}
+@keyframes logoBottom-show {
+    0% {
+        opacity: 0;
+        top: 24.5%; left: 20%;
+    }
+    100% {
+        opacity: 1;
+        top: 24.5%; left: 8%;
+    }
+}
 .into .introduce {
     position: absolute; top: 38%; left: 8.5%;
+    opacity: 0;
     font-size: 1.5vw;
     line-height: 1.2;
+    animation: introduce-show 1s 400ms 1 ease; animation-fill-mode: forwards;  
 }
-.into .border-box {}
+@keyframes introduce-show {
+    0% {
+        opacity: 0;
+        top: 38%; left: 20%;
+    }
+    100% {
+        opacity: 1;
+        top: 38%; left: 8%;
+    }
+}
 .into .border-box .toRight {
     position: absolute; top: 19.6%; left: 55%;
     width: 35vw; height: 2px; 
-    background: #000; 
+    background: #000;
+    animation: borderR-show 0.8s 1 ease; animation-fill-mode: forwards; 
+}
+@keyframes borderR-show {
+    0% {
+        width: 1vw;
+    }
+    100% {
+        width: 35vw;
+    }
 }
 .into .border-box .toRight:before {
     content: '2021';
     width: 5vw; height: 5vh;
     color: #FF0000;
+    opacity: 0;
     font-size: 1vw;
     position: absolute; top: -25px; left: 0;
+    animation: spanYear-show 1s 1 ease; animation-fill-mode: forwards;
+}
+@keyframes spanYear-show {
+    0% {
+        opacity: 0;
+        top: -25px; left: 20%;
+    }
+    100% {
+        opacity: 1;
+        top: -25px; left: 0%;
+    }
 }
 .into .border-box .toBottom {
     position: absolute; top: 19.6%; left: 90%;
     width: 2px; height: 55vw; 
-    background: #000; 
+    background: #000;
+    opacity: 0; 
+    animation: borderB-show 1.5s 800ms 1 ease; animation-fill-mode: forwards; 
+}
+@keyframes borderB-show {
+    0% {
+        opacity: 1;
+        height: 1vw;
+    }
+    100% {
+        opacity: 1;
+        height: 55vw;
+    }
 }
 .into .border-box .toBottom:before {
     content: '';
@@ -531,3 +606,38 @@
         transform: translatey(-2000%);
     }
   }
+
+
+  /* follow */
+  .follow {}
+  .follow .text-box {
+      padding-top: 15vw;
+  } 
+  .follow .text-box > p {
+    font-family: 'GmarketSansBold';
+    font-size: 7.7vw;
+    color: #000;
+    letter-spacing: -7px;
+    line-height: 1.2;
+    -webkit-text-stroke: 3px #000;
+    text-align: center;
+  }
+  .follow .text-box > p:nth-child(1) {
+      color: #ff0000;
+  }
+  .follow span {
+    z-index: 5;
+    position: absolute; bottom: 18%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'GmarketSansBold';
+    font-size: 1.1vw;
+    letter-spacing: -2px;
+  }
+  .follow span:before {
+    z-index: -1;
+    content: '';
+    position: absolute; left: -14.7%; top: -77%;
+    width: 4vw; height: 4vw; 
+    border-radius: 50%;
+    background: #fff;
+  } 
