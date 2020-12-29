@@ -6,7 +6,7 @@ a {color: #111; text-decoration: none;}
 a:hover {}
 
 /* 폰트 초기화 */
-body, input, textarea, select, button, table {font-family:'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #111; line-height: 1.5;}
+body, input, textarea, select, button, table {font-family: 'GmarketSansMedium', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #111; line-height: 1.5;}
 
 /* 보더 초기화 */
 img, fieldset {border: 0;}

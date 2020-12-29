@@ -1,4 +1,5 @@
 /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
 @font-face {
     font-family: 'GmarketSansLight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
@@ -18,19 +19,23 @@
     font-style: normal;
 }
 
-*, html, body {margin: 0; padding: 0; box-sizing: border-box; font-family: 'GmarketSansMedium';}
 
+/* layout */
 #wrap {width: 100vw; height: 500000px;}
 
-#section1 {width: 100vw; height: 8220px;}
+#section1 {width: 100vw; height: 8000px;}
 #into {width: 100vw; height: 1800px; position: relative;}
-#about {width: 100vw; height: 1950px; position: relative; background: #cccccc;}
-#text1 {}
-#text2 {}
-#follow {}
+#about {width: 100vw; height: 1950px; position: relative; overflow: hidden;}
+#text-sec1 {width: 100vw; height: 1000px; position: relative;}
+#text-sec2 {width: 100vw; height: 2050px; position: relative;}
+#follow {width: 100vw; height: 940px; background: #ff0000;}
+
 
 /* section1 */
-.into {}
+.container { margin: 0 auto; height: inherit; padding: 0 10vw; }
+
+
+/* into */
 .into .logo span {
     font-family: 'GmarketSansBold';
     font-size: 11.2vw;
@@ -72,29 +77,457 @@
     transform: rotate(270deg);
 }
 .into .mainImg {
-    position: absolute; top: 63%; left: 31%;
-    width: 37vw; height: 32vw;
-    background: lightgreen;
-    /* background: url(image/mainImg.jpg) no-repeat;
+    position: absolute; top: 60%; left: 30%;
+    width: 40vw; height: 72vh;
+    background: #ccc;
+    background: url(../image/mainImg.jpg) no-repeat;
     background-position: center center;
-    background-size: cover; */
+    background-size: cover;
 }
 
-.about {}
-.about > div:nth-child(1) {
+
+/* about */
+.about span {
+    font-family: 'GmarketSansBold';
+    font-size: 1.5vw;
+    color: #FF0000;
+}
+.about .redText1 {
+    position: absolute; top: 7.5vw; left: 10vw;
+}
+.about .redText2 {
+    position: absolute; top: 25.8vw; left: 10vw;
+}
+.about .text-slide > div {
     margin-top: 10vw;
-    font-size: 7vw;
+    font-size: 7.5vw;
     white-space: nowrap;
     border-top: 2px solid #000;
     border-bottom: 2px solid;
     -webkit-text-stroke: 3px #000;
 }
-.about .slideBox1 {
+.about .text-slide .slideBox1 {
     border-bottom: 2px solid #000;
-    padding: 1vw 0 0.5vw 0;
+    padding: 1vw 0 0.3vw 0;
 }
-.about .slideBox2 {
-    margin-top: 8vw;
+.about .text-slide .slideBox1 p.move {animation: tSlide 30s infinite linear;}
+@keyframes tSlide {
+    0% {transform: translate(0%, 0%);}
+    50% {transform: translate(-238%, 0%);}
+    100% {transform: translate(0%, 0%);}
+}
+.about .text-slide .slideBox2 {
+    margin-top: 5.5vw;
     border-top: 2px solid #000;
-    padding: 1vw 0 0.5vw 0;
+    padding: 1vw 0 0.3vw 0;
 }
+.about .text-slide .slideBox2 p {
+    transform: translate(-158%, 0);
+}
+.about .text-slide .slideBox2 p.move {animation: tSlide2 26s infinite linear;}
+@keyframes tSlide2 {
+    0% {transform: translate(-158%, 0);}
+    50% {transform: translate(0%, 0%);}
+    100% {transform: translate(-158%, 0%);}
+}
+.about .text-slide > div > p {
+    margin-left: 9.5vw;
+}
+.about .coding-intro {
+    position: relative;
+}
+.about .coding-intro .back {
+    margin-top: 5vw;
+    position: absolute; top: 0; right: 0;
+    width: 91vw; height: 74vh;
+    background: #000;
+}
+.about .coding-intro .num {
+    position: absolute; top: 3.3vw; left: 4.5vw;
+}
+.about .coding-intro .num:before {
+    content: '';
+    width: 0.1vw; height: 58vh;
+    background: #ff0000;
+    position: absolute; top: 0.7vw; left: 2.5vw;
+
+}
+.about .coding-intro .num span {
+    display: block;
+    font-family: serif;
+    font-family: 'Fira Code', monospace;
+    font-weight: 300;
+    font-size: 1.5vw;
+    line-height: 1.82;
+    text-align: center;
+}
+.about .coding-intro .text {
+    color: #fff;
+    font-size: 1.5vw;
+    font-size: 1.4vw;
+    line-height: 1.8;
+    margin: 3.2vw 0 0 10.5vw;
+}
+.about .coding-intro .text span {
+    font-family: 'Fira Code', monospace;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
+.about .skill {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5vw;
+}
+.skill .skill-sub {
+    position: absolute; left: 11.8vw; top: 58.3vw;
+    display: flex;
+    justify-content: space-between;
+    width: 83.3vw;
+}
+.skill .skill-sub li {
+    font-size: 1.9vw;
+    font-family: 'GmarketSansBold';
+}
+.skill .skill-sub li:nth-child(2) {
+    position: absolute; left: 15.1vw; top: 0vw;
+}
+.skill .skill-sub li:nth-child(3) {
+    position: absolute; left: 36.5vw; top: 0vw;
+}
+.skill .skill-sub li:nth-child(4) {
+    position: absolute; left: 57.9vw; top: 0vw;
+}
+.skill .skill-per {
+    z-index: 5;
+    position: absolute; left: 10.2vw; top: 49vw;
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+}
+.about .skill-per li {
+    font-size: 3.5vw;
+    font-family: 'GmarketSansBold';
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+} 
+.about .skill-per li:nth-child(2) {
+    position: absolute; left: 19.9vw; top: 0vw;
+}
+.about .skill-per li:nth-child(3) {
+    position: absolute; left: 38.8vw; top: 0vw;
+}
+.about .skill-per li:nth-child(4) {
+    position: absolute; left: 57.5vw; top: 0vw;
+}
+.about .skill > div {
+    margin-top: 47vw;
+    transform: scale(1.6);
+    margin-left: 11vw;
+}
+.about .skill > div .wrapper {
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.about .skill > div .wrapper .fill {
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.2, .6, .8, .4);
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.about .skill > div .wrapper .waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    width: 150px;
+    height: 150px;
+    fill: #000;
+}
+@keyframes waveAction {
+    0% {transform: translate(-150px, 0);}
+    100% {transform: translate(0, 0);}
+}
+.about .skill .s-html .wrapper .fill {animation-name: HfillAction;}
+.about .skill .s-java .wrapper .fill {animation-name: JSfillAction;}
+.about .skill .s-jq .wrapper .fill {animation-name: JQfillAction;}
+.about .skill .s-css .wrapper .fill {animation-name: CfillAction;}
+.about .skill .s-illu .wrapper .fill {animation-name: IfillAction;}
+@keyframes HfillAction {
+    0% {transform: translate(0, 150px);}
+    100% {transform: translate(0, 1px);}
+}
+@keyframes JSfillAction {
+    0% {transform: translate(0, 150px);}
+    100% {transform: translate(0, 35px);}
+}
+@keyframes JQfillAction {
+    0% {transform: translate(0, 150px);}
+    100% {transform: translate(0, 25px);}
+}
+@keyframes CfillAction {
+    0% {transform: translate(0, 150px);}
+    100% {transform: translate(0, 15px);}
+}
+@keyframes IfillAction {
+    0% {transform: translate(0, 150px);}
+    100% {transform: translate(0, 35px);}
+}
+
+
+/* text-sec1 */
+.text-sec1 {
+    display: flex;
+}
+.text-sec1 > div {
+    height: 80vh;
+    margin-top: 24vh;
+}
+.text-sec1 .selfCa{
+    flex: 1 1 45%;
+    margin-top: 14.4vw;
+}
+.text-sec1 .selfCa .selfPic {
+    z-index: 5;
+    position: relative;
+    width: 36.5vw; height: 77vh; 
+    background: url(../image/MaskGroup.png) center center;
+    background-size: cover;
+}
+.text-sec1 .selfCa .back-code {
+    position: absolute; top: 12.5vw; left: 10vw;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    font-size: 0.9vw;
+    line-height: 2;
+}
+.text-sec1 .text-box {
+    flex: 1 1 40%;
+    margin-top: 12.3vw;
+}
+.text-sec1 .text-box p {
+    font-family: 'GmarketSansBold';
+    font-size: 9.1vw;
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+    line-height: 1.15;
+}
+.text-sec1 .text-box p span {
+    color: #000;
+}
+
+
+/* text-sec2 */
+.text-sec2 {}
+.text-sec2 .text-box {
+    position: relative; top: 820px;
+    z-index: 50;
+    font-family: 'GmarketSansBold';  
+    font-size: 7.5vw;
+    text-align: center;
+}
+.text-sec2 .question-box {
+    position: absolute; top: 0; left: 10vw;    
+    width: 80vw; height: 2050px;
+    overflow: hidden;
+}
+.text-sec2 .question-box > div {
+    position: absolute;
+    font-family: 'GmarketSansBold';
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+}
+.text-sec2 .question-box .mark1 {
+    font-size: 3.5vw;
+    left: 20%;
+    bottom: 10%;
+    animation: mark-move 10s -4600ms ease-in infinite;
+}
+.text-sec2 .question-box .mark2 {
+    font-size: 5vw;
+    left: 30%;
+    bottom: 30%;
+    animation: mark-move 10s -2070ms ease-in infinite;
+}
+.text-sec2 .question-box .mark3 {
+    font-size: 8vw;
+    left: 35%;
+    bottom: 15%;
+    animation: mark-move 10s -5ms ease-in infinite;
+}
+.text-sec2 .question-box .mark4 {
+    font-size: 2vw;
+    left: 70%;
+    bottom: 20%;
+    animation: mark-move 10s -700ms ease-in infinite;
+}
+.text-sec2 .question-box .mark5 {
+    font-size: 5vw;
+    left: 39%;
+    bottom: 0%;
+    animation: mark-move 10s -20ms ease-in infinite;
+}
+.text-sec2 .question-box .mark6 {
+    font-size: 7.6vw;
+    left: 63%;
+    bottom: 5%;
+    animation: mark-move 10s -3000ms ease-in infinite;
+}
+.text-sec2 .question-box .mark7 {
+    font-size: 6.6vw;
+    left: 10%;
+    bottom: 30%;
+    animation: mark-move 10s -60ms ease-in infinite;
+}
+.text-sec2 .question-box .mark8 {
+    font-size: 8.5vw;
+    left: 55%;
+    bottom: 0%;
+    animation: mark-move 10s -1700ms ease-in infinite;
+}
+.text-sec2 .question-box .mark9 {
+    font-size: 2.8vw;
+    left: 78%;
+    bottom: 0%;
+    animation: mark-move 10s -3700ms ease-in infinite;
+}
+.text-sec2 .question-box .mark10 {
+    font-size: 3.8vw;
+    left: 90%;
+    bottom: 5%;
+    animation: mark-move 10s -1020ms ease-in infinite;
+}
+.text-sec2 .question-box .mark11 {
+    font-size: 1.5vw;
+    left: 12%;
+    bottom: 25%;
+    animation: mark-move 10s -8800ms ease-in infinite;
+}
+.text-sec2 .question-box .mark12 {
+    font-size: 7.3vw;
+    left: 50%;
+    bottom: 0%;
+    animation: mark-move 10s -5700ms ease-in infinite;
+}
+.text-sec2 .question-box .mark13 {
+    font-size: 6vw;
+    left: 20%;
+    bottom: 0%;
+    animation: mark-move 10s -6300ms ease-in infinite;
+}
+.text-sec2 .question-box .mark14 {
+    font-size: 8vw;
+    left: 85%;
+    bottom: 10%;
+    animation: mark-move 10s -370ms ease-in infinite;
+}
+.text-sec2 .question-box .mark15 {
+    font-size: 2vw;
+    left: 73%;
+    bottom: 0%;
+    animation: mark-move 10s -10ms ease-in infinite;
+}
+.text-sec2 .question-box .mark16 {
+    font-size: 7vw;
+    left: 54%;
+    bottom: 30%;
+    animation: mark-move 10s -3720ms ease-in infinite;
+}
+.text-sec2 .question-box .mark17 {
+    font-size: 13vw;
+    left: 3%;
+    bottom: 20%;
+    animation: mark-move 10s -2070ms ease-in infinite;
+}
+.text-sec2 .question-box .mark18  {
+    font-size: 6.5vw;
+    left: 58%;
+    bottom: 0%;
+    animation: mark-move 10s -6010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark19  {
+    font-size: 3vw;
+    left: 80%;
+    bottom: 10%;
+    animation: mark-move 10s -300ms ease-in infinite;
+}
+.text-sec2 .question-box .mark20  {
+    font-size: 5vw;
+    left: 20%;
+    bottom: 10%;
+    animation: mark-move 10s -1010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark21  {
+    font-size: 5vw;
+    left: 50%;
+    bottom: 0%;
+    animation: mark-move 10s -8010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark22  {
+    font-size: 3vw;
+    left: 40%;
+    bottom: 20%;
+    animation: mark-move 10s -10ms ease-in infinite;
+}
+.text-sec2 .question-box .mark23  {
+    font-size: 3.9vw;
+    left: 20%;
+    bottom: 5%;
+    animation: mark-move 10s -8000ms ease-in infinite;
+}
+.text-sec2 .question-box .mark24  {
+    font-size: 9vw;
+    left: 40%;
+    bottom: 0%;
+    animation: mark-move 10s -2010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark25  {
+    font-size: 3.5vw;
+    left: 70%;
+    bottom: 10%;
+    animation: mark-move 10s -7010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark26  {
+    font-size: 4vw;
+    left: 88%;
+    bottom: 5%;
+    animation: mark-move 10s -3000ms ease-in infinite;
+}
+.text-sec2 .question-box .mark27  {
+    font-size: 11vw;
+    left: 62%;
+    bottom: 0%;
+    animation: mark-move 10s -5010ms ease-in infinite;
+}
+.text-sec2 .question-box .mark28  {
+    font-size: 4vw;
+    left: 47%;
+    bottom: 10%;
+    animation: mark-move 10s -4000ms ease-in infinite;
+}
+.text-sec2 .question-box .mark29  {
+    font-size: 4.5vw;
+    left: 20%;
+    bottom: 5%;
+    animation: mark-move 10s -2510ms ease-in infinite;
+}
+.text-sec2 .question-box .mark30  {
+    font-size: 11vw;
+    left: 30%;
+    bottom: 0%;
+    animation: mark-move 10s -800ms ease-in infinite;
+}
+@keyframes mark-move {
+    0% {
+        transform: translatey(0);
+    }
+    100% {
+        transform: translatey(-2000%);
+    }
+  }
