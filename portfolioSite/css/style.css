@@ -672,7 +672,7 @@
 }
 
 /* sec2-1 */
-.sec2-1 {}
+.sec2-1 {width: 100vw; height: 100vh;}
 .sec2-1 .s2-1Title {
     z-index: 1100;
     font-family: 'GmarketSansBold';
@@ -683,6 +683,7 @@
     left: 150%; top: 90%;
 }
 .sec2-1 .s2-1Img {
+    width: 63.5vw; height: 95vh;
     left: 150%; top: 53%;
 }
 .sec2-1 .s2-1Tag {
@@ -706,7 +707,8 @@
     left: 150%; top: 69%;
     display: flex;
 }
-.sec2-1 .s2-1btn > li {
+.sec2-1 .s2-1btn > li a {
+    display: inline-block;
     width: 18vw;
     font-size: 1.1vw;
     line-height: 1.5vw;
@@ -717,9 +719,14 @@
     border: 1px solid #000;
     background: #fff;
 }
-.sec2-1 .s2-1btn > li:nth-child(1) { border-right: none; }
+.sec2-1 .s2-1btn > li:nth-child(1) a { border-right: none; }
+.sec2-1 .s2-1btn > li a:hover {
+    background: #000;
+    color: #fff;
+}
 
 /* sec2-2 */
+.sec2-2 {width: 100vw; height: 100vh;}
 .sec2-2 .s2-2Title {
     z-index: 1100;
     font-family: 'GmarketSansBold';
@@ -743,10 +750,12 @@
     left: 51.1%; top: 150%;
 }
 .sec2-2 .s2-2Img01 {
-    left: -150%;
+    width: 50vw; height: 50vh;
+    left: 150%; top: 26%;
 }
 .sec2-2 .s2-2Img02 {
-    left: 37%; top: 150%;
+    width: 42vw; height: 60vh;
+    left: 39%; top: 150%;
 }
 .sec2-2 .s2-2Tag {
     left: 150%; top: 38%;
@@ -755,7 +764,7 @@
 .sec2-2 .s2-2Tag > li {
     margin-right: 0.3vw;
     border: 1px solid #9B9B9B;
-    padding: 1vw 1vw 0.6vw 1vw;
+    padding: 1vw 1vw 0.7vw 1vw;
     font-size: 1.1vw;
     line-height: 1vw;
 }
@@ -769,7 +778,8 @@
     left: 150%; top: 83%;
     display: flex;
 }
-.sec2-2 .s2-2btn > li {
+.sec2-2 .s2-2btn > li a {
+    display: inline-block;
     width: 18vw;
     font-size: 1.1vw;
     line-height: 1.5vw;
@@ -780,7 +790,11 @@
     border: 1px solid #000;
     background: #fff;
 }
-.sec2-2 .s2-2btn > li:nth-child(1) { border-right: none; }
+.sec2-2 .s2-2btn > li:nth-child(1) a { border-right: none; }
+.sec2-2 .s2-2btn > li a:hover {
+    background: #000;
+    color: #fff;
+}
 .sec2-2 .phone {
     width: 16vw; height: 60vh;
     border: 1px solid #9B9B9B;
@@ -790,4 +804,61 @@
 .sec2-2 .s2-2Img03 {
     width: 14.5%;
     left: 83.5%; top: 360%;
+}
+
+/* sec2-3 */
+.sec2-3 {width: 100vw; height: 100vh;}
+.sec2-3 .s2-3Title {
+    left: 150%; top: 47%;
+    font-family: 'GmarketSansBold';
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: -8px;
+    white-space: nowrap;
+    font-size: 8vw;
+}
+.sec2-3 .s2-3Img {
+    width: 40vw; height: 60vh;
+    left: 150%; top: 53%;
+}
+.sec2-3 .s2-3ImgWrap {
+    width: 30vw; height: 30vh;
+}
+.sec2-3 .s2-3ImgWrap .s2-4Img01 {}
+.sec2-3 .s2-3Tag {
+    left: 150%; top: 25.7%;
+    display: flex;
+}
+.sec2-3 .s2-3Tag > li {
+    margin-right: 0.3vw;
+    border: 1px solid #9B9B9B;
+    padding: 1vw 1vw 0.7vw 1vw;
+    font-size: 1.1vw;
+    line-height: 1vw;
+}
+.sec2-3 .s2-3Txt {
+    left: 150%; top: 66%;
+    white-space: nowrap;
+    font-family: 'GmarketSansLight';
+    font-size: 1.5vw;
+}
+.sec2-3 .s2-3btn {
+    left: 150%; top: 79.5%;
+    display: flex;
+}
+.sec2-3 .s2-3btn > li a {
+    display: inline-block;
+    width: 18vw;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    text-align: center;
+    font-family: 'GmarketSansBold';
+    letter-spacing: 10px;
+    padding: 1vw 0vw 0.7vw 0vw;
+    border: 1px solid #000;
+    background: #fff;
+}
+.sec2-3 .s2-3btn > li:nth-child(1) a { border-right: none; }
+.sec2-3 .s2-3btn > li a:hover {
+    background: #000;
+    color: #fff;
 }
