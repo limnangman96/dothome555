@@ -34,7 +34,9 @@
 #wrap {width: 100vw; height: 500000px;}
 
 #section1 {width: 100vw; height: 7760px; overflow: hidden;}
-#section2 {width: 100vw; height: 16000px; position: relative; overflow: hidden;}
+#section2 {width: 100vw; height: 40740px; position: relative; overflow: hidden;}
+#section3 {width: 100vw; height: 3500px; position: relative; overflow: hidden;}
+#section4 {width: 100vw; height: 8000px; position: relative; overflow: hidden; background: #ccc;}
 
 
 /* section1 */
@@ -881,6 +883,10 @@
     width: 100%; height: 100%;
     left: 20%; top: -150%;
 }
+.sec2-3 .s2-4Img02 {
+    left: -50%; top: 72%;
+    width: 15vw; height: 36vh;
+}
 .sec2-3 .s2-4Tag {
     left: 57.6%; top: 26.6%;
     display: flex;
@@ -918,4 +924,31 @@
 .sec2-3 .s2-4btn > li a:hover {
     background: #000;
     color: #fff;
+}
+
+
+/* section3 */
+.section3 {}
+.section3 .alphabetS {
+    width: 20%;
+    position: absolute; left: 41.8%; top: 10%;
+}
+.section3 .snake {
+    transform: scale(1.7);
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute; left: 67%; top: 25%;
+}
+.section3 .txt {
+    position: absolute; left: 39%; top: 40%;
+    font-family: 'GmarketSansBold';
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1.2;
+}
+.section3 .alphabetQ {
+    width: 22%;
+    position: absolute; left: 45.2%; top: 71.5%;
 }
