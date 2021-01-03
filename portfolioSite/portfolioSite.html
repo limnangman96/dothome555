@@ -522,7 +522,7 @@
         <section id="section4">
             <div class="section4">
                 <div class="sec4-1">
-                    <div class="sec4-1Title" data-bm="knowledge">
+                    <!-- <div class="sec4-1Title" data-bm="knowledge">
                         <svg xmins="http://www.w3.org/2000/svg" viewBox="0 0 1700 400" width="1700" height="400" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
                             <defs>
                                 <clipPath id="ani1">
@@ -531,10 +531,13 @@
                             </defs>
                             <g clip-path="url(#ani1)">
                                 <g transform="matrix(1,0,0,1,-110,-355)" opacity="1" style="display: block;">
-                                    
                                 </g>
                             </g>
                         </svg>
+                    </div> -->
+                    <div class="ani01Txt">
+                        <p class="Txt-top">tail</p>
+                        <p class="Txt-bottom">animation</p>
                     </div>
                 </div>
                 <div class="sec4-2"></div>
@@ -619,6 +622,14 @@
                 clearInterval(timer);
             }
         }, 90);
+
+        // section4 글씨 쪼개기
+        $(".sec4-1 .ani01Txt p").each(function(){
+            let text = $(this).text();
+            let split = text.split("").join("</span><span>");
+                split = "<span>" + split + "</span>"
+            $(this).html(split);
+        })
     </script>
 </body>
 </html>
