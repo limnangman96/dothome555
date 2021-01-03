@@ -815,18 +815,16 @@
     letter-spacing: -8px;
     white-space: nowrap;
     font-size: 8vw;
+    opacity: 1;
 }
 .sec2-3 .s2-3Img {
     width: 40vw; height: 60vh;
     left: 150%; top: 53%;
 }
-.sec2-3 .s2-3ImgWrap {
-    width: 30vw; height: 30vh;
-}
-.sec2-3 .s2-3ImgWrap .s2-4Img01 {}
 .sec2-3 .s2-3Tag {
-    left: 150%; top: 25.7%;
+    left: 150%; top: 26.6%;
     display: flex;
+    opacity: 1;
 }
 .sec2-3 .s2-3Tag > li {
     margin-right: 0.3vw;
@@ -840,10 +838,12 @@
     white-space: nowrap;
     font-family: 'GmarketSansLight';
     font-size: 1.5vw;
+    opacity: 1;
 }
 .sec2-3 .s2-3btn {
     left: 150%; top: 79.5%;
     display: flex;
+    opacity: 1;
 }
 .sec2-3 .s2-3btn > li a {
     display: inline-block;
@@ -859,6 +859,63 @@
 }
 .sec2-3 .s2-3btn > li:nth-child(1) a { border-right: none; }
 .sec2-3 .s2-3btn > li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* sec2-4 */
+.sec2-3 .s2-4Title {
+    left: 57.9%; top: 44%;
+    font-family: 'GmarketSansBold';
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: -8px;
+    white-space: nowrap;
+    font-size: 8vw;
+}
+.sec2-3 .s2-4ImgBox {
+    left: 16.4%; top: 45.5%;
+    width: 33.2vw; height: 18.9vw;
+    overflow: hidden;
+}
+.sec2-3 .s2-4ImgBox .s2-4Img01 {
+    width: 100%; height: 100%;
+    left: 20%; top: -150%;
+}
+.sec2-3 .s2-4Tag {
+    left: 57.6%; top: 26.6%;
+    display: flex;
+}
+.sec2-3 .s2-4Tag > li {
+    margin-right: 0.3vw;
+    border: 1px solid #9B9B9B;
+    padding: 1vw 1vw 0.7vw 1vw;
+    font-size: 1.1vw;
+    line-height: 1vw;
+}
+.sec2-3 .s2-4Txt {
+    left: 58.1%; top: 63.5%;
+    white-space: nowrap;
+    font-family: 'GmarketSansLight';
+    font-size: 1.5vw;
+}
+.sec2-3 .s2-4btn {
+    left: 56.5%; top: 79.5%;
+    display: flex;
+}
+.sec2-3 .s2-4btn > li a {
+    display: inline-block;
+    width: 18vw;
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    text-align: center;
+    font-family: 'GmarketSansBold';
+    letter-spacing: 10px;
+    padding: 1vw 0vw 0.7vw 0vw;
+    border: 1px solid #000;
+    background: #fff;
+}
+.sec2-3 .s2-4btn > li:nth-child(1) a { border-right: none; }
+.sec2-3 .s2-4btn > li a:hover {
     background: #000;
     color: #fff;
 }
