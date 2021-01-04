@@ -36,7 +36,7 @@
 #section1 {width: 100vw; height: 7760px; overflow: hidden;}
 #section2 {width: 100vw; height: 40740px; position: relative; overflow: hidden;}
 #section3 {width: 100vw; height: 3500px; position: relative; overflow: hidden;}
-#section4 {width: 100vw; height: 8000px; position: relative; overflow: hidden;}
+#section4 {width: 100vw; height: 5630px; position: relative; overflow: hidden; background: #ccc;}
 
 
 /* section1 */
@@ -658,11 +658,6 @@
 
 
 /* section2 */
-#sec2-1 {}
-#sec2-2 {}
-#sec2-3 {}
-#sec2-4 {}
-
 .back-gradient {
     width: 100vw; height: 200vh;
     background-image: linear-gradient(to bottom, #ff0000, #ffff);
@@ -1280,4 +1275,7 @@
 #sec4-6 .ani06More a {
     width: 5vw; height: 5vh;
 }
+
+
+/* section5 */
 
