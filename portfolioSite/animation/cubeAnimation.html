@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cube Animation</title>
+    <style>
+        body {
+            height: 100vh;
+            perspective: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cube {
+            position: relative;
+            width: 100px; height: 100px;
+            transform-style: preserve-3d;
+            transform: rotateX(60deg) rotatey(-30deg);
+            animation: rotate 8s linear infinite;
+        }
+        .cube > div {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100px; height: 100px;
+            opacity: 0.75;
+            color: #fff;
+        }
+        .cube > div:nth-child(1) {
+            background: #FFCC80;
+            transform-origin: center top;
+            transform: rotateX(90deg) translateY(-100px);
+            animation: top 4s  8s ease-in-out infinite;
+        }
+        .cube > div:nth-child(2) {
+            background: #FFB74D;
+            transform: rotateX(-90deg) translateY(100px);
+            transform-origin: center bottom;
+            animation: bottom 4s  8s ease-in-out infinite;
+        }
+        .cube > div:nth-child(3) {
+            background: #FFA726;
+            transform-origin: left center;
+            transform: rotateY(-90deg) translateX(-100px);
+            animation: left 4s  8s ease-in-out infinite;
+        }
+        .cube > div:nth-child(4) {
+            background: #FF9800;
+            transform-origin: right center;
+            transform: rotateY(90deg) translateX(100px);
+            animation: right 4s  8s ease-in-out infinite;
+        }
+        .cube > div:nth-child(5) {
+            background: #FB8C00;
+            transform-origin: center center;
+            transform: rotateX(0deg) translateX(0px);
+            animation: front 4s  8s ease-in-out infinite;
+        }
+        .cube > div:nth-child(6) {
+            background: #F57C00;
+            transform-origin: center center;
+            transform: rotateY(180deg) translateZ(100px);
+            animation: back 4s  8s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            0% {transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0);}
+            100% {transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) translateZ(0);}
+        }
+        @keyframes top {
+            0% {transform: rotatex(90deg) translatey(-100px) translatez(0);}
+            50% {transform: rotatex(90deg) translatey(-100px) translatez(100px);}
+            100% {transform: rotatex(90deg) translatey(-100px) translatez(0px);}
+        }
+        @keyframes bottom {
+            0% {transform: rotatex(-90deg) translatey(100px) translatez(0);}
+            50% {transform: rotatex(-90deg) translatey(100px) translatez(100px);}
+            100% {transform: rotatex(-90deg) translatey(100px) translatez(0px);}
+        }
+        @keyframes left {
+            0% {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+            50% {transform: rotatey(-90deg) translatex(-100px) scaley(3);}
+            100% {transform: rotatey(-90deg) translatex(-100px) scaley(1);}
+        }
+        @keyframes right {
+            0% {transform: rotatey(90deg) translatex(100px) scaley(1);}
+            50% {transform: rotatey(90deg) translatex(100px) scaley(3);}
+            100% {transform: rotatey(90deg) translatex(100px) scaley(1);}
+        }
+        @keyframes front {
+            0% {transform: rotatex(0deg) translatex(0px) scaley(1);}
+            50% {transform: rotatex(0deg) translatex(0px) scaley(3);}
+            100% {transform: rotatex(0deg) translatex(0px) scaley(1);}
+        }
+        @keyframes back {
+            0% {transform: rotatey(180deg) translatez(100px) scaley(1);}
+            50% {transform: rotatey(180deg) translatez(100px) scaley(3);}
+            100% {transform: rotatey(180deg) translatez(100px) scaley(1);}
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -521,31 +521,80 @@
         <!-- //section3 -->
         <section id="section4">
             <div class="section4">
-                <div class="sec4-1">
-                    <!-- <div class="sec4-1Title" data-bm="knowledge">
-                        <svg xmins="http://www.w3.org/2000/svg" viewBox="0 0 1700 400" width="1700" height="400" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
-                            <defs>
-                                <clipPath id="ani1">
-                                    <rect width="1700" height="400" x="0" y="0"></rect>
-                                </clipPath>
-                            </defs>
-                            <g clip-path="url(#ani1)">
-                                <g transform="matrix(1,0,0,1,-110,-355)" opacity="1" style="display: block;">
-                                </g>
-                            </g>
-                        </svg>
-                    </div> -->
-                    <iframe src="./animation/tailAnimation" frameborder="0"></iframe>
+                <ul class="sideMenu">
+                    <li class="menu4-1 active"><a href="#sec4-1">1</a></li>
+                    <li class="menu4-2"><a href="#sec4-2">2</a></li>
+                    <li class="menu4-3"><a href="#sec4-3">3</a></li>
+                    <li class="menu4-4"><a href="#sec4-4">4</a></li>
+                    <li class="menu4-5"><a href="#sec4-5">5</a></li>
+                    <li class="menu4-6"><a href="#sec4-6">6</a></li>
+                </ul>
+                <div id="sec4-1">
+                    <iframe src="./animation/tailAnimation.html" frameborder="0" scrolling="no" width="55%" height="90%"></iframe>
+                    <p class="using">using CSS</p>
                     <div class="ani01Txt">
-                        <p class="Txt-top">tail</p>
-                        <p class="Txt-bottom">animation</p>
+                        <p class="Txt-top">Tail</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani01More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
                     </div>
                 </div>
-                <div class="sec4-2"></div>
-                <div class="sec4-3"></div>
-                <div class="sec4-4"></div>
-                <div class="sec4-5"></div>
-                <div class="sec4-6"></div>
+                <div id="sec4-2">
+                    <iframe src="./animation/waveAnimation.html" frameborder="0" scrolling="no" width="60%" height="90%"></iframe>
+                    <p class="using">using CSS</p>
+                    <div class="ani02Txt">
+                        <p class="Txt-top">Wave</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani02More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
+                    </div>
+                </div>
+                <div id="sec4-3">
+                    <iframe src="./animation/cubeAnimation.html" frameborder="0" scrolling="no" width="60%" height="100%"></iframe>
+                    <p class="using">using CSS</p>
+                    <div class="ani03Txt">
+                        <p class="Txt-top">Cube</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani03More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
+                    </div>
+                </div>
+                <div id="sec4-4">
+                    <iframe src="./animation/loadingAnimation.html" frameborder="0" scrolling="no" width="88%" height="100%"></iframe>
+                    <p class="using">using GSAP</p>
+                    <div class="ani04Txt">
+                        <p class="Txt-top">Loading</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani04More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
+                    </div>
+                </div>
+                <div id="sec4-5">
+                    <iframe src="./animation/tenTacleAnimation.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                    <p class="using">using CSS</p>
+                    <div class="ani05Txt">
+                        <p class="Txt-top">Tentacle</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani05More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
+                    </div>
+                </div>
+                <div id="sec4-6">
+                    <iframe src="./animation/rocketAnimation.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                    <p class="using">using GSAP</p>
+                    <div class="ani06Txt">
+                        <p class="Txt-top">Rocket</p>
+                        <p class="Txt-bottom">Animation</p>
+                    </div>
+                    <div class="ani06More">
+                        <a href="#"><img src="./image/plus_button.svg" alt="더보기"></a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -611,6 +660,22 @@
             //         }
             //     }, 90);
             // }
+
+            // section4 sideMenu 나타나기
+            if( scrollTop > ($("#section4").offset().top)-100 ){
+                $(".section4 .sideMenu").css("display", "block");
+            } else {
+                $(".section4 .sideMenu").css("display", "none");
+            }
+
+            // section4 sideMenu 활성화
+            for ( let i=1; i<=6; i++){
+                if( scrollTop > ($("#sec4-"+i).offset().top)-100 ){
+                $(".section4 .sideMenu li").removeClass("active");
+                $(".section4 .sideMenu .menu4-"+i).addClass("active");
+            }
+            }
+
         });
 
         // 뱀 애니메이션
@@ -625,11 +690,19 @@
         }, 90);
 
         // section4 글씨 쪼개기
-        $(".sec4-1 .ani01Txt p").each(function(){
-            let text = $(this).text();
-            let split = text.split("").join("</span><span>");
-                split = "<span>" + split + "</span>"
-            $(this).html(split);
+        for( let i=1; i<=6; i++ ){
+            $("#sec4-"+i+" .ani0"+i+"Txt p").each(function(){
+                let text = $(this).text();
+                let split = text.split("").join("</span><span>");
+                    split = "<span>" + split + "</span>"
+                $(this).html(split);
+            })
+        }
+
+        // section4 sideMenu 활성화
+        $(".section4 .sideMenu li").click(function(){
+            $(".section4 .sideMenu li").removeClass("active");
+            $(this).addClass("active");
         })
     </script>
 </body>
