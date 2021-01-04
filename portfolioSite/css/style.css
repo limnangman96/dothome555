@@ -968,34 +968,34 @@
     line-height: 1.2;
     text-align: center;
     font-family: 'GmarketSansLight';
-    animation: Top01 5s infinite;
+    animation: Top01 5s infinite ease-in-out;
 }
-@keyframes Top01 {
+/* @keyframes Top01 {
     0% {transform: rotateY(0deg);}
     25% {transform: rotateY(30deg);}
     50% {transform: rotateY(0deg);}
     75% {transform: rotateY(-30deg);}
     100% {transform: rotateY(0deg);}
-}
+} */
 .section4 .sec4-1 .ani01Txt .Txt-top span:nth-child(1) {
     animation: Top1-01 5s infinite;
 }
 @keyframes Top1-01 {
-    0% {font-family: 'GmarketSansLight';}
-    25% {font-family: 'GmarketSansMedium';}
-    50% {font-family: 'GmarketSansbold';}
-    75% {font-family: 'GmarketSansMedium';}
-    100% {font-family: 'GmarketSansLight';}
+    0% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    25% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    50% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    75% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    100% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
 }
 .section4 .sec4-1 .ani01Txt .Txt-top span:nth-child(2) {
     animation: Top1-02 5s infinite;
 }
 @keyframes Top1-02 {
-    0% {font-family: 'GmarketSansMedium';}
-    25% {font-family: 'GmarketSansbold';}
-    50% {font-family: 'GmarketSansLight';;}
-    75% {font-family: 'GmarketSansbold';}
-    100% {font-family: 'GmarketSansMedium';}
+    0% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+    25% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    50% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    75% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    100% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
 }
 .section4 .sec4-1 .ani01Txt .Txt-top span:nth-child(3) {
     animation: Top1-02 5s infinite;
@@ -1004,15 +1004,23 @@
     animation: Top1-03 5s infinite;
 }
 @keyframes Top1-03 {
-    0% {font-family: 'GmarketSansbold';}
-    25% {font-family: 'GmarketSansMedium';}
-    50% {font-family: 'GmarketSansLight';;}
-    75% {font-family: 'GmarketSansMedium';}
-    100% {font-family: 'GmarketSansbold';}
+    0% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    25% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    50% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    75% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    100% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
 }
 .section4 .sec4-1 .ani01Txt .Txt-bottom {
     font-size: 7vw;
     line-height: 1.2;
     text-align: center;
 }
-.section4 .sec4-1 .ani01Txt .Txt-bottom span {}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(1) {animation: Top1-03 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(2) {animation: Top1-03 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(3) {animation: Top1-03 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(4) {animation: Top1-02 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(5) {animation: Top1-02 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(6) {animation: Top1-02 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(7) {animation: Top1-01 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(8) {animation: Top1-01 5s infinite;}
+.section4 .sec4-1 .ani01Txt .Txt-bottom span:nth-child(9) {animation: Top1-01 5s infinite;}
