@@ -732,10 +732,11 @@
     white-space: nowrap;
     font-size: 8vw;
     left: 23.55%; top: 90%;
+    opacity: 0;
 }
 .sec2-2 .s2-2TitleBefore {
     left: 153%; top: 50%;
-    opacity: 1;
+    opacity: 0;
 }
 .sec2-2 .s2-2TitleAfter {
     z-index: 1100;
@@ -862,7 +863,7 @@
 
 /* sec2-4 */
 .sec2-3 .s2-4Title {
-    left: 57.9%; top: 44%;
+    left: 57.9%; top: -120%;
     font-family: 'GmarketSansBold';
     -webkit-text-stroke: 1px #000;
     letter-spacing: -8px;
@@ -883,7 +884,7 @@
     width: 15vw; height: 36vh;
 }
 .sec2-3 .s2-4Tag {
-    left: 57.6%; top: 26.6%;
+    left: 57.6%; top: -130%;
     display: flex;
 }
 .sec2-3 .s2-4Tag > li {
@@ -894,13 +895,13 @@
     line-height: 1vw;
 }
 .sec2-3 .s2-4Txt {
-    left: 58.1%; top: 63.5%;
+    left: 58.1%; top: -110%;
     white-space: nowrap;
     font-family: 'GmarketSansLight';
     font-size: 1.5vw;
 }
 .sec2-3 .s2-4btn {
-    left: 56.5%; top: 79.5%;
+    left: 56.5%; top: -100%;
     display: flex;
 }
 .sec2-3 .s2-4btn > li a {
