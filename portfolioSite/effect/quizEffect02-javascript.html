@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 18px;
+            background: #9FDDD8;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        @font-face {
+            font-family: 'BMEULJIRO';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-size: 18px;
+            background: #9FDDD8;
+            font-family: 'BMEULJIRO';
+            line-height: 1.4;
+        }
+        .quiz-wrap {
+            max-width: 500px;
+            background: #E3E3E3;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .quiz-wrap .info {
+            background: #fff;
+            margin-bottom: 30px;
+        }
+        .quiz-wrap .info ul {
+            border: 3px solid #000;
+        }
+        .quiz-wrap .info li {
+            border-bottom: 3px solid #000;
+            padding: 8px;
+        }
+        .quiz-wrap .info li:last-child {
+            border-bottom: 0;
+        }
+        .quiz-wrap .quiz {
+            border: 3px solid #000;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .quiz-wrap .quiz h2 {
+            font-size: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .quiz-wrap .quiz .question {
+            font-size: 22px;
+            padding-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .quiz-wrap .quiz .question::before {
+            content: '';
+            width: 10px; height: 10px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute; left: 0; top: 9px;
+        }
+        .quiz-wrap .quiz .confirm-btn {
+            background: #00005C;
+            color: #fff;
+            text-align: center;
+            padding: 13px 10px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .quiz-wrap .quiz .confirm-answer {
+            border: 3px solid #000;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* .quiz-wrap .quiz .confirm-answer::before {
+            content:"정답은 : "
+        }
+        .quiz-wrap .quiz .confirm-answer::after {
+            content:" 입니다."
+        } */
+        .quiz-wrap .quiz .confirm-ex {
+            color: red;
+            position: relative;
+            padding-left: 17px;
+        }
+        .quiz-wrap .quiz .confirm-ex::before {
+            content: '';
+            width: 10px; height: 10px;
+            background: red;
+            border-radius: 50%;
+            position: absolute; left: 0; top: 6px;
+        }
+
+        .selects label {
+            display: -webkit-box;
+            display: flex;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0.375em;
+        }
+        .selects label input {
+            position: absolute;
+            left: -9999px;
+        }
+        .selects label input:checked+span {
+            background-color: #D6D6E5;
+        }
+        .selects label input:checked+span:before {
+            box-shadow: inset 0 0 0 0.4375em #00005C;
+        }
+        .selects label span {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            padding: 0.375em 0.75em 0.375em 0.375em;
+            border-radius: 99em;
+            transition: 0.25s ease;
+            font-size: 20px;
+            line-height: 1;
+        }
+        .selects label span:hover {
+            background-color: #D6D6E5;
+        }
+        .selects label span:before {
+            display: -webkit-box;
+            display: flex;
+            flex-shrink: 0;
+            content: "";
+            background-color: #fff;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            margin-right: 0.375em;
+            -webkit-transition: 0.25s ease;
+            transition: 0.25s ease;
+            box-shadow: inset 0 0 0 0.125em #00005C;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-wrap">
+        <div class="info">
+            <ul>
+                <li>시험 유형 : <span>객관식 퀴즈(한문제)</span></li>
+                <li>시험 과목 : <span>자바스크립트</span></li>
+                <li>시험 과목 : <span>HTML</span></li>
+            </ul>
+        </div>
+        <div class="quiz">
+            <h2>&lt; 문제<span class="num">0</span> &gt;</h2>
+            <p class="question"></p>
+            <div class="selects">
+                <label for="select1">
+                    <input class="select" type="radio" name="select" id="select1" value="1">
+                    <span class="choice"></span>
+                </label>
+                <label for="select2">
+                    <input class="select" type="radio" name="select" id="select2" value="2">
+                    <span class="choice"></span>
+                </label>
+                <label for="select3">
+                    <input class="select" type="radio" name="select" id="select3" value="3">
+                    <span class="choice"></span>
+                </label>
+                <label for="select4">
+                    <input class="select" type="radio" name="select" id="select4" value="4">
+                    <span class="choice"></span>
+                </label>
+            </div>
+            <div class="confirm">
+                <p class="confirm-btn">정답 확인하기</p>
+                <div class="confirm-bottom">
+                    <p class="confirm-answer"></p>
+                    <p class="confirm-ex"></p>
+                </div>
+            </div>
+        </div>
+     
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // 선택자
+        const questionAsk = document.querySelector(".question");
+        const questionNum = document.querySelector(".num");
+        const questionBtn = document.querySelector(".confirm-btn");
+        const questionAnswer = document.querySelector(".confirm-answer");
+        const questionEx = document.querySelector(".confirm-ex");
+        const questionBottom = document.querySelector(".confirm-bottom");
+        const questionSelect = document.querySelectorAll(".select");
+        const questionChoice = document.querySelectorAll(".choice")
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                quizNum : 1,
+                quizAsk : "다음 중 시멘틱 태그는 무엇인가요?",
+                quizChoice : ["div 태그", "h1 태그", "span 태그", "main 태그"],
+                quizAnswer : "4",
+                quizEx : "시멘틱 태그는 의미가 부여된 태그로서 main 태그는 사이트에서 중요한 콘텐츠에 한번만 사용할 수 있습니다."
+            }
+        ]
+        
+        // 문제 출력
+        function updateQuiz(){
+            questionNum.innerHTML = quizInfo[0].quizNum;
+            questionAsk.innerHTML = quizInfo[0].quizAsk;
+            questionAnswer.innerHTML = quizInfo[0].quizAnswer;
+            questionEx.innerHTML = quizInfo[0].quizEx;
+
+            for(let i=0; i<4; i++){
+                questionChoice[i].innerHTML = quizInfo[0].quizChoice[i];
+            }
+            // questionChoice.forEach((elem, index) => {
+            //     // console.log(index);                                                           
+            //     questionChoice[i].innerHTML = quizInfo[0].quizChoice[index];
+            // });
+
+            // 정답 감추기
+            questionAnswer.style.display = "none";
+            questionEx.style.display = "none";
+        }
+        updateQuiz();
+
+        // 정답 확인
+        function answerQuiz(){
+            for(let i=0; i<questionSelect.length; i++){
+                if(questionSelect[i].checked == true){
+                    if(questionSelect[i].value == quizInfo[0].quizAnswer){
+                        // 정답입니다.
+                        questionBtn.style.display = "none"
+                        questionAnswer.innerHTML = "정답입니다."
+                        questionAnswer.style.display = "block";
+                        questionEx.style.display = "block";
+                    } else {
+                        // 오답입니다.
+                        questionBtn.style.display = "none"
+                        questionAnswer.innerHTML = "틀렸습니다."
+                        questionAnswer.style.display = "block";
+                        questionEx.style.display = "block";
+                    }
+                } 
+            }
+        }
+        questionBtn.addEventListener("click", answerQuiz)
+    </script>
+</body>
+</html>

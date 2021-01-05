@@ -6,6 +6,7 @@
     <title>Jiwon's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="screen-scroll"></div>
@@ -212,7 +213,8 @@
                     <div class="follow">
                         <div class="text-box">
                             <p>지금 바로 시작합니다!</p>
-                            <p>follow me　　　>></p>
+                            <p>follow me　　　　</p>
+                            <p><i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
                         </div>
                         <span>Scroll</span>
                     </div>
@@ -519,6 +521,7 @@
             </div>
         </section>
         <!-- //section3 -->
+
         <section id="section4">
             <div class="section4">
                 <ul class="sideMenu">
@@ -598,11 +601,122 @@
             </div>
         </section>
         <!-- //section4 -->
-        <section id="section5">
-            <div class="section5">
 
+        <section id="section5">
+            <div class="back-gradient-black"></div>
+            <div class="section5">
+                <div class="slideBox">
+                    <div class="text-slide01"><p>EFFECT-SCRIPT-EFFECT-SCRIPT-EFFECT-SCRIPT-EFFECT-SCRIPT</p></div>
+                    <div class="text-slide02"><p>이펙트-스크립트-이펙트-스크립트-이펙트-스크립트-이펙트-스크립트</p></div>
+                    <div class="text-slide03"><p>EFFECT-SCRIPT-EFFECT-SCRIPT-EFFECT-SCRIPT-EFFECT-SCRIPT</p></div>
+                    <div class="text-slide04"><p>이펙트-스크립트-이펙트-스크립트-이펙트-스크립트-이펙트-스크립트</p></div>
+                </div>
+                <div class="sec5_container">
+                    <div class="effectBox">
+                        <div class="MouseEffect">
+                            <h3>3D Mouse Effect</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/mouseEffect-javascript.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>페이지의 x, y값과 마우스의 x, y값을 구하여 좌표의 (0, 0) 값을 이미지의 중심에 놓고, 마우스를 움직이면 이미지가 3D 입체적으로 회전할 수 있도록 스크립트를 구성하였습니다. 마우스를 올려 확인해보세요!</p>
+                        </div>
+                        <div class="menuEffect">
+                            <h3>Sticky Menu Effect</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/menuEffect.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>페이지의 scrollTop 값과 각 섹션의 offset().top 값을 구하여 두 값을 비교하고, addClass와 removeClass를 이용하여 스크롤 하였을 때 메뉴바를 옮겨주거나, 메뉴를 클릭하였을 때 해당하는 페이지로 이동할 수 있도록 스크립트를 구성하였습니다. 직접 확인해보세요!</p>
+                        </div>
+                        <div class="parallaxEffect">
+                            <h3>parallax Effect</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/parallaxEffect-javascript.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>먼저 split()와 join()메서드를 이용하여 글자를 하나하나 분해하여 <span>태그를 넣어주었습니다. 페이지의 scrollTop 값과 각 섹션의 offset().top 값을 비교한 뒤 addClass와 removeClass를 이용하여 해당 섹션에 이르렀을 때 글자가 한글자씩 나타날 수 있도록 스크립트를 구성하였습니다. 직접 마우스를 올려 스크롤 해보세요!</p>
+                        </div>
+                        <div class="quizEffect01">
+                            <h3>Quiz Effect - answer</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/quizEffect01-javascript.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>문제의 데이터들을 변수에 저장한 뒤 html()메서드를 이용하여 값을 넣어주고, ‘click’함수를 이용하여 버튼을 눌렀을 때 정답과 해설이 보일 수 있도록 스크립트를 구성하였습니다. 퀴즈의 답을 맞춰보세요!</p>
+                        </div>
+                        <div class="quizEffect02">
+                            <h3>Quiz Effect - choice</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/quizEffect02-javascript.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>문제의 데이터들을 변수에 저장한 뒤 html()메서드를 이용하여 값을 넣어주고, ‘on’함수를 이용하여 버튼을 클릭했을 때 정답을 확인하는 함수가 작동할 수 있도록 하였습니다. 정답 확인은 each문을 이용하여 사용자가 check한 값을 가져오고, 그 index 값이 정답을 저장해놓은 변수의 값과 일치하는지를 확인하였습니다. 퀴즈의 답을 골라보세요!</p>
+                        </div>
+                        <div class="sliderEffect">
+                            <h3>Slider Effect</h3>
+                            <span><a href="#">view</a></span>
+                            <div><iframe src="effect/sliderEffect-jquery.html" frameborder="0" width="100%" height="100%"></iframe></div>
+                            <p>먼저 슬라이더의 이미지 다섯개가 다 보여지면 다시 첫번째 이미지로 돌아가 모든 이미지들이 연속적으로 보여지게 하였으며, addClass와 attr()메서드를 이용하여 버튼뿐만 아니라 (dot)으로도 이미지 이동이 가능하도록 스크립트를 구성하였습니다. 버튼을 클릭해보세요!</p>
+                        </div>
+                    </div>
+                    <div class="circleBox">
+                        <div class="circle01"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                        <div class="circle02"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                        <div class="circle03"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- //section5 -->
+
+        <section id="section6">
+            <div class="section6">
+                <div class="sec6-Inform">
+                    <h3>마우스를 올려보세요! 보이는 것 이상의 것을 보여드릴게요.</h3>
+                </div>
+                <div class="Txtbox3d">
+                    <div class="TxtWrap3d">
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                        <div class="Txt3d">REACT</div>
+                    </div>
+                </div>
+                <div class="sec6_container">
+                    <div class="RVPbox">
+                        <p>
+                            This is a <span>p</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span> site <br />
+                            that I <span>s</span><span>t</span><span>u</span><span>d</span><span>i</span><span>e</span><span>d</span> and created<br />
+                            <a class="R-view" href="#">React</a> / <a class="V-view" href="#">View</a><br />
+                            You can also <span>l</span><span>o</span><span>g</span><span>I</span><span>n</span> and <span>S</span><span>i</span><span>g</span><span>n</span><span>U</span><span>P</span><br />
+                            on <a class="P-view" href="#">php</a> page
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section6 -->
+        
+        <section id="section7"></section>
+        <!-- //section7 -->
+
+        <section id="section8"></section>
+        <!-- //section8 -->
+
+        <section id="section9">
+            <div class="sec9_container">
+                <div class="section9">
+                    <div class="sec9_contact">
+                        <div class="myEmail"></div>
+                        <div class="myPhone"></div>
+                    </div>
+                    <div class="sec9_contBox">
+                        <div class="sec9_left">
+                            <p>Wanna Contact me?</p>
+                        </div>
+                        <div class="sec9_right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section9 -->
     </div>
     
 
@@ -610,6 +724,7 @@
     <!--  script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script>
         $(window).scroll(function(){
             
@@ -630,7 +745,7 @@
             //     $(".about .skill div > div > div > svg > path").addClass("waveShape");
             // }
 
-            // 뱀 애니메이션
+            // section3 뱀 애니메이션
             // if( $(window).scrollTop() > $("#section3").offset().top == $(window).scrollTop() ){
             //     let sum = 10;
             //     let timer = setInterval(function(){
@@ -673,13 +788,30 @@
             } else {
                 $(".section4 .sideMenu").css("display", "none");
             }
-
-            // section4 sideMenu 활성화
+            // section4 sideMenu 스크롤 활성화
             for ( let i=1; i<=6; i++){
-                if( scrollTop > ($("#sec4-"+i).offset().top)-100 ){
+                if( scrollTop > ($("#sec4-"+i).offset().top)-140 ){
                 $(".section4 .sideMenu li").removeClass("active");
                 $(".section4 .sideMenu .menu4-"+i).addClass("active");
+                }
             }
+            // section4 sideMenu 사라지기
+            if( scrollTop > ($("#section5").offset().top)-600 ){
+                $(".section4 .sideMenu").css("display", "none");
+            }
+
+            // section5 이펙트 스크립트 텍스트 슬라이드
+            if( scrollTop > $(".section5").offset().top / 1.3 ){
+                $(".slideBox > div").addClass("move2");
+            }
+
+            // section6 한 글자씩 나오게 하기
+             if( scrollTop > ($(".section6 .RVPbox").offset().top)-400 ){
+                $(".section6 .RVPbox p span").each(function(i){
+                    setTimeout(()=>{
+                        $(".section6 .RVPbox p span").eq(i).addClass("show")
+                    }, 50 * (i+1));
+                });
             }
 
         });
@@ -705,11 +837,31 @@
             })
         }
 
-        // section4 sideMenu 활성화
+        // section4 sideMenu 클릭 활성화
         $(".section4 .sideMenu li").click(function(){
             $(".section4 .sideMenu li").removeClass("active");
             $(this).addClass("active");
         })
+
+        // section6 REACT 3d motion
+        const Text3d = document.querySelectorAll('.Txt3d');
+        const halfX = window.innerWidth / 2;
+        const halfY = window.innerHeight / 2;
+
+        Text3d.forEach((el, i) => {
+            TweenMax.to(el, 1, {
+                z: 1 * (i + 8) });
+
+        });
+
+        document.addEventListener('mousemove', e => {
+            Text3d.forEach((el, i) => {
+                TweenMax.to(el, 0.5, {
+                x: (e.clientX - halfX) * (i + 1) * 0.01,
+                y: (e.clientY - halfY) * (i + 1) * 0.01 });
+
+            });
+        });
     </script>
 </body>
 </html>

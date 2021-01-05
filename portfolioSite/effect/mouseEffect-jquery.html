@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect04 - jQuery</title>
+    <style>
+         @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *,*::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+
+        body {
+            background: url(../img/images13@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #a18cd1;
+            background-blend-mode: multiply;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: '62570체';
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8,31,36,0.7);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+
+        .info li a {
+            color:#fff;
+            width: 30px; height: 30px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 0.9rem;
+            margin: 3px;
+        }
+        .info li a.active {
+            background: #fff;
+            color: #222;
+            font-weight: bold;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+
+        /* main */
+        .move-image {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .move-image .mimg img {
+            border-radius: 5px;
+        }
+        .move-image .mimg {
+            position: relative;
+        }
+        .move-image .mimg:before {
+            content: '';
+            position: absolute; left: 5%; bottom: -20px;
+            width: 90%; height: 40px;
+            background: url(img/images05.jpg) no-repeat;
+            background-size: 100% 40px;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: .9;
+        }
+        .move-image .mtxt {
+            font-size: 1rem;
+            position: absolute; left: 50%; bottom: 50%;
+            transform: translate3d(-50%, 68%, 150px);
+            background: rgba(0,0,0,0.4);
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .move-image .mtxt p:nth-child(1) {
+            font-size: 0.8rem;
+        }
+        .cursor {
+            position: absolute; width: 10px; height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .cursor.active {
+            transform: scale(12);
+        }
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+    <h1>mouseEffect04 - jquery</h1>
+    <p>마우스이펙트 - 마우스 방향에 따라 움직이기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="mouseEffect-jquery.html" class="active">jq</a></li>
+            <li><a href="mouseEffect-javascript.html">jv</a></li>
+        </ul>
+    </div>
+    <!-- //info -->
+
+    <main>
+        <div class="cursor"></div>
+        <div class="move-image">
+            <div class="mimg"><img src="../img/images05.jpg" alt="이미지"></div>
+            <div class="mtxt">
+                <p>I never dreamed about success, I <em>worked</em> for it.</p>
+                <p>나는 결코 성공에 대해 꿈꾸지 않았다. 꿈을 위해 <em>행동</em>했다.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        let x = 0,
+            y = 0,
+            mouseX = 0,
+            mouseY = 0,
+            angleX = 0,
+            angleY = 0,
+            fmouseX = 0,
+            fmouseY = 0;
+
+        $(window).mousemove(function(e){
+            x = e.pageX;
+            y = e.pageY;
+
+            // mouseX = $(window).width()/2 - x;  //마우스의 x축 좌표값을 가운데로 설정
+            // mouseY = $(window).height()/2 - y;  //마우스의 y축 좌표값을 가운데로 설정
+            
+            // 마우스의 x축 y축 최솟값은 -50 최댓값은 50으로 설정
+            mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x));  //(-50, 50) 사잇값도 출력할 수 있도록
+            mouseY = Math.max(-50, Math.min(50, $(window).height()/2 - y));
+            
+            angleX = (12 * mouseX) / 100;
+            angleY = (12 * mouseY) / 100;
+
+            // 뻑뻑하지 않게 부드럽게 움직이기 위해 ( 계산과정 때문에 6deg-0deg-7deg 이렇게 작동 )
+            fmouseX += (angleX - fmouseX) * 0.1;
+            fmouseY += (angleY - fmouseY) * 0.1;
+
+
+            // 커서 움직임
+            gsap.to(".cursor", {duration: 0.3, left: x, top: y});
+
+            // 이미지 움직임
+            $(".move-image").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+ -fmouseX+"deg)"});
+        });
+
+    </script>
+</body>
+</html>

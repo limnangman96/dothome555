@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax04-jQuery</title>
+    <title>parallax04-javascript</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
         @font-face {
-            font-family: 'ELAND_Nice_M';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+            font-family: 'NEXON Lv1 Gothic OTF Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -36,18 +36,19 @@
         .info.right {right: 20px; top: 20px;}
         .info.bottom {right: 20px; bottom: 20px;}
         .info h1 {font-size: 1.8rem; line-height: 1.4;}
-        .info p {font-size: 1.2rem;}
+        .info p {font-size: 1rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
         .info li a {
-            width: 25px; height: 25px; 
-            display: inline-block; 
-            border: 1px dashed #fff; 
-            border-radius: 50%; color: #fff; 
-            text-align: center; 
-            line-height: 25px; 
-            font-size: 0.8rem; 
-            margin: 5px;
-        } 
+            color:#fff;
+            width: 30px; height: 30px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 0.9rem;
+            margin: 3px;
+        }
         .info li a.active {
             background: #fff;
             color: #000;
@@ -58,12 +59,12 @@
 
         /* main */
         body {
-            --color-h1 : #BC7AF0;
+            --color-h1 : #FF9C09;
             --color-title: #fff;
             --color-sub: #999;
             --color-link: #000;
             --color-bg: #111;
-            --font-cafe: 'ELAND_Nice_M';
+            --font-cafe: 'NEXON Lv1 Gothic OTF Bold';
             --font-lato: 'Lato', sans-serif;
 
             background-color: var(--color-bg);
@@ -138,7 +139,7 @@
             position: absolute;
             top: calc(-1 * var(--overflow));
             /* 60px과 같은 값 */
-            background: url(img/images18.jpg);
+            background: url(../img/images18.jpg);
             /* background-size: contain; (width값 중심으로 맞추어 주는 것) */
             background-size: cover;
             height: calc(100% + (3 * var(--overflow)));
@@ -171,35 +172,35 @@
         }
 
         .content-item:nth-child(2) .content-item-img {
-            background: url(img/images02.jpg);
+            background: url(../img/images02.jpg);
             background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(img/images03.jpg);
+            background: url(../img/images03.jpg);
             background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(img/images04.jpg);
+            background: url(../img/images04.jpg);
             background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(img/images05.jpg);
+            background: url(../img/images05.jpg);
             background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(img/images06.jpg);
+            background: url(../img/images06.jpg);
             background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(img/images07.jpg);
+            background: url(../img/images07.jpg);
             background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(img/images08.jpg);
+            background: url(../img/images08.jpg);
             background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(img/images09.jpg);
+            background: url(../img/images09.jpg);
             background-size: cover;
         }
 
@@ -229,20 +230,13 @@
 
 <!-- info -->
 <div class="info left">
-    <h1>Parallax Effect04 - jQuery</h1>
+    <h1>Parallax Effect04 - javascript</h1>
     <p>패랠랙스 스크로링 효과 - 글자 나타나기</p>
 </div>
 <div class="info right">
     <ul>
-        <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-        <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
-        <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-        <li><a href="parallax04-jquery.html"  class="active">4</a><a href="parallax04-javascript.html">4</a></li>
-        <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
-        <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
-        <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
-        <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
-        <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
+        <li><a href="parallaxEffect-jquery.html">jq</a></li>
+        <li><a href="parallaxEffect-javascript.html" class="active">jv</a></li>
     </ul>
 </div>
 
@@ -337,102 +331,92 @@
     <script src="../jquery/jquery.min_1.1.24.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>   
-        // let text = $("#section1 .content-item-desc").text();
-        // let split = text.split("").join("</span><span>");
-        //       split = "<span>" + split + "</span>"
-        
-        // 글씨 쪼개기
-        $(".content-item-desc").each(function(){
-            let text = $(this).text(); 
-            let split = text.split("").join("</span><span aria-hidden='true'>");  // 웹 접근성을 준수하지 못하기 때문에 아예 읽지 말라고 숨김
-                split = "<span aria-hidden='true'>" + split + "</span>"
-            $(this).html(split).attr("aria-label", text);  // 웹표준을 준수하기 위해
-        })
+        // let text = document.querySelector("#section1 .content-item-desc");
+        // let splitText = text.innerText;
+        // let splitWrap = splitText.split("").join("</span><span aria-hidden:'true'>");
+        //     splitWrap = "<span aria-hidden:'true'>" + splitWrap + "</span>";
 
-        // 나타나기
-        $(window).scroll(function(){
-            // 한번에 나오게 하기
-            // $(".content-item").each(function(){
-            //     if( $(window).scrollTop() > $(this).offset().top ){
-            //        $(this).find(".content-item-desc").addClass("show");
-            //     } else {
-            //        $(this).find(".content-item-desc").removeClass("show");
-            //     }
-            // });
+        // text.innerHTML = splitWrap;
 
-            // 한 글자씩 나오게 하기
-            if( $(window).scrollTop() > $("#section1").offset().top ){
-                $("#section1 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section1 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section2").offset().top ){
-                $("#section2 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section2 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section3").offset().top ){
-                $("#section3 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section3 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section4").offset().top ){
-                $("#section4 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section4 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section5").offset().top ){
-                $("#section5 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section5 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section6").offset().top ){
-                $("#section6 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section6 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section7").offset().top ){
-                $("#section7 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section7 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section8").offset().top ){
-                $("#section8 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section8 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
-            if( $(window).scrollTop() > $("#section9").offset().top ){
-                $("#section9 .content-item-desc span").each(function(i){
-                    setTimeout(()=>{
-                        $("#section9 .content-item-desc span").eq(i).addClass("show")
-                    }, 50 * (i+1));
-                });
-            }
+        // text.setAttribute("aria-label", "splitText");
 
-            // 모든 콘텐츠에게 한 글자씩 나오게 하기 적용 -> 과부화때문에 좋은 방법은 아니다. 나중에 class함수 사용해서 다시 만날것임.
-            // $(".content-item").each(function(){
-            //     if( $(window).scrollTop() > $(this).offset().top ){
-            //         gsap.to( $(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
-            //     }
-            // });
+        // forEach문 써서 글씨 쪼개기를 한번에
+        document.querySelectorAll(".content-item-desc").forEach(elem => {
+            let splitText = elem.innerText;
+            let splitWrap = splitText.split("").join("</span><span aria-hidden:'true'>");
+                splitWrap = "<span aria-hidden:'true'>" + splitWrap + "</span>";
+
+            elem.innerHTML = splitWrap;
+            elem.setAttribute("aria-label", "splitText");
         });
 
+        // 한 글자씩 나오게 하기
+        window.addEventListener("scroll", () => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+            if(pageYOffset > document.getElementById("section1").offsetTop){
+                document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section2").offsetTop){
+                document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section3").offsetTop){
+                document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section4").offsetTop){
+                document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section5").offsetTop){
+                document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section6").offsetTop){
+                document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section7").offsetTop){
+                document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section8").offsetTop){
+                document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+            if(pageYOffset > document.getElementById("section9").offsetTop){
+                document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 * (index + 1));
+                });
+            }
+        });
     </script>
 </body>
 </html>

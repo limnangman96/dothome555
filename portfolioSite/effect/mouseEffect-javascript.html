@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect04 - javascript</title>
+    <style>
+        @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff; font-family: '62570체';}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+        body {
+            background: url(../img/images12@2.jpg) no-repeat center center;
+            background-size: cover;
+            background-color: #959595;
+            background-blend-mode:luminosity;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            /* cursor: none; */
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(2,58,85,0.2);
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {left: 20px; top: 10px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3dffc1;
+        }
+        .info li a {
+            color:#fff;
+            width: 30px; height: 30px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 0.9rem;
+            margin: 3px;
+        }
+        .info li a.active {
+            font-weight: bold;
+            background: #fff;
+            color: #000;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+        /* main */
+        .move-image {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+        .move-image .mimg img {
+            border-radius: 5px;
+        }
+        .move-image .mimg {
+            position: relative;
+        }
+        .move-image .mimg::before {
+            content: '';
+            position: absolute; left: 5%; bottom: -20px;
+            width: 90%; height: 40px;
+            background: url(img/images05.jpg) no-repeat;
+            background-size: 100% 40px;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: .9;
+        }
+        .move-image .mtxt {
+            font-size: 1.5rem;
+            position: absolute; left: 50%;
+            bottom: 50%;
+            transform: translate3d(-50%, 68%, 150px);
+            background: rgba(0,0,0,0.6);
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+        .move-image .mtxt p:nth-child(1){
+            font-size: 1rem;
+        }
+        .cursor {
+            position: absolute; width: 10px; height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .cursor.active {
+            transform: scale(12);
+        }
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+        <h1>Mouse Effect04 - javascript</h1>
+        <p>마우스 방향에 따라 움직이기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="mouseEffect-jquery.html">jq</a></li>
+            <li><a href="mouseEffect-javascript.html" class="active">jv</a></li>
+        </ul>
+    </div>
+    <!-- info -->
+    <main>
+        <div class="cursor"></div>
+        <div class="move-image">
+            <div class="mimg"><img src="../img/images09.jpg" alt="이미지"></div>
+            <div class="mtxt">
+                <p>Luck is when preparedness meets opportunity.</p>
+                <p>운이란 준비가 기회를 만나는 것이다.</p>
+            </div>
+        </div>
+    </main>
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+         let x = 0,
+             y = 0,
+            mouseX = 0,
+            mouseY = 0,
+            angleX = 0,
+            angleY = 0,
+            fmouseX = 0,
+            fmouseY = 0;
+        document.addEventListener("mousemove", function(e){
+            x = e.pageX;
+            y = e.pageY;
+            //mouseX = window.innerWidth/2 - x;
+            //mouseY = window.innerHeight/2 - y;
+            mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - x));
+            mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - y));
+            angleX = (12 * mouseX) / 100;
+            angleY = (12 * mouseY) / 100;
+            fmouseX += (angleX - fmouseX) * 0.1;
+            fmouseY += (angleY - fmouseY) * 0.1;
+            //움직임
+            const move = document.querySelector(".move-image");
+            move.style.transform = "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+ -fmouseX+"deg)";
+            //커서
+            gsap.to(".cursor", {duration: 0.3, left: x, top: y});
+        });
+    </script>
+</body>
+</html>

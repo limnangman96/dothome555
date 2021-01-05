@@ -39,15 +39,16 @@
         .info p {font-size: 1.2rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
         .info li a {
-            width: 25px; height: 25px; 
-            display: inline-block; 
-            border: 1px dashed #fff; 
-            border-radius: 50%; color: #fff; 
-            text-align: center; 
-            line-height: 25px; 
-            font-size: 0.8rem; 
-            margin: 5px;
-        } 
+            color:#fff;
+            width: 30px; height: 30px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 0.9rem;
+            margin: 3px;
+        }
         .info li a.active {
             background: #fff;
             color: #000;
@@ -138,7 +139,7 @@
             position: absolute;
             top: calc(-1 * var(--overflow));
             /* 60px과 같은 값 */
-            background: url(img/images18.jpg);
+            background: url(../img/images18.jpg);
             /* background-size: contain; (width값 중심으로 맞추어 주는 것) */
             background-size: cover;
             height: calc(100% + (3 * var(--overflow)));
@@ -171,35 +172,35 @@
         }
 
         .content-item:nth-child(2) .content-item-img {
-            background: url(img/images02.jpg);
+            background: url(../img/images02.jpg);
             background-size: cover;
         }
         .content-item:nth-child(3) .content-item-img {
-            background: url(img/images03.jpg);
+            background: url(../img/images03.jpg);
             background-size: cover;
         }
         .content-item:nth-child(4) .content-item-img {
-            background: url(img/images04.jpg);
+            background: url(../img/images04.jpg);
             background-size: cover;
         }
         .content-item:nth-child(5) .content-item-img {
-            background: url(img/images05.jpg);
+            background: url(../img/images05.jpg);
             background-size: cover;
         }
         .content-item:nth-child(6) .content-item-img {
-            background: url(img/images06.jpg);
+            background: url(../img/images06.jpg);
             background-size: cover;
         }
         .content-item:nth-child(7) .content-item-img {
-            background: url(img/images07.jpg);
+            background: url(../img/images07.jpg);
             background-size: cover;
         }
         .content-item:nth-child(8) .content-item-img {
-            background: url(img/images08.jpg);
+            background: url(../img/images08.jpg);
             background-size: cover;
         }
         .content-item:nth-child(9) .content-item-img {
-            background: url(img/images09.jpg);
+            background: url(../img/images09.jpg);
             background-size: cover;
         }
 
@@ -234,24 +235,11 @@
 </div>
 <div class="info right">
     <ul>
-        <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-        <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
-        <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-        <li><a href="parallax04-jquery.html"  class="active">4</a><a href="parallax04-javascript.html">4</a></li>
-        <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
-        <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
-        <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
-        <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
-        <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
+        <li><a href="parallaxEffect-jquery.html" class="active">jq</a></li>
+        <li><a href="parallaxEffect-javascript.html">jv</a></li>
     </ul>
 </div>
 
-<!-- <div class="info bottom">
-    <ul>
-        <li>scrollTop() : <span class="scrollTop">0</span>px</li>
-    </ul>
-</div> -->
-<!-- //info -->
     <main>
         <section id="parallax-wrap">
             <h1>Parallax <em>Scrolling</em></h1>
@@ -334,7 +322,7 @@
     
 
     <!-- script -->
-    <script src="../jquery/jquery.min_1.1.24.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>   
         // let text = $("#section1 .content-item-desc").text();
@@ -425,12 +413,6 @@
                 });
             }
 
-            // 모든 콘텐츠에게 한 글자씩 나오게 하기 적용 -> 과부화때문에 좋은 방법은 아니다. 나중에 class함수 사용해서 다시 만날것임.
-            // $(".content-item").each(function(){
-            //     if( $(window).scrollTop() > $(this).offset().top ){
-            //         gsap.to( $(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
-            //     }
-            // });
         });
 
     </script>

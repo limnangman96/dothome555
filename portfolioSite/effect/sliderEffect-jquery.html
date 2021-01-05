@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax07 - jQuery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'Jal_Onuel';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%;
+            vertical-align: top; /* 여백초기화 */
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        /* info */
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
+            left: 20px; top: 20px;
+        }
+        .info.right {
+            right: 20px; top: 20px;
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .info p {
+            font-size: 1rem;
+        }
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .info li a {
+            color:#fff;
+            width: 25px; height: 25px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0.8rem;
+            margin: 3px;
+        }
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+        /* main */
+        body {
+            --color-h1 : #DC6E25;
+            --color-title : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #111;
+            --font-cafe : 'Jal_Onuel';
+            --font-lato : 'Lato', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-title);
+            font-family: var(--font-cafe);
+            font-size: 16px;
+            background: url(../img/images15@2.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8,31,36,0.7);
+        }
+        /* slider */
+        .slider-wrap {
+            width: 55vw; height: 60vh; 
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        .slider-img {
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-img .slider {
+            float: left;
+            width: 60vw; height: 60vh; 
+            position: relative;
+        }
+        .slider-img .slider span {
+            position: absolute;
+            left: 5px; top: 5px;
+        }
+        .slider-btn a {
+            position: absolute; 
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0,0,0,0.5);
+            text-transform: capitalize;
+            font-family: var(--font-cafe);
+            color: var(--color-title);
+        }
+        .slider-btn a.prev {
+            left: 0;
+        }
+        .slider-btn a.next {
+            right: 0;
+        }
+        .slider-dot {
+            position: absolute;
+            left: 50%;
+            bottom: 5px;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        .slider-dot a {
+            width: 15vw; height: 15vh;
+            display: inline-block;
+            background: rgba(0,0,0,0.3);
+            text-indent: -9999px;
+            border-radius: 50%;
+            margin: 5px;
+            transition: background 0.3s, transform 0.2s; 
+
+            /* 닷이미지 */
+            width: 15vw; height: 15vh; line-height: 70px;
+            text-align: center;
+            background-size: cover;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-indent: initial;
+            color: #fff;
+        }
+        .slider-dot a.active {
+            background-color: rgba(0,0,0,0.7);
+            /* 닷이미지 */
+            background-size: cover;
+            background-blend-mode: darken;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="info left">
+        <h1>Slider Effect07 - jQuery</h1>
+        <p>이미지 슬라이드 - 버튼과 닷으로 움직이기</p>
+    </div>
+    <!-- info -->
+    <!-- main -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider s1"><img src="../img/images06.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider s2"><img src="../img/images07.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider s3"><img src="../img/images08.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider s4"><img src="../img/images09.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider s5"><img src="../img/images10.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+        </div>
+        <div class="slider-btn">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
+        <div class="slider-dot">
+            <!-- <a href="#" class="dot active">1</a>
+            <a href="#" class="dot">2</a>
+            <a href="#" class="dot">3</a>
+            <a href="#" class="dot">4</a>
+            <a href="#" class="dot">5</a> -->
+        </div>
+    </main>
+    <!-- //main -->
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+        const sliderDot = $(".slider-dot");
+        
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderHeight = slider.outerHeight();
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let sliderShowNumber = 1;
+        let currentIndex = 0;
+        let dotIndex = "";
+
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight });
+
+        // 이미지 움직이기
+        function gotoSlider(index){
+            sliderImg.animate({ left: -sliderWidth * index }, 400);
+            currentIndex = index;
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        }
+
+        // 이미지 갯수만큼 닷 버튼 만들기 (html 사용 안 하고 스크립트로)
+        slider.each(function(){
+            // dotIndex += "<a href='#'></a>";
+            // dotIndex += "<a href='#'>"+ (index1) +"</a>";  닷 버튼에 이미지 번호 넣기
+            // let name = $(this).find("img").attr("alt");   닷 버튼에 이미지 제목 넣기
+            // dotIndex += "<a href='#'>"+ name +"</a>";
+            let sliderName = $(this).find("img").attr("alt");  //닷 버튼에 이미지 넣기
+            let sdliderSrc = $(this).find("img").attr("src");
+            dotIndex += "<a href='#' style='background-image:url("+sdliderSrc+")'>"+sliderName+"</a>";
+        });
+        sliderDot.html(dotIndex);
+        sliderDot.find("a").eq(0).addClass("active");
+
+        // 닷 버튼 클릭하기
+        sliderDot.on("click","a",function(e){
+            e.preventDefault();
+            gotoSlider($(this).index());
+
+            // 버튼과 닷이 연동이 안됨 currentIndex 의 값을 가져와서 넣어줘야 함! 함수를 위쪽으로 빼주자.
+            // sliderDot.find("a").removeClass("active");
+            // $(this).addClass("active");
+        }); 
+
+        // 버튼 클릭하기
+        sliderBtn.on("click","a",function(e){
+            e.preventDefault();
+            let nextIndex = (currentIndex + 1) % sliderCount;
+            let prevIndex = (currentIndex - 1) % sliderCount;
+            if(currentIndex == 0) prevIndex = sliderCount - 1;
+            // console.log("nextIndex :" + nextIndex)
+            // console.log("currentIndex :" +currentIndex)
+            // console.log("prevIndex :" + prevIndex)
+
+            if( $(this).hasClass("prev") ){
+                gotoSlider(prevIndex);
+            } else {
+                gotoSlider(nextIndex);
+            }
+        });
+    </script>
+</body>
+</html>
