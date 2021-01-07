@@ -711,7 +711,26 @@
                         <div class="sec9_left">
                             <p>Wanna Contact me?</p>
                         </div>
-                        <div class="sec9_right"></div>
+                        <div class="sec9_right">
+                            <form action="" name="contactWrite" method="post">
+                                <fieldset>
+                                    <legend class="ir_so">정보를 입력하고 제게 메세지를 보내는 영역입니다.</legend>
+                                    <div>
+                                        <label for="writeName">name</label>
+                                        <input type="text" name="writeName" id="writeName" class="yourName" required autofocus placeholder="your name">
+                                    </div>
+                                    <div>
+                                        <label for="writeEmail">Email</label>
+                                        <input type="text" name="writeEmail" id="writeEmail" class="yourEmail" required placeholder="your Email">
+                                    </div>
+                                    <div>
+                                        <label for="writeMessage">message</label>
+                                        <textarea name="writeMessage" id="writeMessage" class="yourMessage" rows="10" required placeholder="Please enter a message here"></textarea>
+                                    </div>
+                                </fieldset>
+                                <button class="writeBtn" type="submit" value="전송하기">send</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
