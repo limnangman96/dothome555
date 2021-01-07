@@ -704,8 +704,8 @@
             <div class="sec9_container">
                 <div class="section9">
                     <div class="sec9_contact">
-                        <div class="myEmail"></div>
-                        <div class="myPhone"></div>
+                        <div class="myEmail"><a href="#">E</a><span class="spanEmail">dnjsdl678@gmail.com</span></div>
+                        <div class="myPhone"><a href="#">P</a><span class="spanPhone">(+82)10-2990-2149</span></div>
                     </div>
                     <div class="sec9_contBox">
                         <div class="sec9_left">
@@ -717,7 +717,7 @@
                                     <legend class="ir_so">정보를 입력하고 제게 메세지를 보내는 영역입니다.</legend>
                                     <div>
                                         <label for="writeName">name</label>
-                                        <input type="text" name="writeName" id="writeName" class="yourName" required autofocus placeholder="your name">
+                                        <input type="text" name="writeName" id="writeName" class="yourName" required placeholder="your name">
                                     </div>
                                     <div>
                                         <label for="writeEmail">Email</label>
@@ -725,7 +725,7 @@
                                     </div>
                                     <div>
                                         <label for="writeMessage">message</label>
-                                        <textarea name="writeMessage" id="writeMessage" class="yourMessage" rows="10" required placeholder="Please enter a message here"></textarea>
+                                        <textarea name="writeMessage" id="writeMessage" class="yourMessage" rows="9" required placeholder="Please enter a message here"></textarea>
                                     </div>
                                 </fieldset>
                                 <button class="writeBtn" type="submit" value="전송하기">send</button>
@@ -880,6 +880,22 @@
                 y: (e.clientY - halfY) * (i + 1) * 0.01 });
 
             });
+        });
+
+        // section9 클릭했을 때 휴대폰번호/이메일 보여주기
+        $(".sec9_contact .myEmail").click(function(e){
+            e.preventDefault();
+            $(".sec9_contact .myPhone a").removeClass("red");
+            $(".sec9_contact .spanPhone").removeClass("show");
+            $(".sec9_contact .myEmail a").toggleClass("red");
+            $(".sec9_contact .spanEmail").toggleClass("show");
+        });
+        $(".sec9_contact .myPhone").click(function(e){
+            e.preventDefault();
+            $(".sec9_contact .myEmail a").removeClass("red");
+            $(".sec9_contact .spanEmail").removeClass("show");
+            $(".sec9_contact .myPhone a").toggleClass("red");
+            $(".sec9_contact .spanPhone").toggleClass("show");
         });
     </script>
 </body>

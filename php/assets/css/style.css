@@ -1,0 +1,453 @@
+/* skip */
+#skip a {
+    position: absolute; top: -100px; left: 0;
+    z-index: 10000;
+    color: #000;
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+#skip a:focus,
+#skip a:active { 
+    top: 0;
+}
+
+/* container */
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* hrader */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 2000;
+    width: 100%;
+    color: #030406;
+    height: 82px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dad8d1;
+    background: #F0eeeb;
+}
+#header .site {
+    flex: 1 1 30%;
+}
+#header .site a {
+    position: relative;
+    text-transform: capitalize;
+    display: block;
+    padding-left: 40px;
+    border-right: 1px solid #dad8d1;
+    width: 175px;
+    height: 82px;
+    padding: 32px 27px 27px 60px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Rajdhani';
+}
+#header .site a::before {
+    content: '';
+    position: absolute;
+    left: 48px; 
+    top: 36px;
+    width: 30px;
+    height: 1px;
+    background: #000;
+}
+#header .site a::after {
+    content: '';
+    position: absolute;
+    left: 48px; 
+    top: 46px;
+    width: 30px;
+    height: 1px;
+    background: #000;
+}
+#header .logo {
+    flex: 1 1 30%;
+    text-align: center;
+    font-family: "Saol Display Regular";
+    font-size: 28px;
+}
+#header .logo a {
+    padding: 0 10px 5px 10px;
+}
+#header .nav {
+    flex: 1 1 30%;
+    text-align: right;
+}
+#header .nav ul {
+    padding-right: 20px;
+}
+#header .nav li {
+    display: inline-block;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family: 'Rajdhani', 'Chosunilbo_myungjo';
+}
+#header .nav li.active {
+    text-decoration: underline;
+}
+#header .nav li a {
+    display: block;
+    font-size: 16px;
+    font-family: 'Rajdhani', 'Chosunilbo_myungjo';
+}
+#header.black {
+    background: #000;
+    border-bottom: 1px solid #2E2E30;
+    color: #fff;
+}
+#header.black .site a::before {
+    background: #fff;
+}
+#header.black .site a::after {
+    background: #fff;
+}
+#header.black .site a {
+    border-right: 1px solid #2E2E30;
+}
+
+
+/* mainCont */
+#mainCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    
+}
+.mainText {
+    font-size: 10vw;
+    line-height: 9vw;
+    font-family: "Saol Display Regular";
+}
+
+
+/* errorAlert */
+.errorAlert {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 18px;
+    text-align: center;
+}
+.errorAlert a {
+    display: block;
+    text-decoration: underline;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+
+/* 회원가입 signUp */
+#signUpCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Chosunilbo_myungjo';
+}
+.signUp {
+   width: 300px;
+}
+.signUp h1 {
+    text-align: center;
+    font-size: 18px;
+}
+.signUp h1 strong {
+    display: block;
+    font-weight: normal;
+}
+.signUp .input-text {
+    border: 1px solid #fff;
+    background: #000;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    color: #fff;
+} 
+.signUp .birth {
+    display: flex;
+    justify-content: space-between;
+}
+.signUp .birth > div {
+    flex: 0 0 30%;
+    text-align: center;
+}
+.signUp .birth > div label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.signUp .birth > div select {
+    display: block;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+.signUp .signUpBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.signUp .signDesc {
+    text-align: center;
+}
+.signUp .signDesc a {
+    text-decoration: underline;
+}
+
+
+/* 로그인 logIn */
+#logInCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Chosunilbo_myungjo';
+}
+.logIn {
+    width: 300px;
+ }
+ .logIn h1 {
+     text-align: center;
+     font-size: 18px;
+ }
+ .logIn h1 strong {
+     display: block;
+     font-weight: normal;
+ }
+ .logIn .input-text {
+     border: 1px solid #fff;
+     background: #000;
+     width: 100%;
+     padding: 13px;
+     margin-bottom: 10px;
+     color: #fff;
+ } 
+ .logIn .logInBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.logIn .logInDesc {
+    text-align: center;
+}
+.logIn .logInDesc a {
+    text-decoration: underline;
+}
+
+
+/* Board */
+#boardCont {
+    min-height: 100vh;
+    background: #F0eeeb;
+}
+.writeBoard {
+    padding-top: 200px;
+}
+.writeBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.writeBoard label {
+    display: block;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.writeBoard .title-text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    font-family: 'S-CoreDream-3Light';
+}
+.writeBoard .writeBoardBtn{
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    padding: 10px 30px;
+    font-family: 'S-CoreDream-3Light';
+}
+.saveBoard {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listBoard {
+    padding-top: 200px;
+}
+.listBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.listSearch {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.listSearch .form-search {
+    border: 1px solid #000;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px 20px;
+}
+.listSearch .form-select {
+    border: 1px solid #000;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px 20px;
+}
+.listSearch .form-btn {
+    border: 1px solid #000;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px 15px;
+}
+.listSearch .form-btn.black {
+    background: #000;
+    color: #fff;
+}
+
+.listTable {
+    margin-top: 20px;
+}
+.listTable .table {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.listTable .table th {background: rgba(0,0,0,0.04);}
+.listTable .table td,
+.listTable .table th {
+    border-top: 1px solid #000;
+    padding: 17px 0;
+    text-align: center;
+    font-size: 16px;
+}
+.listPage {}
+.listPage .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+.listPage .pagination li {}
+.listPage .pagination li a {
+    display: block;
+    border: 1px solid #bebebe;
+    padding: 10px;
+    margin-left: -1px;
+}
+.listPage .pagination li.active a {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+/* mainBoard */
+/* #mainBoardCont {
+    background: #f0eeeb;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1350px;
+    font-family: 'S-CoreDream-3Light';
+}
+.mainBoard {padding-top: 70px;}
+.mainBoard h2 {
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 42px;
+}
+.mainBoard .topMenu {display: flex; justify-content: flex-end;}
+.mainBoard .topMenu > div .inputSearch {
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid #000; 
+    padding: 7px 16px; 
+    background: #f0eeeb;
+}
+.mainBoard .topMenu > span {border: 1px solid #000; border-radius: 5px; margin-left: 7px;} 
+.mainBoard .topMenu > span a {font: 16px; display: inline-block; padding: 7px 16px;}
+.mainBoard .topMenu > span:nth-child(4) {background: #000; color: #fff;} 
+
+.mainBoard .listBox {border-top: 2px solid #000; border-bottom: 2px solid #000; margin-top: 10px;}
+.mainBoard .listBox ul {
+    display: flex; 
+    font-size: 16px; 
+    line-height: 60px; 
+    text-align: center; 
+    border-top: 1px solid #000;
+}
+.mainBoard .listBox ul:nth-child(1) {font-weight: bold;}
+.mainBoard .listBox ul:nth-child(1) {border-top: none; background: rgba(0,0,0,0.02);}
+.mainBoard .listBox ul li {height: 60px;}
+.mainBoard .listBox ul li:nth-child(1) {flex: 1 1 5%;}
+.mainBoard .listBox ul li:nth-child(2) {flex: 1 1 60%; text-align: left; padding-left: 50px;}
+.mainBoard .listBox ul li:nth-child(3) {flex: 1 1 20%;}
+.mainBoard .listBox ul li:nth-child(4) {flex: 1 1 15%;}
+.mainBoard .listBox ul:nth-child(1) li:nth-child(2) {text-align: center;}
+
+.mainBoard .pageBtn {margin-top: 60px; text-align: center;}
+.mainBoard .pageBtn > span a {
+    margin-left: -5px;
+    display: inline-block;
+    width: 38px; height: 46px; 
+    border: 1px solid #bababa;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+}
+.mainBoard .pageBtn > span:nth-child(1) a {margin-left: 0;}
+.mainBoard .pageBtn > span .active {background: #424242; color: #fff;} */
+
+
+/* info */
+.info {width: 400px; border: 1px solid #dad8d1; text-align: center; padding: 60px 30px;}
+.info p {font-family: 'Chosunilbo_myungjo'; font-size: 30px;}
+.info a {font-family: 'Chosunilbo_myungjo'; font-size: 16px; text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+
