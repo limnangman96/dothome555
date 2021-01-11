@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        ul, li, a {text-decoration: none; list-style: none; color: #000;}
+        a:hover {text-decoration: none;}
+
+        /* header */
+        #header {
+            position: fixed; left: 0; top: 0;
+            width: 100%; height: 100px;
+            z-index: 3000;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header .nav {
+            flex: 1 1 30%;
+            padding-left: 100px;
+        }
+        #header .nav li {
+            display: inline;
+        }
+        #header .nav li a {
+            font-family: 'Roboto';
+            font-size: 14px;
+            padding-right: 10px;
+        }
+        #header .nav li.active a {font-weight: bold;}
+        #header h1 {
+            flex: 1 1 40%;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Roboto';
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 10px;
+        }
+        #header .hamNav {
+            flex: 1 1 30%;
+            text-align: right;
+            padding-right: 90px;
+        }
+        #header .hamNav .ham {
+            position: relative;
+            display: inline-block;
+            width: 50px; height: 50px;
+            transition: all 0.5s ease;
+        }
+        #header .hamNav .ham span {
+            display: block;
+            position: absolute; left: 10px; top: 25px;
+            width: 30px; height: 3px;
+            background: #000;
+        }
+        #header .hamNav .ham span::before {
+            content: '';
+            position: absolute; top: -10px; left: 0px;
+            width: 50%; height: 3px;
+            background: #000;
+            transform-origin: left;
+        }
+        #header .hamNav .ham span::after {
+            content: '';
+            position: absolute; bottom: -10px; right: 0px;
+            width: 50%; height: 3px;
+            background: #000;
+            transform-origin: right;
+        }
+        #header .hamNav .ham.active {
+            transform: rotate(135deg);
+        }
+        #header .hamNav .ham.active span::before{
+            top: 0; transform: translateX(100%) rotate(-90deg);
+        }
+        #header .hamNav .ham.active span::after{
+            bottom: 0; transform: translateX(-100%) rotate(-90deg);
+        }
+
+        /* slider */
+        .slider-wrap {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .slider-img {
+            position: absolute;
+            width: 100%; height: 100vh;
+        }
+        .slider-img .slider {
+            position: absolute;
+            width: 100%; height: 100vh;
+            overflow: hidden;
+        }
+        .slider-img .slider:nth-child(1) {
+            background: #fcefe9;
+        }
+        .slider-img .slider:nth-child(2) {
+            background: #e9effd;
+        }
+        .slider-img .slider:nth-child(3) {
+            background: #fae3f5;
+        }
+        .slider-img .slider:nth-child(4) {
+            background: #fbe368;
+        }
+        .slider-img .slider:nth-child(5) {
+            background: #ccebfa;
+        }
+        .slider-img .slider:nth-child(6) {
+            background: #e9effd;
+        }
+        .slider-img .slider:nth-child(7) {
+            background: #f4f2ec;
+        }
+        .slider {}
+        .slider .slider_text {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            font-size: 8vw;
+            line-height: 6vw;
+            color: #fff;
+            font-family: 'Poppins';
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        .slider .slider_img {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .slider .slider_img img {
+            max-width: 500px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* slider-nav */
+        .slider-nav a {
+            position: absolute; bottom: 0;
+            width: 100px; height: 100vh;
+            z-index: 2000;
+            background: #fff;
+        }
+        .slider-nav a svg {
+            width: 18px; height: 18px;
+            position: absolute;
+        }
+        .slider-nav a.prev {
+            left: 0;
+        }
+        .slider-nav a.prev svg {
+            left: 0; bottom: 40px;
+            margin: 45px 0 0 40px;
+            transform: rotate(45deg);
+        }
+        .slider-nav a.next {
+            right: 0;
+        }
+        .slider-nav a.next svg {
+            right: 0; bottom: 40px;
+            margin: 0 50px 0 40px;
+            transform: rotate(-135deg);
+        }
+
+        /* slider-page */
+        .slider-page {
+            position: fixed; left: 50%; bottom: 0;
+            transform: translate(-50%);
+            width: 100%; height: 100px;
+            background: #fff;
+            z-index: 1000;
+            text-align: center;
+        }
+        .slider-page a {
+            display: inline-block;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            border: 1px solid rgb(211, 211, 211);
+            color: #333;
+            font-family: 'Roboto';
+            font-style: italic;
+            font-size: 12px;
+            font-weight: bold;
+            text-indent: -9999px;
+            margin: 50px 15px;
+            line-height: 9px;
+        }
+        .slider-page a.active {
+            border: 0;
+            color: #333;
+            text-indent: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cursor"></div><!-- //cursor -->
+    <header id="header">
+        <nav class="nav">
+            <ul>
+                <li class="active"><a href="#">Works</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>portfolio</h1>
+        <div class="hamNav">
+            <a href="#" class="ham"><span></span></a>
+        </div>
+    </header>
+    <!-- //header -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img1.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img2.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Responsive</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img3.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img4.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img1.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img2.png" alt="이미지1">
+                    </figure>
+                </div>
+                <div class="slider">
+                    <div class="slider_text">Portfolio</div>
+                    <figure class="slider_img">
+                        <img src="img/slider-img3.png" alt="이미지1">
+                    </figure>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <a href="#" class="prev">
+                    <svg viewBox="-1 -2 18 18">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13" stroke="#444444" stroke-width="2"></path>
+                            <path d="M2.27373675e-13,8.84328471 L8.84328471,8.84328471" stroke="#444444" stroke-width="2"></path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" class="next">
+                    <svg viewBox="-1 -2 18 18">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3.26849658e-13,8.84328471 L3.26849658e-13,-4.19220214e-13" stroke="#444444" stroke-width="2"></path>
+                            <path d="M2.27373675e-13,8.84328471 L8.84328471,8.84328471" stroke="#444444" stroke-width="2"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="slider-page">
+                <a href="#" class="active">01</a>
+                <a href="#">02</a>
+                <a href="#">03</a>
+                <a href="#">04</a>
+                <a href="#">05</a>
+                <a href="#">06</a>
+                <a href="#">07</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+</body>
+</html>
