@@ -27,19 +27,9 @@ body {
     --font-3px: '0.15vw';
     background: #fff;
 }
-body::-webkit-scrollbar {
-    width: 15px;
-    background: #000;
-}
-body::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 3px;
-    background-clip: padding-box;
-    border: 1px solid transparent;
-}
-body::-webkit-scrollbar-track {
-    background: #000;
-}
+body::-webkit-scrollbar {  width: 15px; background: #000; }
+body::-webkit-scrollbar-thumb { background: #fff; border-radius: 3px; background-clip: padding-box; border: 1px solid transparent; }
+body::-webkit-scrollbar-track { background: #000; }
 
 
 /* screen-scroll */
@@ -56,9 +46,9 @@ body::-webkit-scrollbar-track {
 
 /* layout */
 #wrap {width: 100%; height: 65000px; overflow: hidden;}
-#main {width: 100%; height: inherit; overflow: hidden;}
+#main {width: 100%; overflow: hidden;}
 #site {}
-#animation {}
+#animation {width: 100%; overflow: hidden; }
 #effect {}
 #react {}
 #contact {}
@@ -350,7 +340,7 @@ body::-webkit-scrollbar-track {
 .m-coming > div .selfBox {height: 50vw; overflow: hidden; display: flex;}
 .m-coming > div .selfBox .leftBox {flex: 1 1 50%; position: relative;}
 .m-coming > div .selfBox .leftBox .backCode {
-    position: absolute; top: 21%; left: 0;
+    position: absolute; top: 20%; left: 0;
     font-family: 'Fira Code', monospace;
     font-weight: 500;
     font-size: 0.9vw;
@@ -364,7 +354,7 @@ body::-webkit-scrollbar-track {
 }
 .m-coming > div .selfBox .rightBox {flex: 1 1 50%; position: relative;}
 .m-coming > div .selfBox .rightBox p {
-    position: absolute; bottom: -4.2%; left: 3%;
+    position: absolute; bottom: -3.1%; left: 3%;
     font-family: var(--font-bold);
     font-size: 9.1vw;
     color: #fff;
@@ -386,156 +376,36 @@ body::-webkit-scrollbar-track {
     color: #fff; 
     -webkit-text-stroke: 0.1vw #000; 
 }
-.questionBox .questionMark-box .mark1 {
-    font-size: 3.5vw;
-    left: 20%; bottom: 10%;
-    animation: mark-move 10s -4600ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark2 {
-    font-size: 5vw;
-    left: 30%; bottom: 30%;
-    animation: mark-move 10s -2070ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark3 {
-    font-size: 8vw;
-    left: 35%; bottom: 15%;
-    animation: mark-move 10s -5ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark4 {
-    font-size: 2vw;
-    left: 70%; bottom: 20%;
-    animation: mark-move 10s -700ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark5 {
-    font-size: 5vw;
-    left: 39%; bottom: 0%;
-    animation: mark-move 10s -20ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark6 {
-    font-size: 7.6vw;
-    left: 63%; bottom: 5%;
-    animation: mark-move 10s -3000ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark7 {
-    font-size: 6.6vw;
-    left: 10%; bottom: 30%;
-    animation: mark-move 10s -60ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark8 {
-    font-size: 8.5vw;
-    left: 55%; bottom: 0%;
-    animation: mark-move 10s -1700ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark9 {
-    font-size: 2.8vw;
-    left: 78%; bottom: 0%;
-    animation: mark-move 10s -3700ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark10 {
-    font-size: 3.8vw;
-    left: 90%; bottom: 5%;
-    animation: mark-move 10s -1020ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark11 {
-    font-size: 1.5vw;
-    left: 12%; bottom: 25%;
-    animation: mark-move 10s -8800ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark12 {
-    font-size: 7.3vw;
-    left: 50%; bottom: 0%;
-    animation: mark-move 10s -5700ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark13 {
-    font-size: 6vw;
-    left: 20%; bottom: 0%;
-    animation: mark-move 10s -6300ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark14 {
-    font-size: 8vw;
-    left: 85%; bottom: 10%;
-    animation: mark-move 10s -370ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark15 {
-    font-size: 2vw;
-    left: 73%; bottom: 0%;
-    animation: mark-move 10s -10ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark16 {
-    font-size: 7vw;
-    left: 54%; bottom: 30%;
-    animation: mark-move 10s -3720ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark17 {
-    font-size: 13vw;
-    left: 3%; bottom: 20%;
-    animation: mark-move 10s -2070ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark18  {
-    font-size: 6.5vw;
-    left: 58%; bottom: 0%;
-    animation: mark-move 10s -6010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark19  {
-    font-size: 3vw;
-    left: 80%; bottom: 10%;
-    animation: mark-move 10s -300ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark20  {
-    font-size: 5vw;
-    left: 20%; bottom: 10%;
-    animation: mark-move 10s -1010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark21  {
-    font-size: 5vw;
-    left: 50%; bottom: 0%;
-    animation: mark-move 10s -8010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark22  {
-    font-size: 3vw;
-    left: 40%; bottom: 20%;
-    animation: mark-move 10s -10ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark23  {
-    font-size: 3.9vw;
-    left: 20%; bottom: 5%;
-    animation: mark-move 10s -8000ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark24  {
-    font-size: 9vw;
-    left: 40%; bottom: 0%;
-    animation: mark-move 10s -2010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark25  {
-    font-size: 3.5vw;
-    left: 70%; bottom: 10%;
-    animation: mark-move 10s -7010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark26  {
-    font-size: 4vw;
-    left: 88%; bottom: 5%;
-    animation: mark-move 10s -3000ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark27  {
-    font-size: 11vw;
-    left: 62%; bottom: 0%;
-    animation: mark-move 10s -5010ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark28  {
-    font-size: 4vw;
-    left: 47%; bottom: 10%;
-    animation: mark-move 10s -4000ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark29  {
-    font-size: 4.5vw;
-    left: 20%; bottom: 5%;
-    animation: mark-move 10s -2510ms ease-in infinite;
-}
-.questionBox .questionMark-box .mark30  {
-    font-size: 11vw;
-    left: 30%; bottom: 0%;
-    animation: mark-move 10s -800ms ease-in infinite;
-}
+.questionBox .questionMark-box .mark1 { font-size: 3.5vw; left: 20%; bottom: 10%; animation: mark-move 10s -4600ms ease-in infinite; }
+.questionBox .questionMark-box .mark2 { font-size: 5vw; left: 30%; bottom: 30%; animation: mark-move 10s -2070ms ease-in infinite; }
+.questionBox .questionMark-box .mark3 { font-size: 8vw; left: 35%; bottom: 15%; animation: mark-move 10s -5ms ease-in infinite; }
+.questionBox .questionMark-box .mark4 { font-size: 2vw; left: 70%; bottom: 20%; animation: mark-move 10s -700ms ease-in infinite; }
+.questionBox .questionMark-box .mark5 { font-size: 5vw; left: 39%; bottom: 0%; animation: mark-move 10s -20ms ease-in infinite; }
+.questionBox .questionMark-box .mark6 { font-size: 7.6vw; left: 63%; bottom: 5%; animation: mark-move 10s -3000ms ease-in infinite; }
+.questionBox .questionMark-box .mark7 { font-size: 6.6vw; left: 10%; bottom: 30%; animation: mark-move 10s -60ms ease-in infinite; }
+.questionBox .questionMark-box .mark8 { font-size: 8.5vw; left: 55%; bottom: 0%; animation: mark-move 10s -1700ms ease-in infinite; }
+.questionBox .questionMark-box .mark9 { font-size: 2.8vw; left: 78%; bottom: 0%; animation: mark-move 10s -3700ms ease-in infinite; }
+.questionBox .questionMark-box .mark10 { font-size: 3.8vw; left: 90%; bottom: 5%; animation: mark-move 10s -1020ms ease-in infinite; }
+.questionBox .questionMark-box .mark11 { font-size: 1.5vw; left: 12%; bottom: 25%; animation: mark-move 10s -8800ms ease-in infinite; }
+.questionBox .questionMark-box .mark12 { font-size: 7.3vw; left: 50%; bottom: 0%; animation: mark-move 10s -5700ms ease-in infinite; }
+.questionBox .questionMark-box .mark13 { font-size: 6vw; left: 20%; bottom: 0%; animation: mark-move 10s -6300ms ease-in infinite; }
+.questionBox .questionMark-box .mark14 { font-size: 8vw; left: 85%; bottom: 10%; animation: mark-move 10s -370ms ease-in infinite; }
+.questionBox .questionMark-box .mark15 { font-size: 2vw; left: 73%; bottom: 0%; animation: mark-move 10s -10ms ease-in infinite; }
+.questionBox .questionMark-box .mark16 { font-size: 7vw; left: 54%; bottom: 30%; animation: mark-move 10s -3720ms ease-in infinite; }
+.questionBox .questionMark-box .mark17 { font-size: 13vw; left: 3%; bottom: 20%; animation: mark-move 10s -2070ms ease-in infinite; }
+.questionBox .questionMark-box .mark18 { font-size: 6.5vw; left: 58%; bottom: 0%; animation: mark-move 10s -6010ms ease-in infinite; }
+.questionBox .questionMark-box .mark19 { font-size: 3vw; left: 80%; bottom: 10%; animation: mark-move 10s -300ms ease-in infinite; }
+.questionBox .questionMark-box .mark20 { font-size: 5vw; left: 20%; bottom: 10%; animation: mark-move 10s -1010ms ease-in infinite; }
+.questionBox .questionMark-box .mark21 { font-size: 5vw; left: 50%; bottom: 0%; animation: mark-move 10s -8010ms ease-in infinite; }
+.questionBox .questionMark-box .mark22 { font-size: 3vw; left: 40%; bottom: 20%; animation: mark-move 10s -10ms ease-in infinite; }
+.questionBox .questionMark-box .mark23 { font-size: 3.9vw; left: 20%; bottom: 5%; animation: mark-move 10s -8000ms ease-in infinite; }
+.questionBox .questionMark-box .mark24 { font-size: 9vw; left: 40%; bottom: 0%; animation: mark-move 10s -2010ms ease-in infinite; }
+.questionBox .questionMark-box .mark25 { font-size: 3.5vw; left: 70%; bottom: 10%; animation: mark-move 10s -7010ms ease-in infinite; }
+.questionBox .questionMark-box .mark26 { font-size: 4vw; left: 88%; bottom: 5%; animation: mark-move 10s -3000ms ease-in infinite; }
+.questionBox .questionMark-box .mark27 { font-size: 11vw; left: 62%; bottom: 0%; animation: mark-move 10s -5010ms ease-in infinite; }
+.questionBox .questionMark-box .mark28 { font-size: 4vw; left: 47%; bottom: 10%; animation: mark-move 10s -4000ms ease-in infinite; }
+.questionBox .questionMark-box .mark29 { font-size: 4.5vw; left: 20%; bottom: 5%; animation: mark-move 10s -2510ms ease-in infinite; }
+.questionBox .questionMark-box .mark30 { font-size: 11vw; left: 30%; bottom: 0%; animation: mark-move 10s -800ms ease-in infinite; }
 @keyframes mark-move { 0% {transform: translatey(0);} 100% {transform: translatey(-2000%);} }
 /* m-follow */
 .m-follow { width: 100%; height: 150vw; background: #ccc; overflow: hidden;}
@@ -570,6 +440,23 @@ body::-webkit-scrollbar-track {
     100% {transform: rotateY(360deg);}
 }
 .m-follow .gradientRed {height: 95vw; background-image: linear-gradient(to bottom, #ff0000, #ffff);}
+
+
+/* animation */
+/* a-snake */
+.s-snake { width: 100%; height: 180vw; background: #ccc; }
+.s-snake .imgBox {}
+.s-snake .imgBox .snakeImg {width: 50%;}
+.s-snake p {}
+.s-snake .alphabetS {}
+.s-snake .alphabetQ {}
+/* a-aniBox */
+.a-aniBox { width: 100%; height: 290vw; background: #999; }
+
+
+
+/* a-gradientBk */
+.a-gradientBk { width: 100%; height: 110vw; background: linear-gradient(to bottom, #fff, #000);}
 
 
 
@@ -670,7 +557,7 @@ body::-webkit-scrollbar-track {
     @keyframes css-fill { 0% {transform: translate(0, 300px);} 100% {transform: translate(0, 5px);} }
     @keyframes ill-fill { 0% {transform: translate(0, 300px);} 100% {transform: translate(0, 8px);} }
     .m-coming > div .selfBox .rightBox p {
-        position: absolute; bottom: -4%; left: 3%;
+        position: absolute; bottom: -3.1%; left: 3%;
         font-family: var(--font-bold);
         font-size: 8.7vw;
         color: #fff;
