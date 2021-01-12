@@ -176,8 +176,8 @@
             transform: rotate(-135deg);
         }
 
-        /* slider-page */
-        .slider-page {
+        /* slider-dot */
+        .slider-dot {
             position: fixed; left: 50%; bottom: 0;
             transform: translate(-50%);
             width: 100%; height: 100px;
@@ -185,7 +185,7 @@
             z-index: 1000;
             text-align: center;
         }
-        .slider-page a {
+        .slider-dot a {
             display: inline-block;
             width: 10px; height: 10px;
             border-radius: 50%;
@@ -199,7 +199,7 @@
             margin: 50px 15px;
             line-height: 9px;
         }
-        .slider-page a.active {
+        .slider-dot a.active {
             border: 0;
             color: #333;
             text-indent: 0px;
@@ -269,6 +269,8 @@
                     </figure>
                 </div>
             </div>
+            <!-- //slider-img -->
+
             <div class="slider-nav">
                 <a href="#" class="prev">
                     <svg viewBox="-1 -2 18 18">
@@ -287,17 +289,36 @@
                     </svg>
                 </a>
             </div>
-            <div class="slider-page">
-                <a href="#" class="active">01</a>
+            <!-- //slider-nav -->
+
+            <div class="slider-dot">
+                <!-- <a href="#" class="active">01</a>
                 <a href="#">02</a>
                 <a href="#">03</a>
                 <a href="#">04</a>
                 <a href="#">05</a>
                 <a href="#">06</a>
-                <a href="#">07</a>
+                <a href="#">07</a> -->
             </div>
+            <!-- //slider-dot -->
         </div>
     </main>
     <!-- //main -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var sliderWrap = $(".slider-wrap");
+            sliderImg = $(".slider-img");
+            slider = $(".slider");
+            sliderNav = $(".slider-nav");
+            sliderDot = $(".slider-dot");
+
+        var dotHTML = "";
+        // 이미지 위치 설정 forEach, map, reduce
+        slider.each(function (index){
+            $(this).css({"left": index * 100 + "%"});
+            dotHTML += "<a href='#' class='active'>0"+ index +"</a>";
+        })
+        sliderDot.html(dotHTML);
+    </script>
 </body>
 </html>
