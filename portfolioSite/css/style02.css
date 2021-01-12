@@ -444,12 +444,16 @@ body::-webkit-scrollbar-track { background: #000; }
 
 /* animation */
 /* a-snake */
-.s-snake { width: 100%; height: 180vw; background: #ccc; }
-.s-snake .imgBox {}
-.s-snake .imgBox .snakeImg {width: 50%;}
-.s-snake p {}
-.s-snake .alphabetS {}
-.s-snake .alphabetQ {}
+.a-snake { width: 100%; height: 180vw; position: relative; }
+.a-snake .imgBox {width: 100%; height: 180vw;}
+.a-snake .imgBox .snakeImg {
+    width: 49vw;
+    position: absolute; left: 24%; top: 5%;
+    z-index: 10;
+}
+.a-snake .txt {position: absolute; top: 38%; left: 36%; font-family: var(--font-bold); font-size: 4.8vw; text-align: center; line-height: 1.2;}
+.a-snake .alphabetS { width: 22vw; position: absolute; left: 36.6%; top: 5.5%;}
+.a-snake .alphabetQ { width: 28vw; position: absolute; left: 37%; top: 77%;}
 /* a-aniBox */
 .a-aniBox { width: 100%; height: 290vw; background: #999; }
 
@@ -544,6 +548,11 @@ body::-webkit-scrollbar-track { background: #000; }
     }
     .m-about .txtSlideBox > div:nth-child(1):before { font-size: 2vw; top: -25%; }
     .m-about .txtSlideBox > div:nth-child(2):before { font-size: 2vw; top: -25%; }
+
+    /* animation */
+    .a-snake .txt {font-size: 5vw;}
+    .a-snake .alphabetS { width: 22vw; position: absolute; left: 37%; top: 5.5%;}
+    .a-snake .alphabetQ { width: 28vw; position: absolute; left: 37.6%; bottom: 18%;}
 }
 
 
@@ -594,6 +603,7 @@ body::-webkit-scrollbar-track { background: #000; }
     .m-follow .textBox > div p:nth-child(3) {right: 14%;}
     .m-follow .textBox > div span {width: 6.5vw; height: 6.5vw; line-height: 6.6vw; font-size: 1.2vw; letter-spacing: 0px; bottom: 0%;}
     .m-follow .textBox > div p { letter-spacing: 0px; }
+    
 }
 
 
@@ -650,6 +660,9 @@ body::-webkit-scrollbar-track { background: #000; }
     .m-coming > div .selfBox .leftBox .backCode {font-size: 0.1vw;}
     .m-coming > div .selfBox .rightBox p { -webkit-text-stroke: 0.2vw #000; }
     .m-follow .textBox > div span {width: 12vw; height: 12vw; line-height: 12.1vw; font-size: 0.5vw; letter-spacing: -0.2px; bottom: -25%;}
+
+    /* animation */
+    .a-snake .txt {font-size: 6vw;}
 }
 
 

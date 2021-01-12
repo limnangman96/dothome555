@@ -187,11 +187,11 @@
         <div id="animation">
             <section class="a-snake">
                 <div class="imgBox">
-                    <img class="snakeImg" src="./image/snake/snake10.png" alt="뱀 이미지" style="max-width:80vw; height:auto;">
+                    <img class="snakeImg" src="./image/snake/snake10.png" alt="뱀 이미지" style="max-width:60vw; height:auto;">
                 </div>
                 <p class="txt">다음은<br />Animation<br />입니다.</p>
-                <img class="alphabetS" src="./image/s.svg" alt="알파벳s">
-                <img class="alphabetQ" src="./image/q.svg" alt="알파벳q">
+                <img class="alphabetS" src="./image/s.svg" alt="알파벳s" style="max-width:60vw; height:auto">
+                <img class="alphabetQ" src="./image/q.svg" alt="알파벳q" style="max-width:60vw; height:auto">
             </section>
             <!-- //a-snake -->
             <section class="a-aniBox"></section>
@@ -226,7 +226,27 @@
 
         });
             
-        
+        // animation 뱀 애니메이션
+        let sum = 10;
+        let bamTimer = "";
+        function start(){
+            bamTimer = setInterval(function(){
+                document.querySelector("#animation .a-snake .snakeImg").setAttribute("src", "./image/snake/snake"+ sum +".png");
+                sum += 2;
+
+                if(sum > 186){
+                    clearInterval(bamTimer);
+                    reset();
+                }
+            }, 100);
+        }
+        document.querySelector("#animation .a-snake").addEventListener("mouseenter", function(){
+            start();
+        });
+        function reset(){
+            document.querySelector("#animation .a-snake .snakeImg").setAttribute("src", "./image/snake/snake"+ sum +".png");
+            sum = 10;
+        }
     </script>
 </body>
 </html>

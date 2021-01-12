@@ -759,6 +759,48 @@
                 $(".slideBox2 p").addClass("move");
             }
 
+            // section1 어바웃 스킬 차오르기 표현
+            // if( scrollTop > $(".coding-intro").offset().top ){
+            //     $(".about .skill div > div > div > svg > path").addClass("waveShape");
+            // }
+
+            // section3 뱀 애니메이션
+            // if( $(window).scrollTop() > $("#section3").offset().top == $(window).scrollTop() ){
+            //     let sum = 10;
+            //     let timer = setInterval(function(){
+            //         $(".section3 .snake .snakeMove").attr("src", "./image/snake/snake"+ sum +".png");
+            //         sum += 2;
+
+            //         if(sum > 55){
+            //             clearInterval(timer);
+            //         }
+            //     }, 90);
+            // }
+
+            // if( $(window).scrollTop() == ($("#section3").offset().top)+ 300 ){
+            //     let sum = 56;
+            //     let timer = setInterval(function(){
+            //         $(".section3 .snake .snakeMove").attr("src", "./image/snake/snake"+ sum +".png");
+            //         sum += 2;
+
+            //         if(sum > 119){
+            //             clearInterval(timer);
+            //         }
+            //     }, 90);
+            // }
+
+            // if( $(window).scrollTop() == ($("#section3").offset().top)+ 700 ){
+            //     let sum = 120;
+            //     let timer = setInterval(function(){
+            //         $(".section3 .snake .snakeMove").attr("src", "./image/snake/snake"+ sum +".png");
+            //         sum += 2;
+
+            //         if(sum > 189){
+            //             clearInterval(timer);
+            //         }
+            //     }, 90);
+            // }
+
             // section4 sideMenu 나타나기
             if( scrollTop > ($("#section4").offset().top)-100 ){
                 $(".section4 .sideMenu").css("display", "block");
@@ -795,7 +837,17 @@
 
         // 뱀 애니메이션
         let sum = 10;
+        // let timer = setInterval(function(){
+        //     $(".section3 .snake .snakeMove").attr("src", "./image/snake/snake"+ sum +".png");
+        //     sum += 2;
+
+        //     if(sum > 189){
+        //         clearInterval(timer);
+        //     }
+        // }, 90);
+
         let bamTimer = "";
+
         function start(){
             bamTimer = setInterval(function(){
                 $(".section3 .snake .snakeMove").attr("src", "./image/snake/snake"+ sum +".png");
@@ -803,7 +855,6 @@
 
                 if(sum > 189){
                     clearInterval(bamTimer);
-                    $(".section3 .snake .snakeMove").css({"display" : "none" })
                 }
             }, 90);
         }
@@ -811,6 +862,8 @@
         $(".section3").mouseenter(function(){
             start();
         });
+
+
 
         // section4 글씨 쪼개기
         for( let i=1; i<=6; i++ ){
