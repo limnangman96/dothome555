@@ -205,7 +205,6 @@
             background-size: cover;
         }
         
-        
     </style>
 </head>
 <body>
@@ -320,7 +319,7 @@
     <script src="../jquery/jquery.min_1.1.24.js"></script>
     <script>
         window.addEventListener("scroll", () => {
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrillTop) // 옛날 버전(익스플로러) 지원, 호환성 준수
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) // 옛날 버전(익스플로러) 지원, 호환성 준수
 
             // 개별적으로
             // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;

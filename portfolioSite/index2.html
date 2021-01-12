@@ -211,20 +211,23 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
     <script>
-         $(window).scroll(function(){
-            
-            var s = skrollr.init();
-            let scrollTop = $(window).scrollTop();
+        window.addEventListener("scroll", function(){
+
+            // var s = skrollr.init();
+            let scrollTop = (window.pageYOffset || document.documentElement.scrollTop);
 
             // 스크롤 출력
-            $("#screen-scroll").text(parseInt(scrollTop));
+            document.getElementById("screen-scroll").innerText = parseInt(scrollTop);
 
             // main m-about 텍스트 슬라이드
-            if( scrollTop > $(".m-about").offset().top / 1.3 ){
-                $(".txtSlide01 p").addClass("move");
-                $(".txtSlide02 p").addClass("move");
-            }
+
         });
+            // main m-about 텍스트 슬라이드
+            // if( scrollTop > $(".m-about").offset().top / 1.3 ){
+            //     $(".txtSlide01 p").addClass("move");
+            //     $(".txtSlide02 p").addClass("move");
+            // }
+        
     </script>
 </body>
 </html>
