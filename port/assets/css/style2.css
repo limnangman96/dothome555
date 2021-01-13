@@ -20,16 +20,16 @@
 }
 body {
     --font-light: 'GmarketSansLight';
-    --font-medium: 'GmarketSansMedium';
+    --font-medium: 'GmarketSansMedium'; 
     --font-bold: 'GmarketSansBold';
     --font-1px: '0.09vw';
     --font-2px: '0.12vw';
     --font-3px: '0.15vw';
     background: #fff;
 }
-body::-webkit-scrollbar {  width: 15px; background: #000; }
-body::-webkit-scrollbar-thumb { background: #fff; border-radius: 3px; background-clip: padding-box; border: 1px solid transparent; }
-body::-webkit-scrollbar-track { background: #000; }
+body::-webkit-scrollbar {  width: 15px; background: rgba(255,255,255,0.1) }
+body::-webkit-scrollbar-thumb { background: #000; border-radius: 3px; }
+body::-webkit-scrollbar-track { display: none }
 
 
 /* screen-scroll */
@@ -88,12 +88,11 @@ body::-webkit-scrollbar-track { background: #000; }
     position: absolute;
     opacity: 0;
     font-size: 1.5vw;
-    line-height: 1.2;
     animation: introduce-show 1s 400ms 1 ease; animation-fill-mode: forwards;  
 }
 @keyframes introduce-show {
-    0% { opacity: 0; top: 35.8%; left: 20%; }
-    100% { opacity: 1; top: 35.8%; left: 8%; }
+    0% { opacity: 0; top: 38.5%; left: 20%; }
+    100% { opacity: 1; top: 38.5%; left: 8%; }
 }
 .m-intro .borderBox .toRight {
     position: absolute; top: 18.3%; left: 55.2%;
@@ -432,7 +431,7 @@ body::-webkit-scrollbar-track { background: #000; }
     letter-spacing: -1px;
     text-align: center;
     line-height: 4.1vw;
-    animation: scrollRotate 3s infinite ease;
+    animation: scrollRotate 2s infinite ease;
 }
 @keyframes scrollRotate {
     0% {transform: rotateY(0deg);}
@@ -444,7 +443,7 @@ body::-webkit-scrollbar-track { background: #000; }
 
 /* animation */
 /* a-snake */
-.a-snake { width: 100%; height: 180vw; position: relative; }
+.a-snake { width: 100%; height: 180vw; position: relative; overflow: hidden;}
 .a-snake .imgBox {width: 100%; height: 180vw;}
 .a-snake .imgBox .snakeImg {
     width: 49vw;
@@ -453,20 +452,111 @@ body::-webkit-scrollbar-track { background: #000; }
 }
 .a-snake .txt {position: absolute; top: 38%; left: 36%; font-family: var(--font-bold); font-size: 4.8vw; text-align: center; line-height: 1.2;}
 .a-snake .alphabetS { width: 22vw; position: absolute; left: 36.6%; top: 5.5%;}
-.a-snake .alphabetQ { width: 28vw; position: absolute; left: 37%; top: 77%;}
+.a-snake .alphabetQ { width: 28vw; position: absolute; left: 37.2%; top: 77%;}
 /* a-aniBox */
-.a-aniBox { width: 100%; height: 290vw; background: #999; }
+.a-aniBox { width: 100%; height: 290vw; overflow: hidden;}
+.a-aniBox .sideMenu { z-index: 500000; position: fixed; right: 5%; top: 25%; display: none; }
+.a-aniBox .sideMenu li { font-size: 1.2vw; line-height: 3; text-align: center; }
+.a-aniBox .sideMenu li.active { font-family: var(--font-bold); font-size: 2vw; }
+.a-aniBox .aniSection {width: 100%; height: 48vw; position: relative;}
+.a-aniBox .aniSection .using { position: absolute; top: 15%; left: 46%; font-size: 1vw; }
+.a-aniBox .aniSection .txtBox { position: absolute; top: 22%; left: 28%;font-size: 7.5vw; line-height: 1.2; text-align: center; }
+.a-aniBox .aniSection .txtBox .txtTop span:nth-child(1) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtTop span:nth-child(2) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtTop span:nth-child(3) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtTop span:nth-child(4) {animation: aniMove3 5s infinite;}
 
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(1) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(2) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(3) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(4) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(5) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(6) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .ani4Txt .txtTop span:nth-child(7) {animation: aniMove3 5s infinite;}
 
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(1) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(2) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(3) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(4) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(5) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(6) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(7) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .ani5Txt .txtTop span:nth-child(8) {animation: aniMove3 5s infinite;}
 
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(1) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(2) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(3) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(4) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(5) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .ani6Txt .txtTop span:nth-child(6) {animation: aniMove3 5s infinite;}
+
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(1) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(2) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(3) {animation: aniMove3 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(4) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(5) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(6) {animation: aniMove2 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(7) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(8) {animation: aniMove1 5s infinite;}
+.a-aniBox .aniSection .txtBox .txtBottom span:nth-child(9) {animation: aniMove1 5s infinite;}
+@keyframes aniMove1 {
+    0% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    25% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    50% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    75% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    100% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+}
+@keyframes aniMove2 {
+    0% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+    25% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    50% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    75% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    100% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+}
+@keyframes aniMove3 {
+    0% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+    25% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    50% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+    75% {font-family: 'GmarketSansLight'; letter-spacing: -20px;}
+    100% {font-family: 'GmarketSansbold'; letter-spacing: 20px;}
+}
+.a-aniBox > div .aniMore {position: absolute; left: 50%; bottom: 11%; transform: translate(-50%); width: 5vw; height: 5vw;}
+.a-aniBox > div .aniMore img {transition: transform 0.3s;}
+.a-aniBox > div .aniMore.active img {transform: rotate(45deg);}
 /* a-gradientBk */
-.a-gradientBk { width: 100%; height: 110vw; background: linear-gradient(to bottom, #fff, #000);}
-
+.a-gradientBk { width: 100%; height: 110vw; background: linear-gradient(to bottom, #fff, #000); position: relative;}
+.a-gradientBk div {position: absolute; left: 50%; top: 50%}
+.a-gradientBk div span {
+    display: block;
+    width: 2vw; height: 2vw; 
+    border-top: 0.15vw solid #fff; 
+    border-right: 0.15vw solid #fff; 
+    transform: rotate(135deg); 
+    margin-top: -1vw;
+    animation: ani-scroll 2s infinite;
+    /* opacity: 0; */
+}
+.a-gradientBk div span:nth-child(1) {animation-delay: 0s;}
+.a-gradientBk div span:nth-child(2) {animation-delay: .15s;}
+.a-gradientBk div span:nth-child(3) {animation-delay: .30s;}
+.a-gradientBk div span:nth-child(4) {animation-delay: .45s;}
+.a-gradientBk p {
+    position: absolute; left: 49.2%; top: 56%; 
+    font-size: 1.3vw; 
+    color: #fff; 
+    font-family: var(--font-light);
+    animation: ani-scroll 2s .60s infinite;
+}
+@keyframes ani-scroll {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
 
 
 
 /* 미디어쿼리 */
-@media (max-width: 1220px){
+@media (max-width: 1620px){
     /* screen-scroll */
     #screen-scroll { width: 50px; height: 50px; line-height: 50px; font-size: 13px; }
     
@@ -486,10 +576,32 @@ body::-webkit-scrollbar-track { background: #000; }
     .m-intro .mainImg { position: absolute; top: 57%; left: 50%; width: 43vw; height: 39vw; }
     .m-follow .textBox > div p:nth-child(3) {right: 17%;}
     .m-follow .textBox > div span {width: 5vw; height: 5vw; line-height: 5.1vw; font-size: 1.2vw;}
+    /* animation */
+    @keyframes aniMove1 {
+        0% {font-family: 'GmarketSansLight'; letter-spacing: -15px;}
+        25% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        50% {font-family: 'GmarketSansbold'; letter-spacing: 15px;}
+        75% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        100% {font-family: 'GmarketSansLight'; letter-spacing: -15px;}
+    }
+    @keyframes aniMove2 {
+        0% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+        25% {font-family: 'GmarketSansbold'; letter-spacing: 15px;}
+        50% {font-family: 'GmarketSansLight'; letter-spacing: -15px;}
+        75% {font-family: 'GmarketSansbold'; letter-spacing: 15px;}
+        100% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+    }
+    @keyframes aniMove3 {
+        0% {font-family: 'GmarketSansbold'; letter-spacing: 15px;}
+        25% {font-family: 'GmarketSansLight'; letter-spacing: -15px;}
+        50% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        75% {font-family: 'GmarketSansLight'; letter-spacing: -15px;}
+        100% {font-family: 'GmarketSansbold'; letter-spacing: 15px;}
+    }
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1424px){
     /* main */
     .m-about .txtSlideBox > div > p { -webkit-text-stroke: 0.25vw #000;}
     .m-about .codingIntro .num { top: 2.5vw; }
@@ -509,7 +621,7 @@ body::-webkit-scrollbar-track { background: #000; }
 
 
 
-@media (max-width: 960px){
+@media (max-width: 1000px){
     /* screen-scroll */
     #screen-scroll { width: 45px; height: 45px; line-height: 45px; font-size: 12px;} 
     
@@ -553,10 +665,32 @@ body::-webkit-scrollbar-track { background: #000; }
     .a-snake .txt {font-size: 5vw;}
     .a-snake .alphabetS { width: 22vw; position: absolute; left: 37%; top: 5.5%;}
     .a-snake .alphabetQ { width: 28vw; position: absolute; left: 37.6%; bottom: 18%;}
+    @keyframes aniMove1 {
+        0% {font-family: 'GmarketSansLight'; letter-spacing: -10px;}
+        25% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        50% {font-family: 'GmarketSansbold'; letter-spacing: 10px;}
+        75% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        100% {font-family: 'GmarketSansLight'; letter-spacing: -10px;}
+    }
+    @keyframes aniMove2 {
+        0% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+        25% {font-family: 'GmarketSansbold'; letter-spacing: 10px;}
+        50% {font-family: 'GmarketSansLight'; letter-spacing: -10px;}
+        75% {font-family: 'GmarketSansbold'; letter-spacing: 10px;}
+        100% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+    }
+    @keyframes aniMove3 {
+        0% {font-family: 'GmarketSansbold'; letter-spacing: 10px;}
+        25% {font-family: 'GmarketSansLight'; letter-spacing: -10px;}
+        50% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        75% {font-family: 'GmarketSansLight'; letter-spacing: -10px;}
+        100% {font-family: 'GmarketSansbold'; letter-spacing: 10px;}
+    }
+    .a-aniBox .aniSection .using { left: 44.5%; font-size: 1.5vw; }
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 808px){
     /* main */
     .m-about .codingIntro .text { font-size: 1.7vw; line-height: 1.7; font-family: var(--font-light);}
     .m-about .txtSlideBox > div:nth-child(1):before { font-size: 2.2vw; top: -28%; }
@@ -577,7 +711,7 @@ body::-webkit-scrollbar-track { background: #000; }
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 640px){
     /* screen-scroll */
     #screen-scroll { width: 40px; height: 40px; line-height: 40px; font-size: 10.5px; }
     @keyframes spanYear-show {
@@ -603,11 +737,34 @@ body::-webkit-scrollbar-track { background: #000; }
     .m-follow .textBox > div p:nth-child(3) {right: 14%;}
     .m-follow .textBox > div span {width: 6.5vw; height: 6.5vw; line-height: 6.6vw; font-size: 1.2vw; letter-spacing: 0px; bottom: 0%;}
     .m-follow .textBox > div p { letter-spacing: 0px; }
-    
+    /* animation */
+    .a-aniBox .aniSection .using { position: absolute; top: 15%; left: 43%; font-size: 1vw; }
+    .a-aniBox .aniSection .txtBox { top: 25%; }
+    @keyframes aniMove1 {
+        0% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
+        25% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        50% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
+        75% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        100% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
+    }
+    @keyframes aniMove2 {
+        0% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+        25% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
+        50% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
+        75% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
+        100% {font-family: 'GmarketSansMedium';  letter-spacing: 0px;}
+    }
+    @keyframes aniMove3 {
+        0% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
+        25% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
+        50% {font-family: 'GmarketSansMedium'; letter-spacing: 0px;}
+        75% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
+        100% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
+    }
 }
 
 
-@media (max-width: 320px){
+@media (max-width: 360px){
     /* screen-scroll */
     #screen-scroll { display: none; }
     /* main */
@@ -659,10 +816,12 @@ body::-webkit-scrollbar-track { background: #000; }
     @keyframes ill-fill { 0% {transform: translate(0, 300px);} 100% {transform: translate(0, 18px);} }
     .m-coming > div .selfBox .leftBox .backCode {font-size: 0.1vw;}
     .m-coming > div .selfBox .rightBox p { -webkit-text-stroke: 0.2vw #000; }
-    .m-follow .textBox > div span {width: 12vw; height: 12vw; line-height: 12.1vw; font-size: 0.5vw; letter-spacing: -0.2px; bottom: -25%;}
+    .m-follow .textBox > div span {width: 12vw; height: 12vw; line-height: 12.1vw; font-size: 0.5vw; letter-spacing: -0.2px; left: 43%; bottom: -25%; }
 
     /* animation */
     .a-snake .txt {font-size: 6vw;}
+    .a-aniBox .aniSection .using { left: 40%; font-size: 0.5vw; }
+    .a-aniBox .aniSection .txtBox { top: 30%; }
 }
 
 
