@@ -48,8 +48,8 @@ body::-webkit-scrollbar-track { display: none }
 #wrap {width: 100%; height: 65000px; overflow: hidden;}
 #main {width: 100%; overflow: hidden;}
 #site {}
-#animation {width: 100%; overflow: hidden; }
-#effect {}
+#animation {width: 100%; overflow: hidden;}
+#effect {width: 100%; overflow: hidden;}
 #react {}
 #contact {}
 
@@ -525,7 +525,7 @@ body::-webkit-scrollbar-track { display: none }
 .a-aniBox > div .aniMore.active img {transform: rotate(45deg);}
 /* a-gradientBk */
 .a-gradientBk { width: 100%; height: 110vw; background: linear-gradient(to bottom, #fff, #000); position: relative;}
-.a-gradientBk div {position: absolute; left: 50%; top: 50%}
+.a-gradientBk div {position: absolute; left: 50%; top: 60%}
 .a-gradientBk div span {
     display: block;
     width: 2vw; height: 2vw; 
@@ -534,18 +534,19 @@ body::-webkit-scrollbar-track { display: none }
     transform: rotate(135deg); 
     margin-top: -1vw;
     animation: ani-scroll 2s infinite;
-    /* opacity: 0; */
+    opacity: 0;
 }
 .a-gradientBk div span:nth-child(1) {animation-delay: 0s;}
 .a-gradientBk div span:nth-child(2) {animation-delay: .15s;}
 .a-gradientBk div span:nth-child(3) {animation-delay: .30s;}
 .a-gradientBk div span:nth-child(4) {animation-delay: .45s;}
 .a-gradientBk p {
-    position: absolute; left: 49.2%; top: 56%; 
+    position: absolute; left: 49.2%; top: 66%; 
     font-size: 1.3vw; 
     color: #fff; 
     font-family: var(--font-light);
     animation: ani-scroll 2s .60s infinite;
+    opacity: 0;
 }
 @keyframes ani-scroll {
     0% {opacity: 0;}
@@ -554,6 +555,97 @@ body::-webkit-scrollbar-track { display: none }
 }
 
 
+/* effect */
+/* e-slideBox */
+.e-slideBox {width: 100%; height: 50vw; overflow: hidden; background: #000; padding-top: 5vw; box-sizing: border-box;}
+.e-slideBox > div {height: 9vw;}
+.e-slideBox .textEn {transform: translate(0%);}
+.e-slideBox .textEn.e-move {animation: slideEn 20s infinite linear;}
+.e-slideBox .textKo {transform: translate(-143%);}
+.e-slideBox .textKo.e-move {animation: slideKo 20s infinite linear;}
+@keyframes slideEn {
+    0% {transform: translate(0%);}
+    25% {transform: translate(-40%);}
+    50% {transform: translate(0%);}
+    75% {transform: translate(-40%);}
+    100% {transform: translate(0%);}
+}
+@keyframes slideKo {
+    0% {transform: translate(-142%);}
+    25% {transform: translate(-102%);}
+    50% {transform: translate(-142%);}
+    75% {transform: translate(-102%);}
+    100% {transform: translate(-142%);}
+}
+.e-slideBox > div p {font-size: 8vw; white-space: nowrap; color: #000; -webkit-text-stroke: 0.1vw #fff;}
+/* e-container */
+.e-container {width: 100%; overflow: hidden; height: 240vw; background: #000; padding: 0 5vw; position: relative;}
+.e-effectBox .Effect {width: 38vw; height: 34vw; float: left; position: relative; border-bottom: 0.15vw solid #fff;}
+.e-effectBox .Mouse {margin: 15vw 4vw 0 0;}
+.e-effectBox .menu {margin-top: 28vw;}
+.e-effectBox .parallax {margin: 20vw 0 0 25vw;}
+.e-effectBox .quiz1 {margin-top: 15vw;}
+.e-effectBox .quiz2 {margin: 8vw 0 0 0; clear: both;}
+.e-effectBox .slider {margin: -15vw 0 0 10vw;}
+.e-effectBox .Effect h3 {font-family: var(--font-bold); color: #fff; font-size: 1.8vw; margin-bottom: 1vw;}
+.e-effectBox .Effect span a {
+    display: inline-block;
+    font-family: var(--font-bold);
+    color: #ff0000; 
+    position: absolute; right: 0%; top: 1%; 
+    font-size: 1vw;
+    line-height: 1.6;
+    border: 0.15vw solid #ff0000;
+    padding: 0.2vw 0.5vw 0 0.5vw;
+}
+.e-effectBox .Effect div {width: 38vw; height: 19vw;}
+.e-effectBox .Effect p {margin-top: 1vw; font-family: var(--font-light); color: #fff; font-size: 1.2vw; line-height: 1.5; text-align: justify;}
+.e-container .e-circleBox .circle {width: 24vw; height: 24vw; border-radius: 50%; border: 0.15vw solid #fff; text-align: center;}
+.e-container .e-circleBox .circle .fa {color: #000; -webkit-text-stroke: 0.15vw #fff; font-size: 12vw; line-height: 2;}
+.e-container .e-circleBox .circle:hover {background: #ffff; transform: rotate(0deg); box-shadow: 1vw 1vw 4vw rgba(255,255,255,0.3);}
+.e-container .e-circleBox .circle:hover .fa {display: none;}
+.e-container .e-circleBox .cir1 {position: absolute; left: 5%; top: 23%;}
+.e-container .e-circleBox .cir1:hover:before {
+    content:"Go";
+    font-size: 5vw;
+    font-family: var(--font-bold);
+    text-align: center;
+    color: #000;
+    position: absolute; top: 30%; left: 33%;
+}
+.e-container .e-circleBox .cir1:hover:after {
+    content:"more Mouse Effect";
+    font-size: 1.2vw;
+    text-align: center;
+    color: #000;
+    position: absolute; top: 56%; left: 25%;
+}
+.e-container .e-circleBox .cir2 {position: absolute; right: 15%; top: 50.5%; transform: rotate(45deg);}
+.e-container .e-circleBox .cir2:hover:before {
+    content:"Go";
+    font-size: 5vw;
+    font-family: var(--font-bold);
+    text-align: center;
+    color: #000;
+    position: absolute; top: 30%; left: 33%;
+}
+.e-container .e-circleBox .cir2:hover:after {
+    content:"more Slider eEffect";
+    font-size: 1.2vw;
+    text-align: center;
+    color: #000;
+    position: absolute; top: 56%; left: 25%;
+}
+.e-container .e-circleBox .cir3 {position: absolute; left: 37.5%; bottom: 0%;}
+.e-container .e-circleBox .cir3:hover {background: #ff0000; border: 0.15vw solid #ff0000;}
+.e-container .e-circleBox .cir3:hover:before {
+    content:"what's the NEXT?";
+    font-size: 2.5vw;
+    text-align: center;
+    color: #fff;
+    font-family: var(--font-bold);
+    position: absolute; top: 35%; left: 0;
+}
 
 /* 미디어쿼리 */
 @media (max-width: 1620px){
@@ -708,6 +800,7 @@ body::-webkit-scrollbar-track { display: none }
         line-height: 1.2;
     }
     .m-coming > div .selfBox .rightBox p { -webkit-text-stroke: 0.15vw #000; }
+    .a-gradientBk p { left: 49%; }
 }
 
 
@@ -761,6 +854,7 @@ body::-webkit-scrollbar-track { display: none }
         75% {font-family: 'GmarketSansLight'; letter-spacing: -5px;}
         100% {font-family: 'GmarketSansbold'; letter-spacing: 5px;}
     }
+    .a-gradientBk p { left: 48.6%; }
 }
 
 
@@ -822,6 +916,13 @@ body::-webkit-scrollbar-track { display: none }
     .a-snake .txt {font-size: 6vw;}
     .a-aniBox .aniSection .using { left: 40%; font-size: 0.5vw; }
     .a-aniBox .aniSection .txtBox { top: 30%; }
+    .a-gradientBk div span {
+        width: 3.5vw; height: 3.5vw; 
+        margin-top: -1.5vw;
+        border-top: 0.15vw solid #fff; 
+        border-right: 0.15vw solid #fff; 
+    }
+    .a-gradientBk p { top: 71%; left: 47.6%; }
 }
 
 
