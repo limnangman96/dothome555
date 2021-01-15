@@ -45,7 +45,7 @@ body::-webkit-scrollbar-track { display: none }
 }
 
 /* layout */
-#wrap {width: 100%; height: 58000px; overflow: hidden;}
+#wrap {width: 100%; height: 55000px; overflow: hidden;}
 #main {width: 100%; overflow: hidden;}
 #site {width: 100%; height: 26500px; position: relative; overflow: hidden;}
 #animation {width: 100%; overflow: hidden;}
@@ -139,7 +139,7 @@ body::-webkit-scrollbar-track { display: none }
     transform: translate(-50%);
     width: 40vw; height: 36vw;
     background: #ccc;
-    background: url(../image/mainImg.jpg) no-repeat;
+    background: url(../image/mainImg4.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
 }
