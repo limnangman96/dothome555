@@ -135,9 +135,9 @@ body::-webkit-scrollbar-track { display: none }
     100% { opacity: 1; top: 17%; left: 55.2%; }
 }
 .m-intro .mainImg {
-    position: absolute; top: 57%; left: 50%;
+    position: absolute; top: 55%; left: 50.5%;
     transform: translate(-50%);
-    width: 40vw; height: 36vw;
+    width: 48vw; height: 43vw;
     background: #ccc;
     background: url(../image/mainImg4.jpg) no-repeat;
     background-position: center center;
@@ -484,7 +484,7 @@ img {width: 100%; vertical-align: top;}
 .s-sec2 {width: 100vw;}
 .s-sec2 .sec2-title {left: 29.5vw; top: 43vw; opacity: 0;}
 .s-sec2 .sec2-title .sec2-titleBefore {left: 41vw; top: 6vw; opacity: 0;}
-.s-sec2 .sec2-title .sec2-titleAfter {left: 64.5vw; top: 100vw;}
+.s-sec2 .sec2-title .sec2-titleAfter {left: 64.5vw; top: 100vw; opacity: 0;}
 .s-sec2 .sec2-img1 {width: 50vw; height: 48vw; left: 150vw; top: 20vw;}
 .s-sec2 .sec2-img2 {width: 40vw; height: 36vw; left: 50vw; top: 100vw;}
 .s-sec2 .sec2-tag {left: 150vw; top: 18vw;}
