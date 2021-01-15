@@ -111,19 +111,50 @@
 }
 
 /* 배너 */
-.ban {position: relative; padding: 24px 0px;}
-.ban > a {position: absolute; top: 60px; background-image: url(../img/icon.png); width: 43px; height: 43px;}
-.ban a.prev {left: -80px; background-position: -150px 0;}
-.ban a.prev:hover {background-position: -193px 0;}
-.ban a.next {right: -80px; background-position: -150px -43px;}
-.ban a.next:hover {background-position: -193px -43px;}
-.ban ul {overflow: hidden;}
-.ban ul li {float: left; width: 330px;}
-.ban ul li img {border: 4px solid #dcdcdc;}
-.ban ul li img:hover { border-color: #98dcdc;}
-.ban ul li.ban_img1 {}
-.ban ul li.ban_img2 {text-align: center;}
-.ban ul li.ban_img3 {text-align: right;}
+.ban {padding: 24px 0;}
+.ban .ban_slick {}
+.ban .ban_slick > div {}
+.ban .ban_slick > div img {border: 4px solid #dcdcdc;}
+.ban .ban_slick > div img:hover {border-color: #98bcbc;}
+.ban .ban_slick .slick-list {margin-left: 30px;}
+
+.ban .ban_slick .slick-prev {
+    position: absolute; top: 40px;
+    background-image: url(../img/icon.png);
+    width: 43px; height: 43px; 
+    left: -80px; background-position: -150px 0;
+    text-indent: -9999px;
+    border-width: 0;
+    background-color: #dceff7;
+}
+.ban .ban_slick .slick-next {
+    position: absolute; top: 40px;
+    background-image: url(../img/icon.png);
+    width: 43px; height: 43px; 
+    right: -80px; background-position: -150px -43px;
+    text-indent: -9999px;
+    border-width: 0;
+    background-color: #dceff7;
+}
+.ban .ban_slick .slick-dots {
+    margin-top: 15px;
+    width: 100%; 
+    text-align: center;
+}
+.ban .ban_slick .slick-dots li {
+    display: inline-block;
+    width: 15px; height: 15px; margin: 5px;
+}
+.ban .ban_slick .slick-dots li button {
+    width: 13px; height: 13px;
+    background: #ccc;
+    border-radius: 50%;
+    text-indent: -9999px;
+    border-width: 0;
+}
+.ban .ban_slick .slick-dots li.slick-active button {
+    background: #2c94c4;
+}
 
 .ban .slick-initialized .slick-slider {position: relative;}
 .slick-prev .slick-arrow {position: absolute; left: 0; top: 0;}

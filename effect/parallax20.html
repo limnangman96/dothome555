@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { padding: 0; margin: 0; box-sizing: border-box; }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        body {
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Fraunces', serif;
+        }
+        .menu {
+            height: 100vh;
+            overflow: hidden;
+            cursor: grab;
+        }
+        .menu ul {
+            counter-reset: count;
+        }
+        .menu-item {
+            counter-increment: count;
+            position: absolute; left: 0; top: 0;
+            z-index: 1;
+            width: 100%;
+            font-size: 120px;
+            line-height: 1.2;
+            padding: 30px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .menu-item:before {
+            content: "0" counter(count);
+            position: absolute; left: 0;
+            color: #862929;
+            transform: translateX(-10px) scale(0.4);
+            font-family: cursive;
+        }
+        .menu-item:nth-child(n+10):before {
+            content: counter(count);
+        }
+        .scroll {
+            position: fixed; left: 10px; top: 10px;
+            width: 50px; height: 50px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+
+        }
+        .ball {
+            width: 100px; height: 100px;
+            background: blue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">0</div>
+    <div class="menu">
+        <ul>
+            <li class="menu-item"><a href="#">portfolio</a></li>
+            <li class="menu-item"><a href="#">webstandard</a></li>
+            <li class="menu-item"><a href="#">responsive</a></li>
+            <li class="menu-item"><a href="#">animation</a></li>
+            <li class="menu-item"><a href="#">react.js</a></li>
+            <li class="menu-item"><a href="#">mySQL</a></li>
+        </ul>
+    </div>
+    <!-- <div class="ball"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const $menu = document.querySelector(".menu"),
+              $menuItem = document.querySelectorAll(".menu-item");
+
+        let menuHeight = $menu.clientHeight,
+            menuItemHeight = $menuItem[0].clientHeight,
+            wrapHeight = $menuItem.length * menuItemHeight,
+            y = 0,
+            scrollY = 0;
+
+        // console.log(wrapHeight);
+
+        // 선형 보간법
+        const lerp = (v0, v1, t) => {
+            return v0 * ( 1 - t ) + v1 * t
+        }
+
+        const dispose = (scroll) => {
+            gsap.set($menuItem, {
+                y: (index) => {
+                    return index * menuItemHeight + scroll;
+                },
+                // ★ 아래 부분 하니까 갑자기 이상해짐. 수정필요 ★
+                modifiers: {
+                    y: (y, target) => {
+                        const s = gsap.utils.wrap(-menuItemHeight, menuItemHeight-menuItemHeight, parseFloat(y));
+                        return `${s}px`
+                    }
+                }
+            })
+        }
+        dispose(0);
+
+        const handleMouseWheel = (e) => {
+            scrollY -= e.deltaY;
+
+            // deltaY 속성은 아래로 스크롤할 때 양수 값을 반환하고 위로 스크롤하면 음수 값을 반환합니다.
+            // console.log(e.deltaY)
+        }
+
+        $menu.addEventListener("mousewheel", handleMouseWheel);
+        const render = () => {
+
+            requestAnimationFrame(render);
+
+            y = lerp(y, scrollY, .1)
+            dispose(y);
+
+            document.querySelector(".scroll").innerHTML = pageYOffset;
+            //document.querySelector(".scroll").innerHTML = scrollY;
+        }
+        render();
+
+
+        // gsap.utils 랜덤숫자 (start, max, 배수)
+        const s1 = gsap.utils.random(0, 200, 10);
+        console.log(s1);
+
+        const s2 = gsap.utils.shuffle([1, 2, 3, 4, 5]);
+        console.log(s2);
+
+        // 최대값(세번째 값)을 초과하면 처음으로 돌아간다. (최소값이 출력)
+        // 최소값보다 작으면 최대값이 출력된다.
+        var s3 = gsap.utils.wrap(5, 10, 10);  //5
+        var s3 = gsap.utils.wrap(5, 10, 11);  //6
+        var s3 = gsap.utils.wrap(5, 10, 12);  //7
+        var s3 = gsap.utils.wrap(5, 10, 13);  //8
+        var s3 = gsap.utils.wrap(5, 10, 14);  //9
+        var s3 = gsap.utils.wrap(5, 10, 15);  //5
+        var s3 = gsap.utils.wrap(5, 10, 16);  //6
+        var s3 = gsap.utils.wrap(5, 10, 17);  //7
+        var s3 = gsap.utils.wrap(5, 10, 18);  //8
+        var s3 = gsap.utils.wrap(5, 10, 19);  //9
+        var s3 = gsap.utils.wrap(5, 10, 20);  //5
+        console.log(s3);
+
+        // gsap.defaults({duration: 20, ease:"none"});
+        // gsap.to(".ball", {
+        //     x: 10000,
+        //     modifiers: {
+        //         x: (x, target) => {
+        //             var s = gsap.utils.wrapYoyo(0, window.innerWidth, parseFloat(x));
+        //             return `${s}px`
+        //         }
+        //     }
+        // })
+    </script>
+</body>
+</html>

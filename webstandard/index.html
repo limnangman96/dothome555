@@ -123,13 +123,18 @@
             <!-- //cont_tit -->
             <div id="cont_ban">
                 <div class="container">
-                    <a href="#" class="prev"><span class="ir_pm">이전이미지</span></a>
                     <div class="ban">
-                        <div class="ban_img1"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></div>
-                        <div class="ban_img2"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></div>
-                        <div class="ban_img3"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></div>
+                        <a href="#" class="prev"><span class="ir_pm">이전 이미지</span></a>
+                        <div class="ban_slick">
+                            <div class="ban_img1"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></div>
+                            <div class="ban_img2"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></div>
+                            <div class="ban_img3"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></div>
+                            <div class="ban_img1"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></div>
+                            <div class="ban_img2"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></div>
+                            <div class="ban_img3"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></div>
+                        </div>
+                        <a href="#" class="next"><span class="ir_pm">다음 이미지</span></a>
                     </div>
-                    <a href="#" class="next"><span class="ir_pm">다음 이미지</span></a>
                 </div>
             </div>
             <!-- //cont_ban -->
@@ -431,7 +436,15 @@
         });
 
         // 이미지 슬라이드
-        $('.ban').slick({});
+        $('.ban_slick').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            arrow: true
+        });
 
         // 라이트 박스
         $("#lightgallery").lightGallery();
