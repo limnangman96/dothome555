@@ -608,21 +608,127 @@
                 <section class="e-circleBox">
                     <a href="http://dnjsdl678.dothome.co.kr/effect/mouseEffect.html" class="circle cir1"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
                     <a href="http://dnjsdl678.dothome.co.kr/effect/sliderEffect.html" class="circle cir2"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                    <a href="#" class="circle cir3"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#react" class="circle cir3"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
                 </section>
                 <!-- //e-circleBox -->
             </div>
             <!-- //e-container -->
         </div>
         <!-- //effect -->
-        <div id="react"></div>
+        <div id="react">
+            <section class="r-motionBox">
+                <p>저는 지금도 계속해서 레벨업 중이랍니다. 마우스를 올려보세요!</p>
+                <div class="Txtbox3d">
+                    <div class="TxtWrap3d">
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                        <div class="Txt3d">LEVELUP</div>
+                    </div>
+                </div>
+            </section>
+            <div class="r-container">
+                <section class="r-hoverWrap">
+                    <div class="hover react">
+                        <figure class="front">
+                            <img src="./assets/image/re1.jpg" alt="이미지1"> 
+                            <figcaption>
+                                <h3>React.js</h3>
+                                <p>포트폴리오 사이트</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="back">
+                            <img src="./assets/image/re1.jpg" alt="이미지1"> 
+                            <figcaption>
+                                <a href="https://react555-class.web.app/#/">바로가기</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="hover php">
+                        <figure class="front">
+                            <img class="php-img" src="./assets/image/re2.jpg" alt="이미지2"> 
+                            <figcaption>
+                                <h3>PHP</h3>
+                                <p>로그인/회원가입/게시판 페이지</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="back">
+                            <img src="./assets/image/re2.jpg" alt="이미지2"> 
+                            <figcaption>
+                                <a href="http://dnjsdl678.dothome.co.kr/php/sign/logIn.php">바로가기</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="hover mySQL">
+                        <figure class="front">
+                            <img src="./assets/image/re3.jpg" alt="이미지3"> 
+                            <figcaption>
+                                <h3>mySQL</h3>
+                                <p>학습한 내용을 정리한 피그마</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="back">
+                            <img src="./assets/image/re3.jpg" alt="이미지3"> 
+                            <figcaption>
+                                <a href="https://www.figma.com/proto/a7dNiD5MtNEjYTp4pUb8Al/mySQL?node-id=1%3A4&scaling=min-zoom">바로가기</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>  
+            </div>
+        </div>
         <!-- //react -->
-        <div id="contact"></div>
+        <div id="contact">
+            <div class="c-container">
+                <section class="c-myInfo">
+                    <div class="myEmail"><a href="#">E</a><span class="spanEmail">dnjsdl678@gmail.com</span></div>
+                    <div class="myPhone"><a href="#">P</a><span class="spanPhone">(+82)10-2990-2149</span></div>
+                </section>
+                <section class="c-contactBox">
+                    <div class="leftBox">
+                        <p>Wanna Contact me?</p>
+                    </div>
+                    <div class="rightBox">
+                        <form action="" name="contactWrite" method="post">
+                            <fieldset>
+                                <legend class="ir_so">정보를 입력하고 제게 메세지를 보내는 영역입니다.</legend>
+                                <div>
+                                    <label for="writeName">name</label>
+                                    <input type="text" name="writeName" id="writeName" class="yourName" required placeholder="your name">
+                                </div>
+                                <div>
+                                    <label for="writeEmail">Email</label>
+                                    <input type="text" name="writeEmail" id="writeEmail" class="yourEmail" required placeholder="your Email">
+                                </div>
+                                <div>
+                                    <label for="writeMessage">message</label>
+                                    <textarea name="writeMessage" id="writeMessage" class="yourMessage" rows="9" required placeholder="Please enter a message here"></textarea>
+                                </div>
+                            </fieldset>
+                            <button class="writeBtn" type="submit" value="전송하기">send</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
         <!-- //contact -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="http://fatlinesofcode.github.io/jquery.smoothwheel/src/jquery.smoothwheel.js"></script> -->
     <script>
+
+        // $(document).ready(function(){ 
+        //     $("html").smoothWheel() 
+        // }); 
+
         var s = skrollr.init();
 
         window.addEventListener("scroll", function(){
@@ -718,6 +824,52 @@
                 elem.classList.remove("active");
             });
         });  
+
+        // effect next 이동하기
+        document.querySelectorAll(".e-circleBox a[href^='#']").forEach( elem => {
+            elem.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(elem.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });          
+        });
+
+        // react 3d motion
+        const Text3d = document.querySelectorAll('.Txt3d');
+        const halfX = window.innerWidth / 2;
+        const halfY = window.innerHeight / 2;
+
+        Text3d.forEach((el, i) => {
+            TweenMax.to(el, 1, {
+                z: 1 * (i + 8) });
+
+        });
+        document.addEventListener('mousemove', e => {
+            Text3d.forEach((el, i) => {
+                TweenMax.to(el, 0.5, {
+                x: (e.clientX - halfX) * (i + 1) * 0.01,
+                y: (e.clientY - halfY) * (i + 1) * 0.01 });
+
+            });
+        });
+
+        // contact .c-myInfo 클릭했을 때 이메일, 연락처 보여주기
+        document.querySelector(".c-myInfo .myEmail").addEventListener("click", function(e){
+            e.preventDefault();
+            document.querySelector(".c-myInfo .myPhone a").classList.remove("red");
+            document.querySelector(".c-myInfo .spanPhone").classList.remove("show");
+            document.querySelector(".c-myInfo .myEmail a").classList.toggle("red");
+            document.querySelector(".c-myInfo .spanEmail").classList.toggle("show");
+        });
+
+        document.querySelector(".c-myInfo .myPhone").addEventListener("click", function(e){
+            e.preventDefault();
+            document.querySelector(".c-myInfo .myEmail a").classList.remove("red");
+            document.querySelector(".c-myInfo .spanEmail").classList.remove("show");
+            document.querySelector(".c-myInfo .myPhone a").classList.toggle("red");
+            document.querySelector(".c-myInfo .spanPhone").classList.toggle("show");
+        });
     </script>
 </body>
 </html>

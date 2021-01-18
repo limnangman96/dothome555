@@ -45,13 +45,13 @@ body::-webkit-scrollbar-track { display: none }
 }
 
 /* layout */
-#wrap {width: 100%; height: 55000px; overflow: hidden;}
+#wrap {width: 100%; height: 56100px; overflow: hidden;}
 #main {width: 100%; overflow: hidden;}
 #site {width: 100%; height: 26500px; position: relative; overflow: hidden;}
 #animation {width: 100%; overflow: hidden;}
 #effect {width: 100%; overflow: hidden;}
-#react {}
-#contact {}
+#react {width: 100%; overflow: hidden;}
+#contact {width: 100%; overflow: hidden; background: #ccc;}
 
 
 /* main */
@@ -647,7 +647,7 @@ img {width: 100%; vertical-align: top;}
 }
 .e-slideBox > div p {font-size: 8vw; white-space: nowrap; color: #000; -webkit-text-stroke: 0.1vw #fff;}
 /* e-container */
-.e-container {width: 100%; overflow: hidden; height: 240vw; background: #000; padding: 0 5vw; position: relative;}
+.e-container {width: 100%; overflow: hidden; height: 245vw; background: #000; padding: 0 5vw; position: relative;}
 .e-effectBox .Effect {width: 38vw; height: 34vw; float: left; position: relative; border-bottom: 0.15vw solid #fff;}
 .e-effectBox .Mouse {margin: 15vw 4vw 0 0;}
 .e-effectBox .menu {margin-top: 28vw;}
@@ -711,7 +711,7 @@ img {width: 100%; vertical-align: top;}
     color: #000;
     position: absolute; top: 58%; left: 27.5%;
 }
-.e-container .e-circleBox .cir3 {position: absolute; left: 37.5%; bottom: 0%;}
+.e-container .e-circleBox .cir3 {position: absolute; left: 34.5%; bottom: 1%;}
 .e-container .e-circleBox .cir3:hover {background: #ff0000; border: 0.15vw solid #ff0000; animation : pulse 1s 1;}
 @keyframes pulse {
     0% {box-shadow: 0 0 0 0 #ff0000}
@@ -725,6 +725,148 @@ img {width: 100%; vertical-align: top;}
     font-family: var(--font-bold);
     position: absolute; top: 38%; left: 0;
 }
+
+
+/* react */
+/* r-motionBox */
+.r-motionBox {width: 100%; height: 47vw; overflow: hidden; background: #000; padding-top: 25vw; box-sizing: border-box;}
+.r-motionBox p { text-align: center; font-size: 1.2vw; line-height: 4; color: #ff0000;}
+.r-motionBox .Txtbox3d {
+    width: 100vw; height: 20vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+}
+.r-motionBox .Txtbox3d .TxtWrap3d {
+    position: relative;
+    perspective: 100px;
+    text-transform: uppercase;
+}
+.r-motionBox .Txtbox3d .TxtWrap3d .Txt3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000;
+    font-size: 10vw;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #f0f0f0, 1px -1px 0 #f0f0f0, -1px 1px 0 #f0f0f0, 1px 1px 0 #f0f0f0;
+    transform-style: preserve-3d;
+}
+.r-motionBox .Txtbox3d .TxtWrap3d .Txt3d:first-child {position: relative;}
+/* r-motionBox */
+.r-container {padding: 0 5vw; background: #000;}
+.r-hoverWrap  {width: 100%; height: 45vw; overflow: hidden; padding-top: 5vw; box-sizing: border-box; display: flex; align-items: center; justify-content: center;}
+.r-hoverWrap .hover {perspective: 1000px; position: relative; margin-left: 1vw;}
+.r-hoverWrap .hover:last-child {margin-right: 1vw;}
+.r-hoverWrap .hover .front {transform: rotatey(0deg);}
+.r-hoverWrap .hover:hover .front {transform: rotatey(180deg);}
+.r-hoverWrap .hover .back {transform: rotatey(-180deg);}
+.r-hoverWrap .hover:hover .back {transform: rotatey(0deg);}
+.r-hoverWrap .react {flex: 1 1 33.333%;}
+.r-hoverWrap .php {flex: 1 1 33.333%;}
+.r-hoverWrap .mySQL {flex: 1 1 33.333%;}
+.r-hoverWrap .hover img {width: 100%; border-radius: 35px;}
+.r-hoverWrap .hover .front {transition: transform 1s; backface-visibility: hidden; transform-style: preserve-3d;}
+.r-hoverWrap .hover .front::before {
+    content: ''; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 35px; 
+    background: rgba(0,0,0,0.3); 
+    position: absolute; left: 0; right: 0;
+}
+.r-hoverWrap .hover .back {position: absolute; left: 0; top: 0; z-index: -1; transition: transform 1s; transform-style: preserve-3d;}
+.r-hoverWrap .hover figcaption {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%) translateZ(100px);
+    color: #fff;
+    text-align: center;
+    backface-visibility: hidden;
+    white-space: nowrap;
+}
+.r-hoverWrap .hover .front figcaption h3 {font-size: 1.5vw; font-family: var(--font-bold); color: #fff;}
+.r-hoverWrap .hover .front figcaption p {font-size: 1.1vw;}
+.r-hoverWrap .hover .back figcaption a {
+    display: inline-block; 
+    padding: 1vw 1.5vw; 
+    background: rgba(0,0,0,0.5); 
+    color: #fff; 
+    font-size: 1.15vw; 
+    line-height: 1.15vw;
+    border-radius: 10px;
+}
+/* contact */
+.c-container {width: 100%; height: 50vw; overflow: hidden; background: #000; box-sizing: border-box; padding: 0 5vw; position: relative;}
+.c-myInfo {padding-top: 5vw; color: #fff;}
+.c-myInfo > div {display: inline-block;}
+.c-myInfo > div > a {
+    position: relative;
+    z-index: 5;
+    display: inline-block; 
+    width: 2.5vw; height: 2.5vw; 
+    border: 0.1vw solid #fff; 
+    border-radius: 50%; 
+    line-height: 2.7vw;
+    text-align: center;
+    color: #fff; 
+    font-family: var(--font-bold);
+    font-size: 1vw;
+}
+.c-myInfo > div > a.red { border: 0.1vw solid #ff0000; background: #ff0000;}
+.c-myInfo > div > span {
+    position: relative;
+    display: none;
+    height: 2.5vw; 
+    background: #ff0000;
+    font-family: var(--font-bold);
+    font-size: 1vw;
+    line-height: 2.7vw;
+    padding: 0 1.2vw;
+    margin-left: -1.2vw;
+    border: 0.1vw solid #ff0000;
+}
+.c-myInfo > div > span.show {display: inline-block; margin-right: 1.5vw;}
+.c-myInfo > div > span:before {
+    content: '';
+    width: 2.5vw; height: 2.5vw;
+    background: #ff0000;
+    border: 0.1vw solid #ff0000;
+    border-radius: 50%;
+    position: absolute; left: 92%; top: -3.8%;
+}
+.c-contactBox {display: flex;}
+.c-contactBox .leftBox {flex: 1 1 50%; padding-right: 3vw;}
+.c-contactBox .leftBox p {
+    margin-top: 6vw;
+    font-size: 9vw; 
+    font-family: 'GmarketSansBold';
+    color: #fff;
+    line-height: 1.2;
+    text-align: right;
+}
+.c-contactBox .rightBox {flex: 1 1 50%; padding-left: 3vw; margin-top: 6vw; color: #fff;}
+.c-contactBox .rightBox > form > fieldset> div {font-size: 1.1vw;}
+.c-contactBox .rightBox > form > fieldset > div {display: flex; padding: 1vw 0; border-bottom: 1px dashed #fff;}
+.c-contactBox .rightBox > form > fieldset > div label {flex: 1 1 18%;}
+.c-contactBox .rightBox > form > fieldset > div:nth-child(4) label {padding-top: 7vw;}
+.c-contactBox .rightBox > form > fieldset > div input {
+    flex: 1 1 70%; 
+    background: transparent; 
+    border: none; 
+    color: #fff; 
+    font-size: 1.1vw; 
+    padding: 0 0.5vw;
+}
+.c-contactBox .rightBox > form > fieldset > div textarea {
+    flex: 1 1 70%; 
+    background: transparent; 
+    border: none; 
+    color: #fff; 
+    font-size: 1.1vw; 
+    padding: 0.5vw 0.5vw;
+}
+.c-contactBox .rightBox .writeBtn {width: 100%; margin-top: 1vw; font-size: 1.5vw; line-height: 2.5;}
 
 
 
